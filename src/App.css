@@ -1,82 +1,82 @@
-  .title {
-    font-size: 2.25rem;
-    font-weight: bold;
-    color: #60a5fa;
-    margin-bottom: 1rem;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .highlight {
-    color: #a855f7;
-  }
-  
-  .subtitle {
-    font-size: 1.125rem;
-    color: #374151;
-  }
-  
-  .button {
-    padding: 0.5rem 1rem;
-    background-color: #60a5fa;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #2563eb;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold;
-    color: #111827;
-    margin-bottom: 2rem;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #F6F6F6;
+}
+
+section {
+  margin: 0 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card{
+  width: 40%;
+  padding: 24px 32px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #9FA2B2;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  min-width: 240px;
+  max-width: 320px;
+}
+
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+h1{
+  color: #222;
+  margin: 10px 0px;
+  font-size: 2rem;
+}
+
+button{
+  width: 50%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 1rem;
+  background-color: #9896f0;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+@media (max-width: 900px) {
   .card {
-    background-color: #d1d5db;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
+      max-width: 90vw;
   }
-  
-  .card-light {
-    background-color: #f9fafb;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
+  .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
   }
-  
-  .card-title {
-    color: #111827;
-  }
-  
-  .number {
-    font-size: 2.25rem;
-    font-weight: bold;
-    color: #111827;
-    margin-bottom: 0.5rem;
-  }
-  
-  .description {
-    color: #6b7280;
-  }
-  
-  .end {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-  }
-  
+}
