@@ -3,3 +3,10 @@
   height: 6rem;
   color: black; 
 }
+
+h1 {
+  font-size: 4rem;
+  color: black;
+  text-align: center;
+  margin-top: 2rem;
+}
