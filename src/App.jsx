@@ -6,23 +6,27 @@ function App() {
   return (
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
-      <nav class="flex justify-center items-center bg-red-500 p-6 sticky top-0 z-50 text-white space-x-4">  
-        <a href='#'>Home</a>
-        <a href='about#'>About</a>
-        <a href='contact#'>Contact</a>
-        <a href='services#'>Services</a>
+      <nav class="flex justify-center items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900">
+        <a class="font-bold text-2xl " href="#">Click Me</a>
+        <div class="flex space-x-4 items-center">
+        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='#'>Home</a>
+        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='about#'>About</a>
+        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='contact#'>Contact</a>
+        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='services#'>Services</a>
+        </div>
+        
       </nav>
       <div class="relative text-white h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src="hero-pic2.jpg" alt="hero image" class="object-cover object-center w-full h-full" />
+          <img src="./assets/hero-pic2.jpg" alt="hero image" class="object-cover object-center w-full h-full" />
           <div class="absolute bg-gray-700 opacity-50">
             
           </div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-6xl font-extrabold text-white mb-4">Everything Abiut Cards and Features</h1>
+          <h1 class="text-6xl font-extrabold text-white mb-4">Everything About Cards and Features</h1>
           <p class="text-gray-200 text-lg mb-8">Features and services that allow you to create scalable cards.</p>
-          <a href="#" class="bg-blue-400 text-gray-900 py-2 px-6 rounded-full text-lg" >Click Me</a>
+          <a href="#" class="bg-blue-400 text-gray-900 py-2 px-6 rounded-lg text-lg hover:bg-blue-500" >Click Me</a>
         </div>
       </div>
 
@@ -202,6 +206,34 @@ function App() {
       </div>
     </div>
   </div>
+</section>
+<section class="p-8 mt-8 mx-auto">
+  <h1 class="text-gray-900 text-4xl font-bold mb-4">Contact Us</h1>
+  <form>
+    <div class="w-full p-2">
+    <div class="relative">
+      <label for="name" class="py-4 text-lg text-gray-900">Name</label>
+      <input type="text" id="name" name="name" required="" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+    </div>
+    </div>
+    <div class="w-full p-2">
+    <div class="relative">
+      <label for="name" class="py-4 text-lg text-gray-900">Email</label>
+      <input type="email" id="email" name="email" required="" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+    </div>
+    </div>
+    <div class="w-full p-2">
+    <div class="relative">
+      <label for="name" class="py-4 text-lg text-gray-900">Message</label>
+      <input type="message" id="message" name="message" required="" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+    </div>
+    </div>
+    <div class="p-2 w-full">
+      <div>
+        <button type="submit" class="flex flex-col text-center text-white bg-gray-900 py-3 px-6 hover:bg-blue-700 font-bold ">Send</button>
+      </div>
+    </div>
+  </form>
 </section>
 
 <footer class="bg-gray-100">
