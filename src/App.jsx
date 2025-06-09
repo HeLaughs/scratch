@@ -7,7 +7,7 @@ function App() {
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
       <nav class="flex justify-center items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900">
-        <a class="font-bold text-2xl " href="#">Click Me</a>
+        <a class="font-bold text-2xl" href="#">Click Me</a>
         <div class="flex space-x-4 items-center">
         <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='#'>Home</a>
         <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='about#'>About</a>
@@ -207,6 +207,58 @@ function App() {
     </div>
   </div>
 </section>
+<section class="bg-gray-100 py-10">
+  <div class="px-4 mx-auto max-w-7xl">
+    <div class="text-center mx-auto max-w-2xl">
+      <h2 class="text-gray-900 font-bold text-3xl">FAQ's</h2>
+    </div>
+    <div class="mt-8 space-y-4 mx-auto">
+      <div class="bg-white border border-gray-200">
+        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
+        <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
+                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+        </button>
+        </div>
+    </div>
+    <div class="mt-8 space-y-4 mx-auto">
+      <div class="bg-white border border-gray-200">
+        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
+        <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
+                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+        </button>
+        </div>
+    </div>
+    <div class="mt-8 space-y-4 mx-auto">
+      <div class="bg-white border border-gray-200">
+        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
+        <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
+                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+        </button>
+        </div>
+    </div>
+    <div class="mt-8 space-y-4 mx-auto">
+      <div class="bg-white border border-gray-200">
+        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
+        <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
+                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+        </button>
+        </div>
+    </div>
+  </div>
+</section>
+
 <section class="p-8 mt-8 mx-auto">
   <h1 class="text-gray-900 text-4xl font-bold mb-4">Contact Us</h1>
   <form>
@@ -232,6 +284,18 @@ function App() {
       <div>
         <button type="submit" class="flex flex-col text-center text-white bg-gray-900 py-3 px-6 hover:bg-blue-700 font-bold ">Send</button>
       </div>
+    </div>
+  </form>
+</section>
+
+<section class="relative rounded-lg border pt-4 mt-20 max-w-xl mx-auto">
+  <div class="absolute px-2 top-0 -left-[0.5] rounded-tl-lg rounded-br-lg bg-blue-400 p-8">
+    <h2 class="text-blue-600 font-semibold h-2 text-md">Discussion</h2>
+  </div>
+  <form>
+    <div class="w-full px-2 py-6 mb-2 mt-12" ><textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400" name="body" placeholder="Your comment" required=""></textarea></div>
+    <div class="w-full justify-end px-3 my-3">
+      <button class="px-2.5 py-1.5 text-gray-900 bg-blue-300 text-lg rounded-md">Comment</button>
     </div>
   </form>
 </section>
