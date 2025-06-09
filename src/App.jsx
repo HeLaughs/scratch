@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './assets/hero-pic2.jpg';
+import hero from './assets/hero-pic2.jpg';
 
 function App() {
   return (
@@ -18,14 +18,14 @@ function App() {
       </nav>
       <div class="relative text-white h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src="./assets/hero-pic2.jpg" alt="hero image" class="object-cover object-center w-full h-full" />
-          <div class="absolute bg-gray-700 opacity-50">
+          <img src={hero} alt="hero image" class="object-cover object-center w-full h-full opacity-75" />
+          <div class="absolute">
             
           </div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-6xl font-extrabold text-white mb-4">Everything About Cards and Features</h1>
-          <p class="text-gray-200 text-lg mb-8">Features and services that allow you to create scalable cards.</p>
+          <h1 class="text-8xl font-extrabold text-white mb-8">Everything About Cards and Features</h1>
+          <p class="text-gray-900 font-bold text-lg mb-">Features and services that allow you to create scalable cards.</p>
           <a href="#" class="bg-blue-400 text-gray-900 py-2 px-6 rounded-lg text-lg hover:bg-blue-500" >Click Me</a>
         </div>
       </div>
