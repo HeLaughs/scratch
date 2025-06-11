@@ -1,57 +1,116 @@
 import React from 'react';
 import './App.css';
 import hero from './assets/hero-pic2.jpg';
+import card1 from './assets/bry.jpg';
 
 function App() {
   return (
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
-      <nav class="flex justify-center items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900">
-        <a class="font-bold text-2xl" href="#">Click Me</a>
+      <nav class="flex justify-center items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900 shadow-md">
+
+        <a class=" flex items-center font-bold text-2xl" href="home#">Click Me</a>
         <div class="flex space-x-4 items-center">
-        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='#'>Home</a>
-        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='about#'>About</a>
-        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='contact#'>Contact</a>
-        <a class="rounded-lg hover:text-blue-800 px-4 py-2" href='services#'>Services</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='home#'>Home</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='about#'>About</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='contact#'>Contact</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='services#'>Services</a>
         </div>
+        <button class="px-2 text-gray-900 rounded-xl text-center bg-blue-500 hover:bg-blue-400">Sign-up
+        </button>
         
       </nav>
-      <div class="relative text-white h-screen overflow-hidden">
+
+      <div class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src={hero} alt="hero image" class="object-cover object-center w-full h-full opacity-75" />
+          <img src={hero} alt="hero image" class="object-cover object-center w-full h-full opacity-45" />
           <div class="absolute">
             
           </div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-8xl font-extrabold text-white mb-8">Everything About Cards and Features</h1>
-          <p class="text-gray-900 font-bold text-lg mb-">Features and services that allow you to create scalable cards.</p>
-          <a href="#" class="bg-blue-400 text-gray-900 py-2 px-6 rounded-lg text-lg hover:bg-blue-500" >Click Me</a>
+          <h1 class="text-10xl font-bold  mb-8 max-w-full">Everything About Cards <span class="text-blue-500">and</span> Features</h1>
+          <p class="text-gray-900 font-bold text-xl mb-8 max-w-2xl ">Features and services that allow you to create scalable cards.</p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="get-started#" class="bg-blue-400 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-500 shadow-lg">
+                        Get Started
+                    </a>
+                    <a href="demo#" class="border text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400">
+                        <i class="fas fa-play-circle mr-2"></i>View Demo
+                    </a>
+                </div>
         </div>
+        
       </div>
 
-      <section class="flex flex-col  md:flex-row items-center justify-between gap-6 p-6">
-          <div class="flex flex-col bg-blue-400 p-6 gap-6 rounded-2xl">
-            <h1 class="text-3xl text-black font-extrabold">About Cards</h1>
+      <section class="flex flex-col  md:flex-row items-center justify-between gap-6 p-6 mb-16">
+          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
+            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
             <p>This is a simple card component.</p>
-            <button class="bg-red-500 p-6 text-white w-full rounded-3xl">Click</button>
+            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
-          <div class="flex flex-col bg-blue-400 p-6 gap-6 rounded-2xl">
-            <h1 class="text-lg text-black">About Cards</h1>
+          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
+            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
             <p>This is a simple card component.</p>
-            <button class="bg-red-500 p-6 text-white w-full rounded-3xl">Click</button>
+            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
-          <div class="flex flex-col bg-blue-400 p-6 gap-6 rounded-2xl">
-            <h1 class="text-lg text-black">About Cards</h1>
+          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
+            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
             <p>This is a simple card component.</p>
-            <button class="bg-red-500 p-6 text-white w-full rounded-3xl">Click</button>
+            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
-          <div class="flex flex-col bg-blue-400 p-6 gap-6 rounded-2xl">
-            <h1 class="text-lg text-black">About Cards</h1>
+          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
+            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
             <p>This is a simple card component.</p>
-            <button class="bg-red-500 p-6 text-white w-full rounded-3xl">Click</button>
+            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
+         
       </section>
+
+      <section class="py-18 px-2 bg-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Card Features</h2>
+                    <p class="text-gray-900 max-w-2xl mx-auto">Discover our innovative features designed to elevate your card solutions to the next level.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-blue-300 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Advanced Security</h3>
+                        <p class="text-gray-900 mb-4">Military-grade encryption and real-time fraud monitoring to keep your transactions secure.</p>
+                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                            Learn more
+                        </a>
+                    </div>
+                    <div class="bg-blue-300 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Instant Processing</h3>
+                        <p class="text-gray-900 mb-4">Real-time transaction processing with 99.9% uptime for seamless user experiences.</p>
+                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                            Learn more
+                        </a>
+                    </div>
+                    <div class="bg-blue-300 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Sync</h3>
+                        <p class="text-gray-900 mb-4">Automatically sync card data across all your devices and platforms in real-time.</p>
+                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                            Learn more
+                        </a>
+                    </div>
+                    <div class="bg-blue-300 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Analytics Dashboard</h3>
+                        <p class="text-gray-900 mb-4">Detailed insights and spending analytics to help you make smarter financial decisions.</p>
+                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <section class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-200 w-full text-center">
   <h1 class="text-4xl font-extrabold text-black">Why buy with car wow?</h1>
@@ -89,9 +148,9 @@ function App() {
   </div>
 </section>
 
-<section class="bg-white w-full flex justify-self-stretch items-center p-4">
+<section class="bg-gray-100 w-full flex justify-self-stretch items-center p-4">
   <div class="mx-auto px-4 pb-6">
-    <div class="grid grid-cols-2 gap-8 text-gray-600">
+    <div class="grid grid-cols-2 gap-8 text-gray-900">
       <a class="flex items-center">
       <svg class="h-18 hover:text-gray-900 dark:hover:text-blue-400" viewBox="0 0 86 29" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
@@ -204,18 +263,66 @@ function App() {
           <p class="mt-1 font-light text-gray-900">Showcase of the products and services</p>
         </div>
       </div>
+      <div class="container mx-auto px-5 py-24">
+    <div class="flex flex-wrap text-center">
+      <div class="p-4 w-full md:w-1/4 sm:w-1/2">
+        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="text-3xl text-blue-500">Users</h2>
+          <p class="text-gray-200">Daily Users Per Click</p>
+        </div>
+      </div>
+      <div class="p-4 w-full md:w-1/4 sm:w-1/2">
+        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="text-3xl text-blue-500">Users</h2>
+          <p class="text-gray-200">Daily Users Per Click</p>
+        </div>
+      </div>
+      <div class="p-4 w-full md:w-1/4 sm:w-1/2">
+        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="text-3xl text-blue-500">Users</h2>
+          <p class="text-gray-200">Daily Users Per Click</p>
+        </div>
+      </div>
+      <div class="p-4 w-full md:w-1/4 sm:w-1/2">
+        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="text-3xl text-blue-500">Users</h2>
+          <p class="text-gray-200">Daily Users Per Click</p>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+    </div>
+  </div>
+</section>                                                                                           
 <section class="bg-gray-100 py-10">
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center mx-auto max-w-2xl">
       <h2 class="text-gray-900 font-bold text-3xl">FAQ's</h2>
     </div>
-    <div class="mt-8 space-y-4 mx-auto">
+    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
+        <span class="flex text-lg font-semibold text-gray-900 overflow-hidden">How to get started with cards?</span>
                     <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         class="w-6 h-6 text-gray-400">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -282,13 +389,13 @@ function App() {
     </div>
     <div class="p-2 w-full">
       <div>
-        <button type="submit" class="flex flex-col text-center text-white bg-gray-900 py-3 px-6 hover:bg-blue-700 font-bold ">Send</button>
+        <button type="submit" class="flex flex-col text-center text-white bg-gray-900 py-3 px-6 hover:bg-blue-700 font-bold rounded-lg">Send</button>
       </div>
     </div>
   </form>
 </section>
 
-<section class="relative rounded-lg border pt-4 mt-20 max-w-xl mx-auto">
+<section class="relative rounded-lg border pt-4 mt-10 mb-6 max-w-xl mx-auto">
   <div class="absolute px-2 top-0 -left-[0.5] rounded-tl-lg rounded-br-lg bg-blue-400 p-8">
     <h2 class="text-blue-600 font-semibold h-2 text-md">Discussion</h2>
   </div>
