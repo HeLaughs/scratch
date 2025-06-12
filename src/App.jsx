@@ -2,19 +2,22 @@ import React from 'react';
 import './App.css';
 import hero from './assets/hero-pic2.jpg';
 import card1 from './assets/bry.jpg';
+import stars from './assets/stars-1.svg';
+import star from './assets/stars-5-1.svg';
 
 function App() {
   return (
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
-      <nav class="flex justify-center items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900 shadow-md">
-
-        <a class=" flex items-center font-bold text-2xl" href="home#">Click Me</a>
+      <nav class="flex justify-between items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900 shadow-md w-full">
+        <div class="flex items-center font-bold text-3xl">
+          <a href="#">Click Me</a>
+          </div>
         <div class="flex space-x-4 items-center">
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='home#'>Home</a>
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='about#'>About</a>
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='contact#'>Contact</a>
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href='services#'>Services</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#home">Home</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#about">About</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#feature">Feature</a>
+        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#contact">Contact</a>
         </div>
         <button class="px-2 text-gray-900 rounded-xl text-center bg-blue-500 hover:bg-blue-400">Sign-up
         </button>
@@ -36,8 +39,7 @@ function App() {
                     <a href="get-started#" class="bg-blue-400 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-500 shadow-lg">
                         Get Started
                     </a>
-                    <a href="demo#" class="border text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400">
-                        <i class="fas fa-play-circle mr-2"></i>View Demo
+                    <a href="demo#" class="border text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400">View more
                     </a>
                 </div>
         </div>
@@ -47,35 +49,35 @@ function App() {
       <section class="flex flex-col  md:flex-row items-center justify-between gap-6 p-6 mb-16">
           <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
             <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
-            <p>This is a simple card component.</p>
+            <h1 class="text-2xl text-gray-900 font-bold">Advanced Cards Solutions</h1>
+            <p>Real-time transaction processing with 99.99% uptime guarantee.</p>
             <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
           <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
             <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
-            <p>This is a simple card component.</p>
+            <h1 class="text-2xl text-gray-900 font-bold">Bank-Level Security</h1>
+            <p>Military-grade encryption and fraud detection to protect every transaction.</p>
             <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
           <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
             <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
-            <p>This is a simple card component.</p>
+            <h1 class="text-2xl text-gray-900 font-bold">Smart Synchronization</h1>
+            <p>Automatically sync card data across all your devices and platforms.</p>
             <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
           <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
             <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">About Cards</h1>
-            <p>This is a simple card component.</p>
+            <h1 class="text-2xl text-gray-900 font-bold">Create. Manage. Scale.</h1>
+            <p>Automatically sync card data across all your devices and platforms.</p>
             <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
           </div>
          
       </section>
 
-      <section class="py-18 px-2 bg-gray-200">
+      <section id="about" class="py-18 px-2 bg-gray-200">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Card Features</h2>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">About Powerful Card Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
                 
@@ -83,29 +85,41 @@ function App() {
                     <div class="bg-blue-300 rounded-lg p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Advanced Security</h3>
                         <p class="text-gray-900 mb-4">Military-grade encryption and real-time fraud monitoring to keep your transactions secure.</p>
-                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                        <a href="#" class="text-blue-800 text-xl flex items-center gap-1">
                             Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Instant Processing</h3>
                         <p class="text-gray-900 mb-4">Real-time transaction processing with 99.9% uptime for seamless user experiences.</p>
-                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                        <a href="#" class="text-blue-800 text-xl flex items-center gap-1">
                             Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Sync</h3>
                         <p class="text-gray-900 mb-4">Automatically sync card data across all your devices and platforms in real-time.</p>
-                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                        <a href="#" class="text-blue-800 text-xl flex items-center gap-1">
                             Learn more
-                        </a>
-                    </div>
-                    <div class="bg-blue-300 rounded-lg p-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+      </a>
+     </div>
+       <div class="bg-blue-300 rounded-lg p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Analytics Dashboard</h3>
                         <p class="text-gray-900 mb-4">Detailed insights and spending analytics to help you make smarter financial decisions.</p>
-                        <a href="#" class="text-blue-800 text-xl flex items-center">
+                        <a href="#" class="text-blue-800 text-xl flex items-center gap-1">
                             Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
                         </a>
                     </div>
                 </div>
@@ -194,7 +208,7 @@ function App() {
     </div>
   </div>
 </section>
-<section class="text-blue-400 bg-gray-100">
+<section id="feature" class="text-blue-400 bg-gray-100">
   <div class="container mx-auto px-5 py-24">
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -274,6 +288,7 @@ function App() {
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
           <p class="text-gray-200">Daily Users Per Click</p>
+          <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -285,6 +300,7 @@ function App() {
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
           <p class="text-gray-200">Daily Users Per Click</p>
+          <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -296,6 +312,7 @@ function App() {
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
           <p class="text-gray-200">Daily Users Per Click</p>
+          <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -307,6 +324,7 @@ function App() {
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
           <p class="text-gray-200">Daily Users Per Click</p>
+          <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
     </div>
@@ -366,7 +384,7 @@ function App() {
   </div>
 </section>
 
-<section class="p-8 mt-8 mx-auto">
+<section id="contact" class="p-8 mt-8 mx-auto">
   <h1 class="text-gray-900 text-4xl font-bold mb-4">Contact Us</h1>
   <form>
     <div class="w-full p-2">
@@ -407,37 +425,49 @@ function App() {
   </form>
 </section>
 
-<footer class="bg-gray-100">
+<footer id="footer" class="bg-blue-300">
   <div class="px-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4">
     <div class="p-5">
-      <h3 class="font-bold text-xl text-blue-600">Click Me</h3>
+      <h3 class="font-bold text-3xl text-blue-600">Click Me</h3>
+      <p class="text-gray-900 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
+     </p>
+    </div>
+    
+    <div class="p-5">
+      <div class="uppercase font-bold text-blue-600">Products</div>
+      <a class="my-3 block" href="support#">Virtual cards</a>
+      <a class="my-3 block" href="terms#">Physical cards</a>
+      <a class="my-3 block" href="docs#">Business cards</a>
+      <a class="my-3 block" href="help-site#">Loyalty cards</a>
+    </div>
+    
+    <div class="p-5">
+      <div class="uppercase font-bold text-blue-600">Resources</div>
+      <a class="my-3 block" href="support#">Support center</a>
+      <a class="my-3 block" href="terms#">Tutorials</a>
+      <a class="my-3 block" href="docs#">Documentation</a>
+      <a class="my-3 block" href="help-site#">Help site</a>
     </div>
     <div class="p-5">
-      <div class="uppercase font-bold text-blue-600">Cards</div>
-      <a class="my-3 block" href="support#">support</a>
-      <a class="my-3 block" href="terms#">terms</a>
-      <a class="my-3 block" href="docs#">docs</a>
-      <a class="my-3 block" href="help-site#">help site</a>
-    </div>
-    <div class="p-5">
-      <div class="uppercase font-bold text-blue-600">Cards</div>
-      <a class="my-3 block" href="support#">support</a>
-      <a class="my-3 block" href="terms#">terms</a>
-      <a class="my-3 block" href="docs#">docs</a>
-      <a class="my-3 block" href="help-site#">help site</a>
-    </div>
-    <div class="p-5">
-      <div class="uppercase font-bold text-blue-600">Cards</div>
-      <a class="my-3 block" href="support#">support</a>
-      <a class="my-3 block" href="terms#">terms</a>
-      <a class="my-3 block" href="docs#">docs</a>
-      <a class="my-3 block" href="help-site#">help site</a>
+      <div class="uppercase font-bold text-blue-600">Terms and Policy</div>
+      <a class="my-3 block" href="support#">Terms of service</a>
+      <a class="my-3 block" href="terms#">Cookies policy</a>
+      <a class="my-3 block" href="docs#">Sitemap</a>
     </div>
     <div class="p-5">
       <div class="uppercase text-blue-600 font-bold">Contact Us</div>
-      <a class="my-3 block" href="contact#">777 3930, Universe.VA</a>
+      <a class="my-3 block" href="contact#">+000 777 3930, Universe.VA</a>
       <a class="my-3 block" href="#">clickme@company.com</a>
       <a class="my-3 block" href="info#">info.us</a>
+      
+    </div>
+    <div class="mt-6">
+      <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
+      <form class="flex">
+          <input type="email" placeholder="Your email" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-gray-200 px-4 py-2 rounded-lg">Submit
+        </button>
+      </form>
     </div>
   </div>
   <div class="bg-gray-200 pt-2">
