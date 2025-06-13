@@ -117,25 +117,25 @@ function App() {
     <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
     <h1 class="text-2xl text-gray-900 font-bold z-10">Advanced Cards Solutions</h1>
     <p class="z-10">Real-time transaction processing with 99.99% uptime guarantee.</p>
-    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
     <h1 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h1>
     <p class="z-10">Military-grade encryption and fraud detection to protect every transaction.</p>
-    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
     <h1 class="text-2xl text-gray-900 font-bold z-10">Smart Synchronization</h1>
     <p class="z-10">Automatically sync card data across all your devices and platforms.</p>
-    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
     <h1 class="text-2xl text-gray-900 font-bold z-10">Create. Manage. Scale.</h1>
     <p class="z-10">Automatically sync card data across all your devices and platforms.</p>
-    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
   </div>
 </div>
 
@@ -177,7 +177,7 @@ function App() {
   </div>
 </section>
 
-<section class="bg-gray-100 w-full flex justify-self-stretch items-center p-4">
+<section class="bg-gray-100 w-full flex items-center p-4">
   <div class="mx-auto px-4 pb-6">
     <div class="grid grid-cols-2 gap-8 text-gray-900">
       <a class="flex items-center">
@@ -278,8 +278,8 @@ function App() {
   <div class="w-full px-4 ">
     <div class="grid grid-cols-1 gap-8">
       <div class="flex flex-col justify-center text-center">
-        <h1 class="text-4xl font-extrabold uppercase">Cards with <span class="text-blue-500">Features</span></h1>
-        <p class="mt-4 font-medium text-white text-balance">Build for websites with maximal impact</p>
+        <h1 class="text-4xl font-extrabold">Cards <span class="text-blue-500">with </span>Features</h1>
+        <p class="mt-4 font-medium text-gray-900 text-balance items-center">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
         <div class="mt-6 flex flex-wrap gap-6">
           <a href="get-cards#" class="p-3 rounded-sm grow border text-blue-400 font-bold uppercase text-center ">Get cards</a>
           <a href="more-cards#" class="p-3 rounded-sm grow border text center text-white bg-blue-400 uppercase ">More cards</a>
@@ -289,7 +289,7 @@ function App() {
         
         <div class="relative bg-gray-300 p-4 text-center grow rounded-xl">
           <h2 class="text-2xl font-bold uppercase text-blue-400 ">About Cards Features</h2>
-          <p class="mt-1 font-light text-gray-900">Showcase of the products and services</p>
+          <p class="mt-1 font-light text-gray-900">Showcase of the products and services to your prospective clients.</p>
         </div>
       </div>
       <div class="container mx-auto px-5 py-24">
@@ -347,7 +347,7 @@ function App() {
     </div>
   </div>
 </section>                                                                                           
-<section class="bg-gray-100 py-10">
+<section id="faqs" class="bg-gray-100 py-10">
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center mx-auto max-w-2xl">
       <h2 class="text-gray-900 font-bold text-3xl">FAQ's</h2>
@@ -363,7 +363,7 @@ function App() {
         </button>
         </div>
     </div>
-    <div class="mt-8 space-y-4 mx-auto">
+    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
         <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
@@ -374,7 +374,7 @@ function App() {
         </button>
         </div>
     </div>
-    <div class="mt-8 space-y-4 mx-auto">
+    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
         <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
@@ -385,7 +385,7 @@ function App() {
         </button>
         </div>
     </div>
-    <div class="mt-8 space-y-4 mx-auto">
+    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
         <span class="flex text-lg font-semibold text-gray-900">How to get started with cards?</span>
@@ -428,7 +428,7 @@ function App() {
     <div class="w-full md:w-1/2">
       <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
         <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-400 p-4">
-          <h2 class="text-blue-600 font-semibold text-md">Discussion</h2>
+          <h5 class="text-blue-600 font-semibold text-md">Discussion</h5>
         </div>
         <form class="pt-12 px-4">
           <div class="w-full mb-2">
@@ -479,14 +479,14 @@ function App() {
       <a class="my-3 block" href="info#">info.us</a>
       
     </div>
-    <div class="mt-6">
+    {/* <div class="mt-6">
       <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
       <form class="flex">
           <input type="email" placeholder="Your email" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-gray-900 font-bold px-4 py-2 rounded-lg">Submit
         </button>
       </form>
-    </div>
+    </div> */}
   </div>
   <div class="bg-gray-200 pt-2">
       <div class="flex flex-col max-w-screen items-center mx-auto pt-5 px-3 pb-5 border-t text-gray-900">
