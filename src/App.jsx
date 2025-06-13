@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import hero from './assets/hero-pic2.jpg';
 import card1 from './assets/bry.jpg';
@@ -6,6 +6,9 @@ import stars from './assets/stars-1.svg';
 import star from './assets/stars-5-1.svg';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
   return (
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
@@ -13,14 +16,24 @@ function App() {
         <div class="flex items-center font-bold text-3xl">
           <a href="#">Click Me</a>
           </div>
-        <div class="flex space-x-4 items-center">
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#home">Home</a>
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#about">About</a>
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#feature">Feature</a>
-        <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#contact">Contact</a>
-        </div>
-        <button class="px-2 text-gray-900 rounded-xl text-center bg-blue-500 hover:bg-blue-400">Sign-up
-        </button>
+        <button
+            class="flex flex-col justify-center items-center md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span class="block w-6 h-0.5 bg-gray-900 mb-1"></span>
+            <span class="block w-6 h-0.5 bg-gray-900 mb-1"></span>
+            <span class="block w-6 h-0.5 bg-gray-900"></span>
+
+          </button>
+          
+          <div class={`flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:space-x-4 md:static absolute top-20 left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`}>
+            <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#feature" onClick={() => setMenuOpen(false)}>Feature</a>
+            <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <button class="text-gray-900 rounded-lg text-center bg-blue-500 hover:bg-blue-400 mt-2 md:mt-0">Sign-up</button>
+          </div>
         
       </nav>
 
@@ -33,7 +46,7 @@ function App() {
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
           <h1 class="text-10xl font-bold  mb-8 max-w-full">Everything About Cards <span class="text-blue-500">and</span> Features</h1>
-          <p class="text-gray-900 font-bold text-xl mb-8 max-w-2xl ">Features and services that allow you to create scalable cards.</p>
+          <p class="text-gray-900 font-bold text-2xl mb-8 max-w-2xl ">Features and services that allow you to create scalable cards.</p>
           
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-400 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-500 shadow-lg">
@@ -43,36 +56,7 @@ function App() {
                     </a>
                 </div>
         </div>
-        
       </div>
-
-      <section class="flex flex-col  md:flex-row items-center justify-between gap-6 p-6 mb-16">
-          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
-            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">Advanced Cards Solutions</h1>
-            <p>Real-time transaction processing with 99.99% uptime guarantee.</p>
-            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
-          </div>
-          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
-            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">Bank-Level Security</h1>
-            <p>Military-grade encryption and fraud detection to protect every transaction.</p>
-            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
-          </div>
-          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
-            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">Smart Synchronization</h1>
-            <p>Automatically sync card data across all your devices and platforms.</p>
-            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
-          </div>
-          <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden">
-            <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-            <h1 class="text-2xl text-gray-900 font-bold">Create. Manage. Scale.</h1>
-            <p>Automatically sync card data across all your devices and platforms.</p>
-            <button class="bg-red-500 p-6 text-gray-100 w-full rounded-xl">Click</button>
-          </div>
-         
-      </section>
 
       <section id="about" class="py-18 px-2 bg-gray-200">
             <div class="max-w-6xl mx-auto">
@@ -124,6 +108,37 @@ function App() {
                     </div>
                 </div>
             </div>
+            <div class="text-center mb-14">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">About Powerful Card Features</h2>
+                    <p class="text-gray-900 max-w-2xl mx-auto">Discover our innovative features designed to elevate your card solutions to the next level.</p>
+                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
+  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
+    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+    <h1 class="text-2xl text-gray-900 font-bold z-10">Advanced Cards Solutions</h1>
+    <p class="z-10">Real-time transaction processing with 99.99% uptime guarantee.</p>
+    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+  </div>
+  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
+    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+    <h1 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h1>
+    <p class="z-10">Military-grade encryption and fraud detection to protect every transaction.</p>
+    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+  </div>
+  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
+    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+    <h1 class="text-2xl text-gray-900 font-bold z-10">Smart Synchronization</h1>
+    <p class="z-10">Automatically sync card data across all your devices and platforms.</p>
+    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+  </div>
+  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
+    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
+    <h1 class="text-2xl text-gray-900 font-bold z-10">Create. Manage. Scale.</h1>
+    <p class="z-10">Automatically sync card data across all your devices and platforms.</p>
+    <button class="bg-red-500 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+  </div>
+</div>
+
         </section>
 
 <section class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-200 w-full text-center">
@@ -259,7 +274,7 @@ function App() {
   </div>
 </section>
 
-<section class="flex items-center justify-center shadow-2xl text-gray-700 bg-gray-700 p-10 m-5 rounded-lg">
+<section class="flex items-center justify-center shadow-2xl text-gray-700 bg-gray-200 p-10 m-5 rounded-lg">
   <div class="w-full px-4 ">
     <div class="grid grid-cols-1 gap-8">
       <div class="flex flex-col justify-center text-center">
@@ -287,7 +302,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-200">Daily Users Per Click</p>
+          <p class="text-gray-900">Daily Users Per Click</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
@@ -299,7 +314,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-200">Daily Users Per Click</p>
+          <p class="text-gray-900">Daily Users Per Click</p>
           <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
@@ -311,7 +326,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-200">Daily Users Per Click</p>
+          <p class="text-gray-900">Daily Users Per Click</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
@@ -323,7 +338,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-200">Daily Users Per Click</p>
+          <p class="text-gray-900">Daily Users Per Click</p>
           <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
@@ -384,45 +399,48 @@ function App() {
   </div>
 </section>
 
-<section id="contact" class="p-8 mt-8 mx-auto">
+<section id="contact" class="p-8 mt-8 mx-auto max-w-5xl">
   <h1 class="text-gray-900 text-4xl font-bold mb-4">Contact Us</h1>
-  <form>
-    <div class="w-full p-2">
-    <div class="relative">
-      <label for="name" class="py-4 text-lg text-gray-900">Name</label>
-      <input type="text" id="name" name="name" required="" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
-    </div>
-    </div>
-    <div class="w-full p-2">
-    <div class="relative">
-      <label for="name" class="py-4 text-lg text-gray-900">Email</label>
-      <input type="email" id="email" name="email" required="" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
-    </div>
-    </div>
-    <div class="w-full p-2">
-    <div class="relative">
-      <label for="name" class="py-4 text-lg text-gray-900">Message</label>
-      <input type="message" id="message" name="message" required="" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
-    </div>
-    </div>
-    <div class="p-2 w-full">
-      <div>
-        <button type="submit" class="flex flex-col text-center text-white bg-gray-900 py-3 px-6 hover:bg-blue-700 font-bold rounded-lg">Send</button>
+  <div class="flex flex-col md:flex-row gap-8">
+    <form class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
+      <div class="w-full p-2">
+        <div class="relative">
+          <label for="name" class="py-4 text-lg text-gray-900">Name</label>
+          <input type="text" id="name" name="name" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+        </div>
       </div>
+      <div class="w-full p-2">
+        <div class="relative">
+          <label for="email" class="py-4 text-lg text-gray-900">Email</label>
+          <input type="email" id="email" name="email" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+        </div>
+      </div>
+      <div class="w-full p-2">
+        <div class="relative">
+          <label for="message" class="py-4 text-lg text-gray-900">Message</label>
+          <input type="text" id="message" name="message" required class="w-full bg-gray-100 rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+        </div>
+      </div>
+      <div class="p-2 w-full">
+        <button type="submit" class="text-center text-gray-900 bg-blue-400 py-3 px-6 hover:bg-blue-500 font-bold rounded-lg">Send</button>
+      </div>
+    </form>
+    <div class="w-full md:w-1/2">
+      <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
+        <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-400 p-4">
+          <h2 class="text-blue-600 font-semibold text-md">Discussion</h2>
+        </div>
+        <form class="pt-12 px-4">
+          <div class="w-full mb-2">
+            <textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400" name="body" placeholder="Your comment" required></textarea>
+          </div>
+          <div class="w-full flex justify-end my-3">
+            <button class="px-4 py-2 text-gray-900 bg-blue-300 font-bold rounded-md">Comment</button>
+          </div>
+        </form>
+      </section>
     </div>
-  </form>
-</section>
-
-<section class="relative rounded-lg border pt-4 mt-10 mb-6 max-w-xl mx-auto">
-  <div class="absolute px-2 top-0 -left-[0.5] rounded-tl-lg rounded-br-lg bg-blue-400 p-8">
-    <h2 class="text-blue-600 font-semibold h-2 text-md">Discussion</h2>
   </div>
-  <form>
-    <div class="w-full px-2 py-6 mb-2 mt-12" ><textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400" name="body" placeholder="Your comment" required=""></textarea></div>
-    <div class="w-full justify-end px-3 my-3">
-      <button class="px-2.5 py-1.5 text-gray-900 bg-blue-300 text-lg rounded-md">Comment</button>
-    </div>
-  </form>
 </section>
 
 <footer id="footer" class="bg-blue-300">
@@ -465,7 +483,7 @@ function App() {
       <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
       <form class="flex">
           <input type="email" placeholder="Your email" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-gray-200 px-4 py-2 rounded-lg">Submit
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-gray-900 font-bold px-4 py-2 rounded-lg">Submit
         </button>
       </form>
     </div>
