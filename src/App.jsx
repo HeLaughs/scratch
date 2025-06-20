@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import hero from './assets/hero-pic2.jpg';
+import hero from './assets/cardy.jpg';
 import card1 from './assets/bry.jpg';
 import stars from './assets/stars-1.svg';
 import star from './assets/stars-5-1.svg';
@@ -39,12 +39,12 @@ function App() {
 
       <div class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src={hero} alt="hero image" class="object-cover object-center w-full h-full opacity-45" />
+          <img src={hero} alt="hero image" class="object-cover object-center w-full h-full opacity-50" />
           <div class="absolute">
             
           </div>
         </div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6 ">
           <h1 class="text-10xl font-bold  mb-8 max-w-full">Everything About Cards <span class="text-blue-500">and</span> Features</h1>
           <p class="text-gray-900 font-bold text-2xl mb-8 max-w-2xl ">Features and services that allow you to create scalable cards.</p>
           
@@ -228,45 +228,45 @@ function App() {
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
+          <h2 class="text-3xl text-blue-300">Users</h2>
           <p class="text-gray-700">Daily Users Per Click</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
+          <h2 class="text-3xl text-blue-300">Users</h2>
           <p class="text-gray-700">Daily Users Per Click</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
+          <h2 class="text-3xl text-blue-300">Users</h2>
           <p class="text-gray-700">Daily Users Per Click</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
+          <h2 class="text-3xl text-blue-300">Users</h2>
           <p class="text-gray-700">Daily Users Per Click</p>
         </div>
       </div>
@@ -350,7 +350,7 @@ function App() {
 <section id="faqs" class="bg-gray-100 py-10">
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center mx-auto max-w-2xl">
-      <h2 class="text-gray-900 font-bold text-3xl">FAQ's</h2>
+      <h2 class="text-gray-900 font-bold text-3xl">Frequently Asked Questions</h2>
     </div>
     <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200">
@@ -400,7 +400,7 @@ function App() {
 </section>
 
 <section id="contact" class="p-8 mt-8 mx-auto max-w-5xl">
-  <h1 class="text-gray-900 text-4xl font-bold mb-4">Contact Us</h1>
+  <h2 class="text-gray-900 text-3xl font-semibold mb-4">Contact Us</h2>
   <div class="flex flex-col md:flex-row gap-8">
     <form class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
       <div class="w-full p-2">
@@ -428,14 +428,14 @@ function App() {
     <div class="w-full md:w-1/2">
       <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
         <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-400 p-4">
-          <h5 class="text-blue-600 font-semibold text-md">Discussion</h5>
+          <h5 class="text-gray-900 font-semibold text-md">Discussion</h5>
         </div>
         <form class="pt-12 px-4">
           <div class="w-full mb-2">
             <textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400" name="body" placeholder="Your comment" required></textarea>
           </div>
           <div class="w-full flex justify-end my-3">
-            <button class="px-4 py-2 text-gray-900 bg-blue-300 font-bold rounded-md">Comment</button>
+            <button class="px-4 py-2 text-gray-900 bg-blue-400 font-bold rounded-md hover:bg-blue-500">Comment</button>
           </div>
         </form>
       </section>
@@ -447,7 +447,7 @@ function App() {
   <div class="px-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4">
     <div class="p-5">
       <h3 class="font-bold text-3xl text-blue-600">Click Me</h3>
-      <p class="text-gray-900 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
+      <p class="text-blue-600 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
      </p>
     </div>
     
