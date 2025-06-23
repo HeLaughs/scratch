@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import './App.css';
 import hero from './assets/cardy.jpg';
-import card1 from './assets/bry.jpg';
+import secure from './assets/secure.jpg';
+import secure2 from './assets/secure2.jpg';
 import stars from './assets/stars-1.svg';
 import star from './assets/stars-5-1.svg';
+import Feature from './assets/Feature.jpg';
+import Feature1 from './assets/security.jpg';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
 
   return (
+    <>
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
       <nav class="flex justify-between items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900 shadow-md w-full">
         <div class="flex items-center font-bold text-3xl">
-          <a href="#">Click Me</a>
+          <a href="#" class="">Click Me</a>
           </div>
         <button
             class="flex flex-col justify-center items-center md:hidden"
@@ -28,7 +32,7 @@ function App() {
           </button>
           
           <div class={`flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:space-x-4 md:static absolute top-20 left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`}>
-            <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a class="rounded-lg font-medium hover:text-gray-100 px-1 py-2" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
             <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#feature" onClick={() => setMenuOpen(false)}>Feature</a>
             <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -45,14 +49,12 @@ function App() {
           </div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6 ">
-          <h1 class="text-10xl font-bold  mb-8 max-w-full">Everything About Cards <span class="text-blue-500">and</span> Features</h1>
+          <h1 class="text-2xl font-bold mt-4  mb-6 max-w-full">Everything About Cards <span class="text-blue-400">and</span> Features</h1>
           <p class="text-gray-900 font-bold text-2xl mb-8 max-w-2xl ">Features and services that allow you to create scalable cards.</p>
           
           <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="get-started#" class="bg-blue-400 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-500 shadow-lg">
-                        Get Started
-                    </a>
-                    <a href="demo#" class="border text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400">View more
+                    <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
+                        Sign-up for privacy
                     </a>
                 </div>
         </div>
@@ -109,40 +111,70 @@ function App() {
                 </div>
             </div>
             <div class="text-center mb-14">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">About Powerful Card Features</h2>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">Secure Cards Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
+
+  <div class="w-full h-full flex flex-col items-center py-10">
+    <div
+      class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
+      <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="feature" />
+
+      <div class="w-full  rounded-lg">
+        <h2 class="text-3xl font-semibold text-gray-900 ">Advanced cards solutions.</h2>
+        <p class="text-md mt-4">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
+          <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-500">Take Control with Spend Limits
+  </button>
+      </div>
+
+    </div>
+    <div
+      class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-6">
+      <div class="w-full p-2 rounded-md">
+        <h2 class="text-3xl font-semibold text-gray-900">Bank-level security.</h2>
+        <p class="text-md mt-4">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
+        <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-500">Take Control with Spend Limits</button>
+      </div>
+      <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" />
+    </div>
+  </div>
+  <div class="px-4 mx-auto max-w-7xl">
+    <div class="text-center">
+      <h3 class="text-blue-400 font-bold text-3xl">How card machines can help you take safer payments</h3>
+    </div>
+    </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-    <h1 class="text-2xl text-gray-900 font-bold z-10">Advanced Cards Solutions</h1>
-    <p class="z-10">Real-time transaction processing with 99.99% uptime guarantee.</p>
-    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Advanced Cards Solutions</h2>
+    <p class="z-10 text-gray-900">Real-time transaction processing with 99.99% uptime guarantee.</p>
+    <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
+  </div>
+  
+  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
+    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h2>
+    <p class="z-10 text-gray-100">Military-grade encryption and fraud detection to protect every transaction.</p>
+    <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-    <h1 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h1>
-    <p class="z-10">Military-grade encryption and fraud detection to protect every transaction.</p>
-    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Smart Synchronization</h2>
+    <p class="z-10 text-gray-100">Automatically sync card data across all your devices and platforms.</p>
+    <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-    <h1 class="text-2xl text-gray-900 font-bold z-10">Smart Synchronization</h1>
-    <p class="z-10">Automatically sync card data across all your devices and platforms.</p>
-    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
-  </div>
-  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={card1} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-40 rounded-2xl" />
-    <h1 class="text-2xl text-gray-900 font-bold z-10">Create. Manage. Scale.</h1>
-    <p class="z-10">Automatically sync card data across all your devices and platforms.</p>
-    <button class="bg-blue-400 p-4 text-gray-100 w-full rounded-lg z-10">Click</button>
+    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Create. Manage. Scale.</h2>
+    <p class="z-10 text-gray-900">Automatically sync card data across all your devices and platforms.</p>
+    <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
 </div>
 
         </section>
 
-<section class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-200 w-full text-center">
-  <h1 class="text-4xl font-extrabold text-black">Why buy with car wow?</h1>
+<section class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-100 w-full text-center">
+  <h2 class="text-4xl font-extrabold text-gray-900">Why secure your cards</h2>
   
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
     <div class="flex flex-col items-center p-6 w-80">
@@ -151,7 +183,7 @@ function App() {
     <path stroke-linecap="round" stroke-linejoin="round"
       d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
   </svg>
-      <h2 class="text-xl font-bold text-black mb-2">Local service and repair</h2>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
       <p class="text-gray-700 text-sm">This is a simple card component. This is a simple card component. This is a simple card component.</p>
     </div>
 
@@ -161,7 +193,7 @@ function App() {
     <path stroke-linecap="round" stroke-linejoin="round"
       d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
   </svg>
-      <h2 class="text-xl font-bold text-black mb-2">LOcal service and repair</h2>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
       <p class="text-gray-700 text-sm">This is a simple card component. This is a simple card component. This is a simple card component.</p>
     </div>
 
@@ -171,7 +203,7 @@ function App() {
     <path stroke-linecap="round" stroke-linejoin="round"
       d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
   </svg>
-      <h2 class="text-xl font-bold text-black mb-2">Local service and repair</h2>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
       <p class="text-gray-700 text-sm">This is a simple card component. This is a simple card component. This is a simple card component.</p>
     </div>
   </div>
@@ -179,7 +211,7 @@ function App() {
 
 <section class="bg-gray-100 w-full flex items-center p-4">
   <div class="mx-auto px-4 pb-6">
-    <div class="grid grid-cols-2 gap-8 text-gray-900">
+    <div class="grid grid-cols-5 gap-8 text-gray-900">
       <a class="flex items-center">
       <svg class="h-18 hover:text-gray-900 dark:hover:text-blue-400" viewBox="0 0 86 29" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
@@ -227,7 +259,7 @@ function App() {
   <div class="container mx-auto px-5 py-24">
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <div class="px-4 py-6">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -238,7 +270,7 @@ function App() {
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <div class="px-4 py-6">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -249,7 +281,7 @@ function App() {
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <div class="px-4 py-6">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -260,7 +292,7 @@ function App() {
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="border-2 border-gray-600 px-4 py-6 rounded-lg">
+        <div class="px-4 py-6">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -273,23 +305,23 @@ function App() {
     </div>
   </div>
 </section>
-
 <section class="flex items-center justify-center shadow-2xl text-gray-700 bg-gray-200 p-10 m-5 rounded-lg">
   <div class="w-full px-4 ">
     <div class="grid grid-cols-1 gap-8">
-      <div class="flex flex-col justify-center text-center">
-        <h1 class="text-4xl font-extrabold">Cards <span class="text-blue-500">with </span>Features</h1>
-        <p class="mt-4 font-medium text-gray-900 text-balance items-center">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
-        <div class="mt-6 flex flex-wrap gap-6">
-          <a href="get-cards#" class="p-3 rounded-sm grow border text-blue-400 font-bold uppercase text-center ">Get cards</a>
-          <a href="more-cards#" class="p-3 rounded-sm grow border text center text-white bg-blue-400 uppercase ">More cards</a>
+      <div class="flex flex-col">
+        <h2 class="text-4xl font-extrabold">Cards <span class="text-blue-500">with </span>Features</h2>
+        <p class="mt-4 font-medium text-gray-900 items-center">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
+        <div class="mt-6 flex flex-wrap gap-6 w-fit">
+          <a href="get-cards#" class="p-3 rounded-lg grow border w-fit text-blue-400 font-bold text-center ">Get cards</a>
+          <a href="more-cards#" class="p-3 rounded-lg grow border w-fit text center text-gray-100 bg-blue-400">More cards</a>
         </div>
       </div>
       <div class="relative flex items-center">
         
-        <div class="relative bg-gray-300 p-4 text-center grow rounded-xl">
-          <h2 class="text-2xl font-bold uppercase text-blue-400 ">About Cards Features</h2>
-          <p class="mt-1 font-light text-gray-900">Showcase of the products and services to your prospective clients.</p>
+        <div class="relative p-4 text-center grow rounded-xl">
+          <h2 class="text-2xl font-bold text-blue-400 ">About Cards Features</h2> <blockquote class="mt-6 pl-6 text-2xl italic">
+      &quot;After all, security used to be an inconvenience, now it's essential.&quot;
+    </blockquote>
         </div>
       </div>
       <div class="container mx-auto px-5 py-24">
@@ -346,8 +378,7 @@ function App() {
   </div>
     </div>
   </div>
-</section>                                                                                           
-<section id="faqs" class="bg-gray-100 py-10">
+</section>                                                                                     <section id="faqs" class="bg-gray-100 py-10">
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center mx-auto max-w-2xl">
       <h2 class="text-gray-900 font-bold text-3xl">Frequently Asked Questions</h2>
@@ -405,14 +436,13 @@ function App() {
     <form class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
       <div class="w-full p-2">
         <div class="relative">
-          <label for="name" class="py-4 text-lg text-gray-900">Name</label>
-          <input type="text" id="name" name="name" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+          
+        <label for="email" class="py-4 text-lg text-gray-900 placeholder-gray-400 focus:placeholder-blue-300">Email</label>
+        <input type="text" id="email" name="email" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
       </div>
       <div class="w-full p-2">
         <div class="relative">
-          <label for="email" class="py-4 text-lg text-gray-900">Email</label>
-          <input type="email" id="email" name="email" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
       </div>
       <div class="w-full p-2">
@@ -432,7 +462,7 @@ function App() {
         </div>
         <form class="pt-12 px-4">
           <div class="w-full mb-2">
-            <textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400" name="body" placeholder="Your comment" required></textarea>
+            <textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400 focus:placeholder-blue-300" name="body" placeholder="Your comment" required></textarea>
           </div>
           <div class="w-full flex justify-end my-3">
             <button class="px-4 py-2 text-gray-900 bg-blue-400 font-bold rounded-md hover:bg-blue-500">Comment</button>
@@ -444,13 +474,12 @@ function App() {
 </section>
 
 <footer id="footer" class="bg-blue-300">
-  <div class="px-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4">
+  <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
     <div class="p-5">
       <h3 class="font-bold text-3xl text-blue-600">Click Me</h3>
       <p class="text-blue-600 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
      </p>
     </div>
-    
     <div class="p-5">
       <div class="uppercase font-bold text-blue-600">Products</div>
       <a class="my-3 block" href="support#">Virtual cards</a>
@@ -458,7 +487,6 @@ function App() {
       <a class="my-3 block" href="docs#">Business cards</a>
       <a class="my-3 block" href="help-site#">Loyalty cards</a>
     </div>
-    
     <div class="p-5">
       <div class="uppercase font-bold text-blue-600">Resources</div>
       <a class="my-3 block" href="support#">Support center</a>
@@ -476,26 +504,27 @@ function App() {
       <div class="uppercase text-blue-600 font-bold">Contact Us</div>
       <a class="my-3 block" href="contact#">+000 777 3930, Universe.VA</a>
       <a class="my-3 block" href="#">clickme@company.com</a>
-      <a class="my-3 block" href="info#">info.us</a>
-      
+      <a class="my-3 block" href="info#">info.us</a> 
     </div>
-    {/* <div class="mt-6">
+    
+    <div class="mt-6">
       <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
       <form class="flex">
           <input type="email" placeholder="Your email" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-gray-900 font-bold px-4 py-2 rounded-lg">Submit
+        <button type="submit" class="bg-blue-400 hover:bg-blue-600 text-gray-100 font-bold px-4 py-2 rounded-lg">Submit
         </button>
       </form>
-    </div> */}
+    </div>
   </div>
   <div class="bg-gray-200 pt-2">
-      <div class="flex flex-col max-w-screen items-center mx-auto pt-5 px-3 pb-5 border-t text-gray-900">
+      <div class="flex flex-col max-w-screen items-center px-3 pb-2 text-gray-900">
         <div class="my-5">Click Me Copyright 2025. All Rights Reserved.</div>
       </div>
     </div>
 </footer>
     </main>
     </body>
+    </>
   )
 };
 

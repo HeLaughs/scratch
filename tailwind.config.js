@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      placeholderColor: ['hover', 'active'],
+    },
     fontFamily: {
       'sans': ['Rubik', 'sans'],
     },
