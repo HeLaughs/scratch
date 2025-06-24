@@ -265,7 +265,18 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-300">Users</h2>
+          <h2 class="text-3xl text-blue-300">7M+</h2>
+          <p class="text-gray-700">Virtual cards secured</p>
+        </div>
+      </div>
+      <div class="p-4 w-full md:w-1/4 sm:w-1/2">
+        <div class="px-4 py-6">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="text-3xl text-blue-300">380K</h2>
           <p class="text-gray-700">Daily Users Per Click</p>
         </div>
       </div>
@@ -276,8 +287,8 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-300">Users</h2>
-          <p class="text-gray-700">Daily Users Per Click</p>
+          <h2 class="text-3xl text-blue-300">100%</h2>
+          <p class="text-gray-700">Clients satisfactory</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -287,19 +298,8 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-300">Users</h2>
-          <p class="text-gray-700">Daily Users Per Click</p>
-        </div>
-      </div>
-      <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="px-4 py-6">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-300 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
-          </svg>
-          <h2 class="text-3xl text-blue-300">Users</h2>
-          <p class="text-gray-700">Daily Users Per Click</p>
+          <h2 class="text-3xl text-blue-300">$5B</h2>
+          <p class="text-gray-700">Market Demand</p>
         </div>
       </div>
     </div>
@@ -333,8 +333,8 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-900">Daily Users Per Click</p>
+          <h2 class="text-3xl text-blue-500">15K+</h2>
+          <p class="text-gray-900">Global Presence</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
@@ -345,8 +345,8 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-900">Daily Users Per Click</p>
+          <h2 class="text-3xl text-blue-500">700+</h2>
+          <p class="text-gray-900">Security Standard</p>
           <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
@@ -357,8 +357,8 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-900">Daily Users Per Click</p>
+          <h2 class="text-3xl text-blue-500">$243M</h2>
+          <p class="text-gray-900">Certified Products</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
@@ -369,8 +369,8 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-500">Users</h2>
-          <p class="text-gray-900">Daily Users Per Click</p>
+          <h2 class="text-3xl text-blue-500">900</h2>
+          <p class="text-gray-900">Data Clusters</p>
           <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
@@ -489,7 +489,7 @@ function App() {
     </div>
     <div class="p-5">
       <div class="uppercase font-bold text-blue-600">Resources</div>
-      <a class="my-3 block" href="support#">Support center</a>
+      <a href="services#" class="block my-3">Services</a>
       <a class="my-3 block" href="terms#">Tutorials</a>
       <a class="my-3 block" href="docs#">Documentation</a>
       <a class="my-3 block" href="help-site#">Help site</a>
@@ -518,7 +518,7 @@ function App() {
   </div>
   <div class="bg-gray-200 pt-2">
       <div class="flex flex-col max-w-screen items-center px-3 pb-2 text-gray-900">
-        <div class="my-5">Click Me Copyright 2025. All Rights Reserved.</div>
+        <div class="my-5">2025 Copyright Click Me. All Rights Reserved.</div>
       </div>
     </div>
 </footer>

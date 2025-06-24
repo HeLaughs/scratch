@@ -67,7 +67,6 @@ footer p {
   line-height: 1.7;
 }
 
-
 @media (max-width: 768px) {
   .flex-col.items-center p {
     font-size: 0.9rem;
