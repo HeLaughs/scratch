@@ -16,9 +16,9 @@ function App() {
     <>
     <body class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
-      <nav class="flex justify-between items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900 shadow-md w-full">
+      <nav class="flex justify-between items-center bg-blue-300 p-6 sticky top-0 z-50 text-gray-900 shadow-md w-full" aria-label="Main navigation">
         <div class="flex items-center font-bold text-3xl">
-          <a href="#" class="">Click Me</a>
+          <a href="#" class="text-3xl font-extrabold">Click Me</a>
           </div>
         <button
             class="flex flex-col justify-center items-center md:hidden"
@@ -31,7 +31,7 @@ function App() {
 
           </button>
           
-          <div class={`flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:space-x-4 md:static absolute top-20 left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`}>
+          <div class={`flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:space-x-4 md:static absolute top-20 left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`} style={{ transition: 'all 0.3s ease-in-out', top: '100%' }}>
             <a class="rounded-lg font-medium hover:text-gray-100 px-1 py-2" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
             <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a class="rounded-lg font-medium hover:text-blue-800 px-4 py-2" href="#feature" onClick={() => setMenuOpen(false)}>Feature</a>
@@ -43,7 +43,7 @@ function App() {
 
       <div class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src={hero} alt="hero image" class="object-cover object-center w-full h-full opacity-50" />
+          <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-50" />
           <div class="absolute">
             
           </div>
@@ -114,7 +114,6 @@ function App() {
                     <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">Secure Cards Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
-
   <div class="w-full h-full flex flex-col items-center py-10">
     <div
       class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
@@ -122,7 +121,7 @@ function App() {
 
       <div class="w-full  rounded-lg">
         <h2 class="text-3xl font-semibold text-gray-900 ">Advanced cards solutions.</h2>
-        <p class="text-md mt-4">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
+        <p class="text-md mt-4 text-gray-900">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
           <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-500">Take Control with Spend Limits
   </button>
       </div>
@@ -132,7 +131,7 @@ function App() {
       class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-6">
       <div class="w-full p-2 rounded-md">
         <h2 class="text-3xl font-semibold text-gray-900">Bank-level security.</h2>
-        <p class="text-md mt-4">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
+        <p class="text-md mt-4 text-gray-900">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
         <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-500">Take Control with Spend Limits</button>
       </div>
       <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" />
@@ -150,7 +149,6 @@ function App() {
     <p class="z-10 text-gray-900">Real-time transaction processing with 99.99% uptime guarantee.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
-  
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
     <h2 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h2>
@@ -170,9 +168,7 @@ function App() {
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
 </div>
-
-        </section>
-
+</section>
 <section class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-100 w-full text-center">
   <h2 class="text-4xl font-extrabold text-gray-900">Why secure your cards</h2>
   
@@ -265,6 +261,7 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
+          <img src="./assets/security.jpg" alt="security" />
           <h2 class="text-3xl text-blue-300">7M+</h2>
           <p class="text-gray-700">Virtual cards secured</p>
         </div>
@@ -305,7 +302,7 @@ function App() {
     </div>
   </div>
 </section>
-<section class="flex items-center justify-center shadow-2xl text-gray-700 bg-gray-200 p-10 m-5 rounded-lg">
+<section class="flex items-center justify-center shadow-2xl text-gray-700 bg-gray-100 p-10 m-5 rounded-lg">
   <div class="w-full px-4 ">
     <div class="grid grid-cols-1 gap-8">
       <div class="flex flex-col">
@@ -438,7 +435,7 @@ function App() {
         <div class="relative">
           
         <label for="email" class="py-4 text-lg text-gray-900 placeholder-gray-400 focus:placeholder-blue-300">Email</label>
-        <input type="text" id="email" name="email" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+        <input type="text" id="email" name="email" aria-required="true" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
       </div>
       <div class="w-full p-2">
@@ -473,10 +470,10 @@ function App() {
   </div>
 </section>
 
-<footer id="footer" class="bg-blue-300">
+<footer role="contentinfo" id="footer" aria-label="Footer" class="bg-blue-300">
   <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
     <div class="p-5">
-      <h3 class="font-bold text-3xl text-blue-600">Click Me</h3>
+      <h1 class="font-bold text-2xl text-blue-600">Click Me</h1>
       <p class="text-blue-600 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
      </p>
     </div>
@@ -510,7 +507,7 @@ function App() {
     <div class="mt-6">
       <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
       <form class="flex">
-          <input type="email" placeholder="Your email" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
+          <input id="email" type="email" placeholder="Enter email" aria-required="true" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
         <button type="submit" class="bg-blue-400 hover:bg-blue-600 text-gray-100 font-bold px-4 py-2 rounded-lg">Submit
         </button>
       </form>

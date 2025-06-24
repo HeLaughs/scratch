@@ -1,12 +1,12 @@
 .custom-icon {
   width: 48rem; 
   height: 6rem;
-  color: rgb(56, 124, 203); 
+  color: rgb(88, 164, 250); 
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  color: gray;
+  font-family: 'Roboto', system-ui, sans-serif;
+  color: white;
   line-height: 1.6;
 }
 
@@ -55,10 +55,15 @@ nav a {
   margin-bottom: 0.5rem;
 }
 
-button, 
-a[class*="bg-blue"] {
+button, a[class*="bg-blue"] {
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
