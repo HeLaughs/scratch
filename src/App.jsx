@@ -435,7 +435,7 @@ function App() {
         <div class="relative">
           
         <label for="email" class="py-4 text-lg text-gray-900 placeholder-gray-400 focus:placeholder-blue-300">Email</label>
-        <input type="text" id="email" name="email" aria-required="true" required class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+        <input type="text" id="email" name="email" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
       </div>
       <div class="w-full p-2">
@@ -445,7 +445,7 @@ function App() {
       <div class="w-full p-2">
         <div class="relative">
           <label for="message" class="py-4 text-lg text-gray-900">Message</label>
-          <input type="text" id="message" name="message" required class="w-full bg-gray-100 rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+          <input type="text" id="message" name="message" class="w-full bg-gray-100 rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
       </div>
       <div class="p-2 w-full">
@@ -470,7 +470,7 @@ function App() {
   </div>
 </section>
 
-<footer role="contentinfo" id="footer" aria-label="Footer" class="bg-blue-300">
+<footer id="footer" aria-label="Footer" class="bg-blue-300">
   <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
     <div class="p-5">
       <h1 class="font-bold text-2xl text-blue-600">Click Me</h1>
