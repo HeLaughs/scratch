@@ -43,13 +43,11 @@ function App() {
 
       <div class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-50" />
-          <div class="absolute">
-            
-          </div>
+          <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" />
+          <div class="absolute"></div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6 ">
-          <h1 class="text-2xl font-bold mt-4  mb-6 max-w-full">Everything About Cards <span class="text-blue-400">and</span> Features</h1>
+          <h1 class="text-6xl font-bold mt-12  mb-6 max-w-full">Advanced Cards <span class="text-blue-400">and</span> Features</h1>
           <p class="text-gray-900 font-bold text-2xl mb-8 max-w-2xl ">Features and services that allow you to create scalable cards.</p>
           
           <div class="flex flex-col sm:flex-row gap-4">

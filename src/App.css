@@ -15,8 +15,8 @@ nav .flex-col a {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.15;
+  font-size: clamp(4rem, 10vw, 10rem);
+  line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
