@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { DiRedhat, DiCreativecommonsBadge } from "react-icons/di";
 import hero from './assets/cardy.jpg';
 import secure from './assets/secure.jpg';
 import secure2 from './assets/secure2.jpg';
@@ -7,6 +8,7 @@ import stars from './assets/stars-1.svg';
 import star from './assets/stars-5-1.svg';
 import Feature from './assets/Feature.jpg';
 import Feature1 from './assets/security.jpg';
+import card2 from './assets/card2.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +20,7 @@ function App() {
     <main class="flex-grow">
       <nav class="flex justify-between items-center bg-blue-300 p-2 sticky top-0 z-10 text-gray-900 shadow-md w-full" aria-label="Main navigation">
         <div class="flex font-bold">
+        <DiRedhat size={50} color="white" />
           <a href="#" class="text-4xl">Click Me</a>
           </div>
         <button
@@ -36,11 +39,8 @@ function App() {
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#feature" onClick={() => setMenuOpen(false)}>Feature</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-            {/* <button class="text-gray-900 rounded-lg text-center bg-blue-500 hover:bg-blue-400 mt-2 md:mt-0">Sign-up</button> */}
           </div>
-        
       </nav>
-
       <div class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
           <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" />
@@ -49,7 +49,6 @@ function App() {
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
           <h1 class="text-6xl font-bold mt-2 mb-6 max-w-full">Advanced Cards <span class="text-blue-400">and</span> Features.</h1>
           <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Features and services that allow you to create scalable cards.</p>
-          
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
                         Sign-up for privacy
@@ -57,14 +56,12 @@ function App() {
                 </div>
         </div>
       </div>
-
       <section id="about" class="py-18 px-2 bg-gray-200">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">About <span class="text-blue-400">Secure Cards </span> Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
-                
                 <div class="grid grid-cols-1 gap-8">
                     <div class="bg-blue-300 rounded-lg p-8">
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">Advanced Security</h3>
@@ -192,11 +189,12 @@ function App() {
     </div>
 
     <div class="flex flex-col items-center p-6 w-80">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      <DiCreativecommonsBadge />
+    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
     stroke-width="1.5" stroke="currentColor" class="custom-icon">
     <path stroke-linecap="round" stroke-linejoin="round"
       d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
-  </svg>
+  </svg> */}
       <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
       <p class="text-gray-900 text-sm leading-relaxed">This is a simple card component. This is a simple card component. This is a simple card component.</p>
     </div>
@@ -253,19 +251,15 @@ function App() {
   <div class="container mx-auto px-5 py-24">
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="px-4 py-6">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
-          </svg>
-          {/* <img src="./assets/card2.png" alt="security" /> */}
+        <div class="px-2 py-4">
+          <div class="mb-3 w-12 h-12 items-center">
+            <img src={card2} alt="security" /></div>
           <h2 class="text-3xl text-blue-400">7M+</h2>
           <p class="text-gray-700">Virtual cards secured</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="px-4 py-6">
+        <div class="px-2 py-4">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -276,7 +270,7 @@ function App() {
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="px-4 py-6">
+        <div class="px-2 py-4">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -287,7 +281,7 @@ function App() {
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
-        <div class="px-4 py-6">
+        <div class="px-2 py-4">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -447,13 +441,13 @@ function App() {
         </div>
       </div>
       <div class="p-2 w-full">
-        <button type="submit" class="text-center text-gray-900 bg-blue-300 py-3 px-4 hover:bg-blue-400 font-bold rounded-lg">Send</button>
+        <button type="submit" class="text-center text-gray-900 bg-blue-300 py-2 px-4 hover:bg-blue-400 font-bold rounded-lg">Send</button>
       </div>
     </form>
     <div class="w-full md:w-1/2">
       <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
         <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-300 p-4">
-          <h5 class="text-gray-900 font-semibold text-md">Discussion</h5>
+          <h5 class="text-gray-900 px-2 font-semibold text-md">Discussion</h5>
         </div>
         <form class="pt-12 px-4">
           <div class="w-full mb-2">
@@ -471,6 +465,7 @@ function App() {
 <footer id="footer" aria-label="Footer" class="bg-blue-300">
   <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
     <div class="p-5">
+    <DiRedhat size={50} color="white" />
       <h3 class="font-bold text-2xl text-blue-500">Click Me</h3>
       <p class="text-blue-500 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
      </p>
