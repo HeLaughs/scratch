@@ -43,12 +43,12 @@ function App() {
       </nav>
       <div class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
-          <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" />
+          <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" decoding="async" />
           <div class="absolute"></div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
           <h1 class="text-6xl font-bold mt-2 mb-6 max-w-full">Advanced Cards <span class="text-blue-400">and</span> Features.</h1>
-          <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Features and services that allow you to create scalable cards.</p>
+          {/* <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Features and services that allow you to create scalable cards.</p> */}
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
                         Sign-up for privacy
@@ -112,15 +112,13 @@ function App() {
   <div class="w-full h-full flex flex-col items-center py-10">
     <div
       class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
-      <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="feature" />
-
+      <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="feature" decoding="async" />
       <div class="w-full  rounded-lg">
         <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Advanced cards solutions.</h2>
         <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
           <button class="bg-blue-300 text-center text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-400">Take Control with Spend Limits
   </button>
       </div>
-
     </div>
     <div
       class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-6">
@@ -129,7 +127,7 @@ function App() {
         <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
         <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400">Take Control with Spend Limits</button>
       </div>
-      <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" />
+      <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
     </div>
   </div>
   <div class="px-4 mx-auto max-w-7xl">
@@ -139,25 +137,25 @@ function App() {
     </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
     <h2 class="text-2xl text-gray-900 font-bold z-10">Advanced Cards Solutions</h2>
     <p class="z-10 text-gray-900">Real-time transaction processing with 99.99% uptime guarantee.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
     <h2 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h2>
     <p class="z-10 text-gray-100">Military-grade encryption and fraud detection to protect every transaction.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
     <h2 class="text-2xl text-gray-900 font-bold z-10">Smart Synchronization</h2>
     <p class="z-10 text-gray-100">Automatically sync card data across all your devices and platforms.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" />
+    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
     <h2 class="text-2xl text-gray-900 font-bold z-10">Create. Manage. Scale.</h2>
     <p class="z-10 text-gray-900">Automatically sync card data across all your devices and platforms.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
@@ -418,14 +416,12 @@ function App() {
     </div>
   </div>
 </section>
-
 <section id="contact" class="p-8 mt-8 mx-auto max-w-5xl">
   <h2 class="text-gray-900 text-3xl font-semibold mb-4">Contact Us</h2>
   <div class="flex flex-col md:flex-row gap-8">
     <form class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
       <div class="w-full p-2">
-        <div class="relative">
-          
+        <div class="relative">  
         <label for="email" class="py-4 text-lg text-gray-900 placeholder-gray-400 focus:placeholder-blue-300">Email</label>
         <input type="text" id="email" name="email" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
@@ -461,13 +457,12 @@ function App() {
     </div>
   </div>
 </section>
-
 <footer id="footer" aria-label="Footer" class="bg-blue-300">
   <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
     <div class="p-5">
     <DiRedhat size={50} color="white" />
       <h3 class="font-bold text-2xl text-blue-500">Click Me</h3>
-      <p class="text-blue-500 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
+      <p class="text-gray-100 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
      </p>
     </div>
     <div class="p-5">
@@ -496,7 +491,6 @@ function App() {
       <a class="my-3 block hover:text-gray-100" href="#">clickme@company.com</a>
       <a class="my-3 block hover:text-gray-100" href="info#">info.us</a> 
     </div>
-    
     <div class="mt-6">
       <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
       <form class="flex">
@@ -508,7 +502,7 @@ function App() {
   </div>
   <div class="bg-gray-200 pt-2">
       <div class="flex flex-col max-w-screen items-center px-2 pb-1 text-gray-900">
-        <div class="my-5">2025 Copyright Click Me. All Rights Reserved.</div>
+        <div class="my-5">® 2025 Copyright Click Me. All Rights Reserved.</div>
       </div>
     </div>
 </footer>
