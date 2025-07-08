@@ -6,12 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      placeholderColor: ['hover', 'active'],
-    },
-    fontFamily: {
-      'sans': ['Rubik', 'sans'],
-    },
-  },
-  plugins: [],
+      fontFamily: {
+        sans: ['Outfit', 'sans-serif'],
+      }
+    }
+  }
 }
-

@@ -12,7 +12,7 @@ import card2 from './assets/card2.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+// Tailwind CSS configuration should be defined in a separate file (e.g., tailwind.config.js) or in the global scope outside the React component.
 
   return (
     <>
