@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { DiRedhat } from "react-icons/di";
 import hero from './assets/cardy.jpg';
@@ -10,10 +10,25 @@ import Feature from './assets/Feature.jpg';
 import Feature1 from './assets/security.jpg';
 import card2 from './assets/card2.png';
 
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 300);
+    };
 
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -29,26 +44,24 @@ function App() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span class="block w-6 h-0.5 bg-gray-900 mb-1"></span>
-            <span class="block w-6 h-0.5 bg-gray-900 mb-1"></span>
-            <span class="block w-6 h-0.5 bg-gray-900"></span>
-
+            <span class={`block w-6 h-0.5 bg-gray-900 mb-1 transition-transform ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+            <span class={`block w-6 h-0.5 bg-gray-900 mb-1 ${menuOpen ? 'opacity-0' : ''}`}></span>
+            <span class={`block w-6 h-0.5 bg-gray-900 transition-transform ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
           </button>
           
-          <div class={`flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:space-x-4 md:static absolute top-20 left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`} style={{ transition: 'all 0.3s ease-in-out', top: '100%' }}>
+          <div class={`flex flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:flex md:space-x-4 md:static absolute top-full left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`} style={{ transition: 'all 0.3s ease-in-out', top: '100%' }}>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#feature" onClick={() => setMenuOpen(false)}>Feature</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </div>
       </nav>
-      <div class="relative text-gray-900 h-screen overflow-hidden">
+      <div id="home" class="relative text-gray-900 h-screen overflow-hidden">
         <div class="absolute inset-0">
           <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" decoding="async" />
-          <div class="absolute"></div>
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-6xl font-bold mt-2 mb-6 max-w-full">Advanced Cards <span class="text-blue-400">and</span> Features.</h1>
+          <h1 class="text-6xl md:text-8xl font-bold mt-2 mb-6 max-w-full">Advanced Cards <span class="text-blue-400">and</span> Features.</h1>
           {/* <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Features and services that allow you to create scalable cards.</p> */}
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
@@ -163,7 +176,7 @@ function App() {
   </div>
 </div>
 </section>
-<section class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-100 w-full text-center">
+<section id="features" class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-100 w-full text-center">
   <h2 class="text-4xl font-extrabold text-gray-900">Why <span class='text-blue-400'>secure</span> your cards?</h2>
   
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
@@ -197,9 +210,7 @@ function App() {
       <p class="text-gray-900 text-sm leading-relaxed">This is a simple card component. This is a simple card component. This is a simple card component.</p>
     </div>
   </div>
-</section>
-
-<section class="bg-gray-100 w-full flex items-center p-4">
+  <div class="bg-gray-100 w-full flex items-center p-4">
   <div class="mx-auto px-4 pb-6">
     <div class="grid grid-cols-5 gap-8 text-gray-900">
       <a class="flex items-center">
@@ -244,8 +255,8 @@ function App() {
       </a>
     </div>
   </div>
-</section>
-<section id="feature" class="text-blue-400 bg-gray-100">
+</div>
+<div class="text-blue-400 bg-gray-100">
   <div class="container mx-auto px-5 py-24">
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -291,8 +302,8 @@ function App() {
       </div>
     </div>
   </div>
-</section>
-<section class="flex items-center justify-center shadow-2xl text-gray-900 bg-gray-100 p-10 m-5 rounded-lg">
+</div>
+<div class="flex items-center justify-center shadow-2xl text-gray-900 bg-gray-100 p-10 m-5 rounded-lg">
   <div class="w-full px-4 ">
     <div class="grid grid-cols-1 gap-8">
       <div class="flex flex-col">
@@ -365,7 +376,9 @@ function App() {
   </div>
     </div>
   </div>
-</section>                                                                            <section id="faqs" class="bg-gray-100 py-10">
+</div>
+</section>
+                                             <section id="faqs" class="bg-gray-100 py-10">
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center mx-auto max-w-2xl">
       <h2 class="text-gray-900 font-bold text-3xl">Frequently Asked Questions</h2>
@@ -503,6 +516,30 @@ function App() {
   <div class="bg-gray-200 pt-2">
       <div class="flex flex-col max-w-screen items-center px-2 pb-1 text-gray-900">
         <div class="my-5">® 2025 Copyright Click Me. All Rights Reserved.</div>
+    <button
+          onClick={scrollToTop}
+          className={`fixed bottom-6 right-6 z-50 bg-blue-300 text-gray-900 p-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-110 ${
+            showScrollButton 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-10 pointer-events-none'
+          }`}
+          aria-label="Scroll to top"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-6 w-6" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M5 15l7-7 7 7" 
+            />
+          </svg>
+        </button>
       </div>
     </div>
 </footer>
