@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-    <body class="min-h-screen flex flex-col scroll-smooth">
+    <div class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
       <nav class="flex justify-between items-center bg-blue-300 p-2 fixed top-0 z-10 text-gray-900 shadow-md w-full" aria-label="Main navigation">
         <div class="flex font-bold">
@@ -66,8 +66,8 @@ function App() {
           <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" decoding="async" />
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-6xl md:text-8xl font-bold mt-2 mb-6 max-w-full">Premium <span class="text-blue-400 italic">ClickSafe</span> Cards.</h1>
-          <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
+          <h1 class="text-5xl md:text-7xl font-bold mt-2 mb-6 max-w-full">Premium <span class="text-blue-300 italic">ClickSafe</span> Cards.</h1>
+          <p class="text-gray-900 font-bold text-3xl mb-8 max-w-2xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
                         Get ClickSafe
@@ -75,15 +75,15 @@ function App() {
                 </div>
         </div>
       </div>
-      <section id="about" class="py-18 px-2 bg-gray-200">
+      <section id="about" class="py-18 px-2 bg-gray-100">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">ClickSafe <span class="text-blue-400">Secure Cards </span> Features</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">ClickSafe <span class="text-blue-400">Secure Cards </span> Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-8">
                     <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Platinum Credit Card</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Platinum Credit Card</h3>
                         <p class="text-gray-900 mb-4">Premium benefits with travel rewards and concierge service.</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
@@ -93,7 +93,7 @@ function App() {
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Business Expense Card</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Business Expense Card</h3>
                         <p class="text-gray-900 mb-4">Real-time transaction with smart spending controls and expense reporting</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
@@ -103,7 +103,7 @@ function App() {
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Virtual Debit Card</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Virtual Debit Card</h3>
                         <p class="text-gray-900 mb-4">Automatic instant digital card for online purchases with enhanced security.</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
@@ -113,7 +113,7 @@ function App() {
       </a>
      </div>
        <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Rewards Mastercard</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Rewards Mastercard</h3>
                         <p class="text-gray-900 mb-4">Earn cashback on every purchase with premium benefits.</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
@@ -125,16 +125,16 @@ function App() {
                 </div>
             </div>
             <div class="text-center mb-14">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">ClickSafe Security Features</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 mt-8">ClickSafe Security Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
                 </div>
   <div class="w-full h-full flex flex-col items-center py-10">
     <div
       class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
-      <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="feature" decoding="async" />
+      <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="Contactless payment technology" decoding="async" />
       <div class="w-full  rounded-lg">
-        <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Advanced contactless technology</h2>
-        <p class="text-md block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
+        <h2 class="text-2xl font-semibold text-gray-900 items-center md:text-4xl">Advanced contactless technology.</h2>
+        <p class="block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
           <button class="bg-blue-300 text-center text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-400">Explore ClickSafe
   </button>
       </div>
@@ -143,7 +143,7 @@ function App() {
       class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-6">
       <div class="w-full p-2 rounded-md">
         <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Bank-level security.</h2>
-        <p class="text-md block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
+        <p class="block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
         <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400">Security Features</button>
       </div>
       <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
@@ -156,37 +156,37 @@ function App() {
     </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Global Acceptance</h2>
+    <img src={secure2} alt="Global card acceptance" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
+    <h2 class="text-xl text-gray-900 font-bold z-10">Global Acceptance</h2>
     <p class="z-10 text-gray-900">Accepted at millions of locations worldwide with real-time currency conversion.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Instant Alerts</h2>
+    <h2 class="text-xl text-gray-900 font-bold z-10">Instant Alerts</h2>
     <p class="z-10 text-gray-100">Add your card to Apple Pay, Google Pay, and Samsung Pay.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Digital Wallet Integration</h2>
+    <h2 class="text-xl text-gray-900 font-bold z-10">Digital Wallet Integration</h2>
     <p class="z-10 text-gray-100">Real-time notifications for every transaction on your card.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Card Controls</h2>
+    <h2 class="text-xl text-gray-900 font-bold z-10">Card Controls</h2>
     <p class="z-10 text-gray-900">Freeze/unfreeze, set spending limits, and manage locations.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
 </div>
 </section>
 <section id="features" class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-100 w-full text-center">
-  <h2 class="text-4xl font-extrabold text-gray-900">Why <span class='text-blue-400'>choose</span> ClickSafe?</h2>
+  <h2 class="text-3xl font-extrabold text-gray-900">Why <span class='text-blue-400'>choose</span> ClickSafe?</h2>
   
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
     <div class="flex flex-col items-center p-6 w-80">
-  <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
+  <img src={badge} alt="Zero fraud liability badge" class="rounded-2xl" decoding="async" />
       <h3 class="text-xl font-bold text-gray-900 mb-2">Zero Fraud Liability</h3>
       <p class="text-gray-900 text-sm leading-relaxed">You're not responsible for unauthorized transactions with our advanced security measures.</p>
     </div>
@@ -253,8 +253,8 @@ function App() {
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-          <div class="mb-3 w-12 h-12 items-center">
-            <img src={card2} alt="security" /></div>
+          <div class="mb-3 w-12 h-12 items-center mx-auto">
+            <img src={card2} alt="Virtual cards issued" /></div>
           <h2 class="text-3xl text-blue-400">7M+</h2>
           <p class="text-gray-700">Virtual-Cards Issued</p>
         </div>
@@ -543,7 +543,7 @@ function App() {
     </div>
 </footer>
     </main>
-    </body>
+    </div>
     </>
   )
 };
