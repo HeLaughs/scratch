@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { DiRedhat } from "react-icons/di";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import hero from './assets/cardy.jpg';
 import secure from './assets/secure.jpg';
 import secure2 from './assets/secure2.jpg';
@@ -30,6 +32,8 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  AOS.init();
 
   return (
     <>
