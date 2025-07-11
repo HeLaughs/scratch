@@ -62,7 +62,7 @@ function App() {
           <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" decoding="async" />
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-6xl md:text-8xl font-bold mt-2 mb-6 max-w-full">Premium <span class="text-blue-400">ClickSafe</span> Cards.</h1>
+          <h1 class="text-6xl md:text-8xl font-bold mt-2 mb-6 max-w-full">Premium <span class="text-blue-400 italic">ClickSafe</span> Cards.</h1>
           <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
@@ -130,7 +130,7 @@ function App() {
       <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="feature" decoding="async" />
       <div class="w-full  rounded-lg">
         <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Advanced contactless technology</h2>
-        <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
+        <p class="text-md block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
           <button class="bg-blue-300 text-center text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-400">Explore ClickSafe
   </button>
       </div>
@@ -139,7 +139,7 @@ function App() {
       class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-6">
       <div class="w-full p-2 rounded-md">
         <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Bank-level security.</h2>
-        <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
+        <p class="text-md block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
         <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400">Security Features</button>
       </div>
       <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
@@ -418,7 +418,7 @@ function App() {
   </div>
 </section>
 <section id="contact" class="p-8 mt-8 mx-auto max-w-5xl">
-  <h2 class="text-gray-900 text-3xl font-semibold mb-4">Card Support</h2>
+  <h2 class="text-gray-900 text-3xl font-semibold mb-4">ClickSafe Support</h2>
   <div class="flex flex-col md:flex-row gap-8">
     <form class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
       <div class="w-full p-2">
@@ -450,7 +450,7 @@ function App() {
     <div class="w-full md:w-1/2">
       <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
         <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-300 p-4">
-          <h5 class="text-gray-900 px-2 font-semibold text-md">Card Support</h5>
+          <h5 class="text-gray-900 px-2 font-semibold text-md">ClickSafe Support</h5>
         </div>
           <div class="pt-12 px-4">
           <p class="text-gray-900 mb-4">24/7 Customer Support:</p>
@@ -461,8 +461,6 @@ function App() {
             <button class="px-4 py-2 text-gray-900 bg-blue-300 font-bold rounded-md hover:bg-blue-400">Chat Now</button>
           </div>
         </div>
-        
-          
       </section>
     </div>
   </div>
