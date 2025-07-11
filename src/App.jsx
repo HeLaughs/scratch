@@ -9,6 +9,7 @@ import star from './assets/stars-5-1.svg';
 import Feature from './assets/Feature.jpg';
 import Feature1 from './assets/security.jpg';
 import card2 from './assets/card2.png';
+import badge from './assets/badge.jpg';
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <nav class="flex justify-between items-center bg-blue-300 p-2 fixed top-0 z-10 text-gray-900 shadow-md w-full" aria-label="Main navigation">
         <div class="flex font-bold">
         <DiRedhat size={50} color="white" />
-          <a href="#" class="text-4xl">Click Me</a>
+          <a href="#" class="text-4xl">ClickSafe</a>
             </div>
         <button
             class="flex flex-col justify-center items-center md:hidden"
@@ -61,11 +62,11 @@ function App() {
           <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-90" decoding="async" />
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-6xl md:text-8xl font-bold mt-2 mb-6 max-w-full">Advanced Cards <span class="text-blue-400">and</span> Features.</h1>
-          {/* <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Features and services that allow you to create scalable cards.</p> */}
+          <h1 class="text-6xl md:text-8xl font-bold mt-2 mb-6 max-w-full">Premium <span class="text-blue-400">ClickSafe</span> Cards.</h1>
+          <p class="text-gray-900 font-bold text-4xl mb-8 max-w-2xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
-                        Sign-up for privacy
+                        Get ClickSafe
                     </a>
                 </div>
         </div>
@@ -73,13 +74,13 @@ function App() {
       <section id="about" class="py-18 px-2 bg-gray-200">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">About <span class="text-blue-400">Secure Cards </span> Features</h2>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">ClickSafe <span class="text-blue-400">Secure Cards </span> Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-8">
                     <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Advanced Security</h3>
-                        <p class="text-gray-900 mb-4">Military-grade encryption and real-time fraud monitoring to keep your transactions secure.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Platinum Credit Card</h3>
+                        <p class="text-gray-900 mb-4">Premium benefits with travel rewards and concierge service.</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,8 +89,8 @@ function App() {
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Instant Processing</h3>
-                        <p class="text-gray-900 mb-4">Real-time transaction processing with 99.9% uptime for seamless user experiences.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Business Expense Card</h3>
+                        <p class="text-gray-900 mb-4">Real-time transaction with smart spending controls and expense reporting</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,8 +99,8 @@ function App() {
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Sync</h3>
-                        <p class="text-gray-900 mb-4">Automatically sync card data across all your devices and platforms in real-time.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Virtual Debit Card</h3>
+                        <p class="text-gray-900 mb-4">Automatic instant digital card for online purchases with enhanced security.</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -108,8 +109,8 @@ function App() {
       </a>
      </div>
        <div class="bg-blue-300 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Analytics Dashboard</h3>
-                        <p class="text-gray-900 mb-4">Detailed insights and spending analytics to help you make smarter financial decisions.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Rewards Mastercard</h3>
+                        <p class="text-gray-900 mb-4">Earn cashback on every purchase with premium benefits.</p>
                         <a href="#" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,17 +121,17 @@ function App() {
                 </div>
             </div>
             <div class="text-center mb-14">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">Secure Cards Features</h2>
-                    <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Discover our innovative features designed to elevate your card solutions to the next level.</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4 mt-8">ClickSafe Security Features</h2>
+                    <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
                 </div>
   <div class="w-full h-full flex flex-col items-center py-10">
     <div
       class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
       <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="feature" decoding="async" />
       <div class="w-full  rounded-lg">
-        <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Advanced cards solutions.</h2>
-        <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
-          <button class="bg-blue-300 text-center text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-400">Take Control with Spend Limits
+        <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Advanced contactless technology</h2>
+        <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
+          <button class="bg-blue-300 text-center text-gray-900 px-4 py-2 rounded-xl hover:bg-blue-400">Explore ClickSafe
   </button>
       </div>
     </div>
@@ -138,76 +139,63 @@ function App() {
       class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-6">
       <div class="w-full p-2 rounded-md">
         <h2 class="text-3xl font-semibold text-gray-900 items-center md:text-4xl">Bank-level security.</h2>
-        <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
-        <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400">Take Control with Spend Limits</button>
+        <p class="text-md text-center items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
+        <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400">Security Features</button>
       </div>
       <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
     </div>
   </div>
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center">
-      <h3 class="text-blue-400 font-bold text-3xl">How card machines can help you take <span class="text-gray-900">safer </span> payments.</h3>
+      <h3 class="text-blue-400 font-bold text-3xl">ClickSafe Cards for a <span class="text-gray-900">secure </span> payments.</h3>
     </div>
     </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Advanced Cards Solutions</h2>
-    <p class="z-10 text-gray-900">Real-time transaction processing with 99.99% uptime guarantee.</p>
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Global Acceptance</h2>
+    <p class="z-10 text-gray-900">Accepted at millions of locations worldwide with real-time currency conversion.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Bank-Level Security</h2>
-    <p class="z-10 text-gray-100">Military-grade encryption and fraud detection to protect every transaction.</p>
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Instant Alerts</h2>
+    <p class="z-10 text-gray-100">Add your card to Apple Pay, Google Pay, and Samsung Pay.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Smart Synchronization</h2>
-    <p class="z-10 text-gray-100">Automatically sync card data across all your devices and platforms.</p>
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Digital Wallet Integration</h2>
+    <p class="z-10 text-gray-100">Real-time notifications for every transaction on your card.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
     <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
-    <h2 class="text-2xl text-gray-900 font-bold z-10">Create. Manage. Scale.</h2>
-    <p class="z-10 text-gray-900">Automatically sync card data across all your devices and platforms.</p>
+    <h2 class="text-2xl text-gray-900 font-bold z-10">Card Controls</h2>
+    <p class="z-10 text-gray-900">Freeze/unfreeze, set spending limits, and manage locations.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
 </div>
 </section>
 <section id="features" class="flex flex-col items-center justify-center gap-10 p-10 bg-gray-100 w-full text-center">
-  <h2 class="text-4xl font-extrabold text-gray-900">Why <span class='text-blue-400'>secure</span> your cards?</h2>
+  <h2 class="text-4xl font-extrabold text-gray-900">Why <span class='text-blue-400'>choose</span> ClickSafe?</h2>
   
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
     <div class="flex flex-col items-center p-6 w-80">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" class="custom-icon">
-    <path stroke-linecap="round" stroke-linejoin="round"
-      d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
-  </svg>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
-      <p class="text-gray-900 text-sm leading-relaxed">This is a simple card component. This is a simple card component. This is a simple card component.</p>
+  <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Zero Fraud Liability</h3>
+      <p class="text-gray-900 text-sm leading-relaxed">You're not responsible for unauthorized transactions with our advanced security measures.</p>
+    </div>
+    <div class="flex flex-col items-center p-6 w-80">
+  <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
+      <h3 class="text-xl font-bold text-gray-900 mb-2">No Annual Fees</h3>
+      <p class="text-gray-900 text-sm leading-relaxed">Premium card benefits without the premium price tag.</p>
     </div>
 
     <div class="flex flex-col items-center p-6 w-80">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" class="custom-icon">
-    <path stroke-linecap="round" stroke-linejoin="round"
-      d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
-  </svg>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
-      <p class="text-gray-900 text-sm leading-relaxed">This is a simple card component. This is a simple card component. This is a simple card component.</p>
-    </div>
-
-    <div class="flex flex-col items-center p-6 w-80">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-    stroke-width="1.5" stroke="currentColor" class="custom-icon">
-    <path stroke-linecap="round" stroke-linejoin="round"
-      d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
-  </svg>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Local service and repair</h3>
-      <p class="text-gray-900 text-sm leading-relaxed">This is a simple card component. This is a simple card component. This is a simple card component.</p>
+  <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Spending Analytics</h3>
+      <p class="text-gray-900 text-sm leading-relaxed">Detailed spending reports and budgeting tools right in our app.</p>
     </div>
   </div>
   <div class="bg-gray-100 w-full flex items-center p-4">
@@ -264,7 +252,7 @@ function App() {
           <div class="mb-3 w-12 h-12 items-center">
             <img src={card2} alt="security" /></div>
           <h2 class="text-3xl text-blue-400">7M+</h2>
-          <p class="text-gray-700">Virtual cards secured</p>
+          <p class="text-gray-700">Virtual-Cards Issued</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -275,7 +263,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">380K</h2>
-          <p class="text-gray-900">Daily Users Per Click</p>
+          <p class="text-gray-900">Daily Transactions</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -286,7 +274,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">100%</h2>
-          <p class="text-gray-900">Clients satisfactory</p>
+          <p class="text-gray-900">Fraud Protections</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
@@ -297,7 +285,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">$5B</h2>
-          <p class="text-gray-700">Market Demand</p>
+          <p class="text-gray-700">Annual Transactions</p>
         </div>
       </div>
     </div>
@@ -306,19 +294,19 @@ function App() {
 <div class="flex items-center justify-center shadow-2xl text-gray-900 bg-gray-100 p-10 m-5 rounded-lg">
   <div class="w-full px-4 ">
     <div class="grid grid-cols-1 gap-8">
-      <div class="flex flex-col">
-        <h2 class="text-4xl font-extrabold">Cards <span class="text-blue-400">with </span>Features</h2>
-        <p class="mt-4 font-medium text-gray-900 items-center">Build for websites with maximal impact to elevate your networking with smart business cards that blend physical elegance with digital intelligence. Our feature rich cards offer seamless contact sharing, real-time analytics, and dynamic content updates,ensuring your first impression evolves long after the exchange.</p>
+      <div class="flex flex-col items-center">
+        <h2 class="text-4xl font-extrabold">Smart <span class="text-blue-400">Banking </span>Cards</h2>
+        <p class="mt-4 font-medium text-gray-900 items-center">Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
         <div class="mt-6 flex flex-wrap gap-6 w-fit"> 
-          <a href="get-cards#" class="p-3 rounded-lg grow border border-gray-300 w-fit text-gray-900 font-bold text-center hover:bg-blue-400">Get cards</a>
-          <a href="more-cards#" class="p-3 rounded-lg grow border w-fit text center text-gray-100 bg-blue-300 hover:bg-blue-400">More cards</a>
+          <a href="get-cards#" class="p-3 rounded-lg grow border border-gray-300 w-fit text-gray-900 font-bold text-center hover:bg-blue-400">Order Cards</a>
+          <a href="more-cards#" class="p-3 rounded-lg grow border w-fit text center text-gray-100 bg-blue-300 hover:bg-blue-400">Compare Cards</a>
         </div>
       </div>
       <div class="relative flex items-center">
         <div class="relative p-4 text-center grow rounded-xl">
-          <h2 class="text-2xl font-bold text-blue-400 ">About <span class='text-gray-900'>Cards</span> Features</h2>
+          <h2 class="text-2xl font-bold text-blue-400 ">Cardholder <span class='text-gray-900'>Testimonial</span></h2>
           <blockquote class="mt-6 pl-6 text-2xl italic">
-      &quot;After all, security used to be an inconvenience, now it's essential.&quot;
+          &quot;The security features give me peace of mind, and the contactless payments are incredibly convenient.&quot;
     </blockquote>
         </div>
       </div>
@@ -332,7 +320,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">15K+</h2>
-          <p class="text-gray-900">Global Presence</p>
+          <p class="text-gray-900">Retail Partners</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
@@ -344,7 +332,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">700+</h2>
-          <p class="text-gray-900">Security Standard</p>
+          <p class="text-gray-900">Security Certified</p>
           <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
@@ -356,7 +344,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">$243M</h2>
-          <p class="text-gray-900">Certified Products</p>
+          <p class="text-gray-900">Annual Savings</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
       </div>
@@ -368,7 +356,7 @@ function App() {
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
           <h2 class="text-3xl text-blue-400">900</h2>
-          <p class="text-gray-900">Data Clusters</p>
+          <p class="text-gray-900">Global ATMs</p>
           <img src={stars} alt="stars" class="w-full"/>
         </div>
       </div>
@@ -397,7 +385,7 @@ function App() {
     <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200 shadow-2xl">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400">How to get started with cards?</span>
+        <span class="flex text-lg font-semibold text-blue-400">What security features do your cards have?</span>
                     <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         class="w-6 h-6 text-gray-400">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -408,7 +396,7 @@ function App() {
     <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200 shadow-2xl">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400">How to get started with cards?</span>
+        <span class="flex text-lg font-semibold text-blue-400">Can I use my card internationally?</span>
                     <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         class="w-6 h-6 text-gray-400">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -419,7 +407,7 @@ function App() {
     <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
       <div class="bg-white border border-gray-200 shadow-2xl">
         <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400">How to get started with cards?</span>
+        <span class="flex text-lg font-semibold text-blue-400">How do contactless payments work?</span>
                     <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         class="w-6 h-6 text-gray-400">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -430,13 +418,19 @@ function App() {
   </div>
 </section>
 <section id="contact" class="p-8 mt-8 mx-auto max-w-5xl">
-  <h2 class="text-gray-900 text-3xl font-semibold mb-4">Contact Us</h2>
+  <h2 class="text-gray-900 text-3xl font-semibold mb-4">Card Support</h2>
   <div class="flex flex-col md:flex-row gap-8">
     <form class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
       <div class="w-full p-2">
         <div class="relative">  
         <label for="email" class="py-4 text-lg text-gray-900 placeholder-gray-400 focus:placeholder-blue-300">Email</label>
         <input type="text" id="email" name="email" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
+        </div>
+      </div>
+      <div class="w-full p-2">
+        <div class="relative">
+        <label for="card" class="py-4 text-lg text-gray-900">Card Number</label>
+        <input type="text" id="card" name="card" class="w-full bg-white rounded border border-gray-500 text-base py-1 px-1 text-gray-900" />
         </div>
       </div>
       <div class="w-full p-2">
@@ -456,16 +450,19 @@ function App() {
     <div class="w-full md:w-1/2">
       <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
         <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-300 p-4">
-          <h5 class="text-gray-900 px-2 font-semibold text-md">Discussion</h5>
+          <h5 class="text-gray-900 px-2 font-semibold text-md">Card Support</h5>
         </div>
-        <form class="pt-12 px-4">
-          <div class="w-full mb-2">
-            <textarea class="bg-gray-100 rounded w-full h-28 p-3 font-medium placeholder-gray-400 focus:placeholder-blue-300" name="body" placeholder="Your comment" required></textarea>
-          </div>
+          <div class="pt-12 px-4">
+          <p class="text-gray-900 mb-4">24/7 Customer Support:</p>
+          <p class="text-blue-400 font-bold text-xl">+000 777 3930</p>
+          <p class="text-gray-900 mt-6">For lost or stolen cards:</p>
+          <p class="text-blue-400 font-bold text-xl">+000 777 3930</p>
           <div class="w-full flex justify-end my-3">
-            <button class="px-4 py-2 text-gray-900 bg-blue-300 font-bold rounded-md hover:bg-blue-400">Comment</button>
+            <button class="px-4 py-2 text-gray-900 bg-blue-300 font-bold rounded-md hover:bg-blue-400">Chat Now</button>
           </div>
-        </form>
+        </div>
+        
+          
       </section>
     </div>
   </div>
@@ -474,48 +471,48 @@ function App() {
   <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
     <div class="p-5">
     <DiRedhat size={50} color="white" />
-      <h3 class="font-bold text-2xl text-blue-500">Click Me</h3>
-      <p class="text-gray-100 mb-6">Creating innovative card solutions for modern businesses. Scalable, secure, and user-friendly card features.
+      <h3 class="font-bold text-2xl text-blue-500">ClickSafe</h3>
+      <p class="text-gray-100 mb-6">Creating innovative ClickSafe solutions for modern businesses. Scalable, secure, and with user-friendly modern banking needs.
      </p>
     </div>
     <div class="p-5">
       <div class="uppercase font-bold text-blue-500">Products</div>
-      <a class="my-3 block hover:text-gray-100" href="virtual#">Virtual cards</a>
-      <a class="my-3 block hover:text-gray-100" href="physical#">Physical cards</a>
-      <a class="my-3 block hover:text-gray-100" href="business#">Business cards</a>
+      <a class="my-3 block hover:text-gray-100" href="virtual#">Virtual Cards</a>
+      <a class="my-3 block hover:text-gray-100" href="physical#">Prepaid Cards</a>
+      <a class="my-3 block hover:text-gray-100" href="business#">Business Cards</a>
       <a class="my-3 block hover:text-gray-100" href="loyalty#">Loyalty cards</a>
     </div>
     <div class="p-5">
       <div class="uppercase font-bold text-blue-500">Resources</div>
-      <a class="block my-3 hover:text-gray-100" href="services#">Services</a>
-      <a class="my-3 block hover:text-gray-100" href="tutorials#">Tutorials</a>
-      <a class="my-3 block hover:text-gray-100" href="docs#">Documentation</a>
-      <a class="my-3 block hover:text-gray-100" href="help-site#">Help site</a>
+      <a class="block my-3 hover:text-gray-100" href="services#">Card Security</a>
+      <a class="my-3 block hover:text-gray-100" href="tutorials#">Card Management</a>
+      <a class="my-3 block hover:text-gray-100" href="docs#">Fee Schedule</a>
+      <a class="my-3 block hover:text-gray-100" href="help-site#">Support Center</a>
     </div>
     <div class="p-5">
-      <div class="uppercase font-bold text-blue-500">Terms and Policy</div>
-      <a class="my-3 block hover:text-gray-100" href="t&c#">Terms of service</a>
-      <a class="my-3 block hover:text-gray-100" href="cookies#">Cookies policy</a>
-      <a class="my-3 block hover:text-gray-100" href="sitemap#">Sitemap</a>
+      <div class="uppercase font-bold text-blue-500">Company</div>
+      <a class="my-3 block hover:text-gray-100" href="t&c#">About Us</a>
+      <a class="my-3 block hover:text-gray-100" href="cookies#">Careers</a>
+      <a class="my-3 block hover:text-gray-100" href="sitemap#">Partners</a>
     </div>
     <div class="p-5">
-      <div class="uppercase text-blue-500 font-bold">Contact Us</div>
+      <div class="uppercase text-blue-500 font-bold">Contact</div>
       <a class="my-3 block hover:text-gray-100" href="contact#">+000 777 3930, Universe.VA</a>
-      <a class="my-3 block hover:text-gray-100" href="#">clickme@company.com</a>
+      <a class="my-3 block hover:text-gray-100" href="#">support@clicksafe.com</a>
       <a class="my-3 block hover:text-gray-100" href="info#">info.us</a> 
     </div>
     <div class="mt-6">
-      <h4 class="text-gray-900 mb-3">Subscribe to our Newsletter</h4>
+      <h4 class="text-gray-900 mb-3">ClickSafe Security Updates</h4>
       <form class="flex">
           <input id="email" type="email" placeholder="Enter email" aria-required="true" class="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg w-full" />
-        <button type="submit" class="bg-blue-400 hover:bg-blue-600 text-gray-100 font-bold px-4 py-2 rounded-lg">Submit
+        <button type="submit" class="bg-blue-400 hover:bg-blue-600 text-gray-100 font-bold px-4 py-2 rounded-lg">Subscribe
         </button>
       </form>
     </div>
   </div>
   <div class="bg-gray-200 pt-2">
       <div class="flex flex-col max-w-screen items-center px-2 pb-1 text-gray-900">
-        <div class="my-5">® 2025 Copyright Click Me. All Rights Reserved.</div>
+        <div class="my-5">® 2025 ClickSafe. All financial services are subject to terms and conditions.</div>
     <button
           onClick={scrollToTop}
           className={`fixed bottom-6 right-6 z-50 bg-blue-300 text-gray-900 p-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-110 ${
@@ -550,3 +547,4 @@ function App() {
 };
 
 export default App;
+
