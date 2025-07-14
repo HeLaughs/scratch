@@ -15,6 +15,7 @@ import badge from './assets/badge.jpg';
 
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({
@@ -26,15 +27,30 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
+      setShowScrollButton(window.scrollY > 250);
     };
-    
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  setTimeout(() => setLoading(false), 5000);
   AOS.init();
+  if (loading) {
+    return (
+      <div class="min-h-screen bg-gray-100 flex flex-col">
+        <div class="bg-blue-200 h-16 w-full flex items-center px-8 animate-pulse">
+          <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+          <div class="w-32 h-8 bg-gray-300 rounded"></div>
+        </div>
+        <div class="flex-1 flex flex-col items-center justify-center space-y-6 animate-pulse">
+          <div class="w-80 h-75 bg-gray-300 rounded"></div>
+          <div class="w-2/3 h-6 bg-gray-300 rounded"></div>
+          <div class="w-1/2 h-6 bg-gray-300 rounded"></div>
+          <div class="w-1/4 h-6 bg-blue-200 rounded"></div>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <>
@@ -55,7 +71,7 @@ function App() {
             <span class={`block w-6 h-0.5 bg-gray-900 transition-transform ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
           </button>
           
-          <div class={`flex flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:flex md:space-x-4 md:static absolute top-full left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`} style={{ transition: 'all 1s ease-in-out', top: '100%' }}>
+          <div class={`flex flex-col md:flex-row md:flex items-center space-x-4 ${menuOpen ? 'flex' : 'hidden'} md:flex md:space-x-4 md:static absolute top-full left-0 w-full md:w-auto bg-blue-300 md:bg-transparent z-40`} style={{ transition: 'all 2s ease-in-out', top: '100%' }}>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#feature" onClick={() => setMenuOpen(false)}>Feature</a>
@@ -125,6 +141,8 @@ function App() {
                     </div>
                 </div>
             </div>
+        </section>
+      <section id="feature" class="py-18 px-2 bg-gray-100">
             <div class="text-center mb-14">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4 mt-8">ClickSafe Security Features</h2>
                     <p class="text-gray-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
@@ -371,7 +389,7 @@ function App() {
   </div>
 </div>
 </section>
-                                             <section id="faqs" class="bg-gray-100 py-10">
+<section id="faqs" class="bg-gray-100 py-10">
   <div class="px-4 mx-auto max-w-7xl">
     <div class="text-center mx-auto max-w-2xl">
       <h2 class="text-gray-900 font-bold text-3xl">Frequently Asked Questions</h2>
