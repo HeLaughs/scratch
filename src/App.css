@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Roboto Mono', sans-serif;
+  font-size: 16px;
   color: white;
   line-height: 1.6;
   overflow-x: hidden;
@@ -26,7 +27,7 @@ nav .flex-col a {
 
 h1 {
   font-size: clamp(4rem, 8vw, 8rem);
-  line-height: 1.05;
+  line-height: 1.5;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
@@ -49,6 +50,7 @@ p {
   max-width: 65ch;
   margin-bottom: 1.25rem;
   font-weight: 300;
+  line-height: 1.6;
 }
 
 .text-10xl {
@@ -57,13 +59,13 @@ p {
 }
 
 nav a {
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 0.02em;
 }
 
 
 .section-title {
-  font-size: 20px;
+  font-size: 16px;
   margin: 20px 0;
   letter-spacing: 0.8px;
   color: var(--primaryColor);
@@ -166,12 +168,12 @@ input, textarea {
 }
 
 footer {
-  padding-top: 80px;
   padding-bottom: 30px;
 }
 footer p {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 300;
 }
 
 

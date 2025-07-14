@@ -32,7 +32,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  setTimeout(() => setLoading(false), 5000);
+  setTimeout(() => setLoading(false), 2500);
   AOS.init();
   if (loading) {
     return (
@@ -84,9 +84,9 @@ function App() {
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
           <h1 class="text-5xl md:text-7xl font-bold mt-2 mb-6 max-w-full">Premium <span class="text-blue-300 italic">ClickSafe</span> Cards.</h1>
-          <p class="text-gray-900 font-bold text-3xl mb-8 max-w-2xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
+          <p class="text-gray-900 font-bold text-3xl mb-8 max-w-4xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
           <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="get-started#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
+                    <a href="get-clicksafe#" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
                         Get ClickSafe
                     </a>
                 </div>
@@ -175,25 +175,25 @@ function App() {
     </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="Global card acceptance" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
+    <img src={secure2} alt="Global card acceptance" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
     <h2 class="text-xl text-gray-900 font-bold z-10">Global Acceptance</h2>
     <p class="z-10 text-gray-900">Accepted at millions of locations worldwide with real-time currency conversion.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
+    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
     <h2 class="text-xl text-gray-900 font-bold z-10">Instant Alerts</h2>
-    <p class="z-10 text-gray-100">Add your card to Apple Pay, Google Pay, and Samsung Pay.</p>
+    <p class="z-10 text-gray-900">Add your card to Apple Pay, Google Pay, and Samsung Pay.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
+    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
     <h2 class="text-xl text-gray-900 font-bold z-10">Digital Wallet Integration</h2>
-    <p class="z-10 text-gray-100">Real-time notifications for every transaction on your card.</p>
+    <p class="z-10 text-gray-900">Real-time notifications for every transaction on your card.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
   </div>
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-50 rounded-2xl" decoding="async" />
+    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
     <h2 class="text-xl text-gray-900 font-bold z-10">Card Controls</h2>
     <p class="z-10 text-gray-900">Freeze/unfreeze, set spending limits, and manage locations.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400">See more</button>
@@ -302,11 +302,8 @@ function App() {
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
-          </svg>
+        <div class="mb-3 w-12 h-12 items-center mx-auto">
+        <img src={card2} alt="Virtual cards issued" /></div>
           <h2 class="text-3xl text-blue-400">$5B</h2>
           <p class="text-gray-700">Annual Transactions</p>
         </div>
@@ -366,7 +363,7 @@ function App() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <h2 class="text-3xl text-blue-400">$243M</h2>
+          <h2 class="text-3xl text-blue-400">$4B</h2>
           <p class="text-gray-900">Annual Savings</p>
           <img src={star} alt="star" class="w-full"/>
         </div>
@@ -533,7 +530,7 @@ function App() {
   </div>
   <div class="bg-gray-200 pt-2">
       <div class="flex flex-col max-w-screen items-center px-2 pb-1 text-gray-900">
-        <div class="my-5">® 2025 ClickSafe. All financial services are subject to terms and conditions.</div>
+        <div class="my-5">® 2025 ClickSafe. All terms and conditions apply.</div>
     <button
           onClick={scrollToTop}
           className={`fixed bottom-6 right-6 z-50 bg-blue-300 text-gray-900 p-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-110 ${
