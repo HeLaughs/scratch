@@ -1,77 +1,76 @@
-.custom-icon {
-  width: 48rem; 
-  height: 6rem;
-  color: rgb(88, 164, 250); 
+:root {
+  --grayColor: #cfe1f0;
+  --primaryColor: blue-300;
+  --color-gray-100: #f5f5f5;
+  --color-gray-300: #d1d1d1;
 }
 
+.custom-icon {
+  width: 3rem; 
+  height: 3rem;
+  color: var(--primaryColor); 
+}
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: white;
+  color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
 }
-
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--grayColor);
   border-radius: 10px;
 }
-
 nav .flex-col a {
   font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
 }
-
 h1 {
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(2.5rem, 8vw, 6rem);
   line-height: 1.5;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
-
 h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-
 h3 {
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
-
-
 p {
   font-size: clamp(1rem, 1.25vw, 1.125rem);
   max-width: 65ch;
   margin-bottom: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
 }
-
 .text-10xl {
-  font-size: clamp(3rem, 8vw, 6rem) !important;
-  line-height: 1.1 !important;
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;
+  line-height: 1.2 !important;
 }
-
-nav a {
+a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+/* nav a {
   font-weight: 800;
   letter-spacing: 0.02em;
-}
-
-
+} */
 .section-title {
-  font-size: 16px;
-  margin: 20px 0;
-  letter-spacing: 0.8px;
+  font-size: 1rem;
+  margin: 1rem 0;
+  letter-spacing: 0.5rem;
   color: var(--primaryColor);
 }
-
-
 .bg-blue-300 h3 {
   margin-bottom: 0.5rem;
 }
@@ -81,42 +80,48 @@ button, a[class*="bg-blue"] {
   letter-spacing: 0.02em;
 }
 
-button:hover {
+button:hover, button-focus, a[class*="bg-blue"]:hover {
   transform: translateY(-2px);
   transition: transform 0.2s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+button-focus, input:focus, textarea:focus {
+  outline: 2px solid var(--primaryColor);
+  outline-offset: 2px;
+}
+
 .container {
-  width: 82%;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
 }
 section {
   min-height: 40vh;
   width: 100%;
-  padding: 60px 0;
+  padding: 3rem 0;
 }
 
 input, textarea {
     width: 100%;
     background: var(--color-gray-100);
     border: 1px solid var(--color-gray-300);
-    padding: 8px 20px;
-    font-size: 16px;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     outline: none;
 }
 
-@keyframes float {
+/* @keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
   }
-}
+} */
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -125,9 +130,9 @@ input, textarea {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
-@keyframes slideDown {
+/* @keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(-10px);
@@ -136,9 +141,9 @@ input, textarea {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
-@keyframes slideUp {
+/* @keyframes slideUp {
   0% {
     opacity: 1;
     transform: translateY(0);
@@ -147,7 +152,7 @@ input, textarea {
     opacity: 0;
     transform: translateY(-10px);
   }
-}
+} */
 
 @keyframes pulse {
   0% { transform: scale(0.95); }
@@ -157,29 +162,37 @@ input, textarea {
 
 .pulse {
   animation: pulse 1s infinite;
+  will-change: transform;
 }
-
+/* 
 .scroll-button-enter {
   animation: fadeInUp 0.3s ease-out forwards;
+} */
+
+/* .scroll-button-exit {
+  animation: fadeOutDown 0.3s ease-out forwards;
+} */
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse, .scroll-button-enter, .scroll-button-exit {
+    animation: none;
+  }
+}
+@media (min-width: 768px) {
+  .flex-col.items-center p {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 16px;
+  }
 }
 
-.scroll-button-exit {
-  animation: fadeOutDown 0.3s ease-out forwards;
+footer p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 footer {
-  padding-bottom: 30px;
-}
-footer p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-
-@media (min-width: 768px) {
-  .flex-col.items-center p {
-    font-size: 0.9rem;
-  }
-  
+  padding-bottom: 1.875rem;
 }

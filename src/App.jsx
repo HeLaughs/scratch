@@ -528,8 +528,8 @@ function App() {
       </form>
     </div>
   </div>
-  <div class="bg-gray-200 pt-2">
-      <div class="flex flex-col max-w-screen items-center px-2 pb-1 text-gray-900">
+  <div class="bg-gray-200 pt-1">
+      <div class="flex flex-col max-w-screen items-center px-2 pb-0 text-gray-900">
         <div class="my-5">® 2025 ClickSafe. All terms and conditions apply.</div>
     <button
           onClick={scrollToTop}
