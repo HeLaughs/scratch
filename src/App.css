@@ -107,7 +107,7 @@ button-focus, input:focus, textarea:focus {
   margin: auto;
 }
 section {
-  min-height: 40vh;
+  min-height: 0vh;
   width: 100%;
   padding: 3rem 0;
 }

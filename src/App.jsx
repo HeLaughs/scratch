@@ -180,7 +180,7 @@ function App() {
         <p class="block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
         <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400"onClick={() => window.location.href = '/security'}>Security Features</button>
       </div>
-      <img class="w-full px-2 py-4 rounded-xl image high-quality" src={Feature1} alt="feature1" decoding="async" />
+      <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
     </div>
   </div>
   <div class="px-4 mx-auto max-w-7xl">
@@ -331,7 +331,7 @@ function App() {
     <div class="grid grid-cols-1 gap-8">
       <div class="flex flex-col items-center">
         <h2 class="text-4xl font-extrabold">Smart <span class="text-blue-400">Banking </span>Cards</h2>
-        <p class="block mt-4 font-medium text-gray-900 items-center">Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
+        <p class="block mt-2 font-medium text-gray-900 items-center">Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
         <div class="mt-6 flex flex-wrap gap-6 w-fit"> 
           <a href="get-cards#" class="p-3 rounded-lg grow border border-gray-300 w-fit text-gray-900 font-bold text-center hover:bg-blue-400">Order Cards</a>
           <a href="more-cards#" class="p-3 rounded-lg grow border w-fit text center text-gray-100 bg-blue-300 hover:bg-blue-400">Compare Cards</a>
@@ -401,7 +401,7 @@ function App() {
   </div>
 </div>
 </section>
-<section id="contact" class="p-8 mt-8 mx-auto max-w-5xl">
+<section id="contact" class="p-8 mt-2 mx-auto max-w-5xl">
   <h2 class="text-gray-900 text-3xl font-semibold mb-4">ClickSafe Support</h2>
   <div class="flex flex-col md:flex-row gap-8">
     <form onSubmit={handleFormSubmit} class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
