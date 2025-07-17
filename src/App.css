@@ -8,6 +8,8 @@
   --neutralColor: #F9FAFB; 
   --color-gray-100: #f5f5f5;
   --color-gray-300: #d1d1d1;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
 .custom-icon {
@@ -18,7 +20,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #ffffff;
+  background-color: var(--neutralColor);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -64,7 +66,7 @@ p {
 a {
   color: var(--primaryColor);
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 nav a {
@@ -85,11 +87,12 @@ nav a {
 button, a[class*="bg-blue"] {
   font-weight: 600;
   letter-spacing: 0.02em;
+  transition: 0.5s ease-in;
 }
 
 button:hover, button-focus, a[class*="bg-blue"]:hover {
   transform: translateY(-2px);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -176,6 +179,7 @@ footer p {
 
 footer {
   padding-bottom: 1.875rem;
+
 }
 .bg-primary {
   background-color: var(--primaryColor) !important;

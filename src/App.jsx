@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import 'animate.css';
 import { DiRedhat } from "react-icons/di";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -48,16 +49,6 @@ function App() {
     console.log('Form submitted:', formData);
     alert('Form submitted successfully!');
     setFormData({ email: '', card: '', message: '' });
-  };
-  const handleChatNow = () => {
-    window.open('https://support.clicksafe.com/chat', '_blank');
-  };
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    console.log('Subscribed with email:', email);
-    alert('Subscribed successfully!');
-    e.target.reset();
   };
   if (loading) {
     return (
@@ -116,7 +107,7 @@ function App() {
                 </div>
         </div>
       </div>
-      <section id="about" class="py-18 px-2 bg-gray-100">
+      <section id="about" class="py-18 px-2 bg-gray-100 animate__animated animate__bounce">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">ClickSafe <span class="text-blue-400">Secure Cards </span> Features</h2>
@@ -189,7 +180,7 @@ function App() {
         <p class="block items-center ml-0 mt-4 mb-8 px-4 py-6 text-gray-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
         <button class="bg-blue-300 text-gray-900 px-4 py-2 rounded-lg  hover:bg-blue-400"onClick={() => window.location.href = '/security'}>Security Features</button>
       </div>
-      <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
+      <img class="w-full px-2 py-4 rounded-xl image high-quality" src={Feature1} alt="feature1" decoding="async" />
     </div>
   </div>
   <div class="px-4 mx-auto max-w-7xl">
@@ -199,7 +190,7 @@ function App() {
     </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
   <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="Global card acceptance" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
+    <img src={secure2} alt="Global card acceptance" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl image high-quality" decoding="async" />
     <h2 class="text-xl text-gray-900 font-bold z-10">Global Acceptance</h2>
     <p class="z-10 text-gray-900">Accepted at millions of locations worldwide with real-time currency conversion.</p>
     <button class="bg-blue-300 p-4 text-gray-900 px-4 py-2 w-fit rounded-lg z-10 hover:bg-blue-400" onClick={() => window.location.href = '/global'}>See more</button>
@@ -419,14 +410,14 @@ function App() {
         <label htmlFor="email" class="block py-4 text-lg text-gray-900 placeholder-gray-400 focus:placeholder-blue-300">Email</label>
         <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} class="w-full bg-white rounded-lg border border-gray-500 text-base py-1 px-1 text-gray-900" required />
         </div>
-        <div className="mb-4">
-                <label htmlFor="card" className="block text-gray-900 font-medium mb-2">Card Type</label>
+        <div class="mb-4">
+                <label htmlFor="card" class="block text-gray-900 font-medium mb-2">Card Type</label>
                 <select
                   id="card"
                   name="card"
                   value={formData.card}
                   onChange={handleInputChange}
-                  className="w-full p-3 rounded-lg bg-blue-200 text-gray-900"
+                  class="w-full p-3 rounded-lg bg-blue-200 text-gray-900"
                   required
                 >
                   <option value="">Select a card</option>
@@ -436,26 +427,26 @@ function App() {
                   <option value="rewards">Rewards Mastercard</option>
                 </select>
               </div>
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-900 font-medium mb-2">Message</label>
+              <div class="mb-4">
+                <label htmlFor="message" class="block text-gray-900 font-medium mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full p-3 rounded-lg bg-blue-200 text-gray-900"
+                  class="w-full p-3 rounded-lg bg-blue-200 text-gray-900"
                   rows="5"
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400">
+              <button type="submit" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400">
                 Send
               </button>
       </div>
       
     </form>
     <div class="w-full md:w-1/2">
-      <section class="relative rounded-lg border pt-4 mb-8 bg-white shadow">
+      <section class="relative rounded-lg pt-4 mb-8 bg-white shadow">
         <div class="absolute px-2 top-0 left-0 rounded-tl-lg rounded-br-lg bg-blue-300 p-4">
           <h5 class="text-gray-900 px-2 font-semibold text-md">ClickSafe Support</h5>
         </div>
@@ -643,6 +634,7 @@ function App() {
     </>
   )
 };
+
 
 export default App;
 
