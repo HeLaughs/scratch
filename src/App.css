@@ -8,8 +8,6 @@
   --neutralColor: #F9FAFB; 
   --color-gray-100: #f5f5f5;
   --color-gray-300: #d1d1d1;
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
 }
 
 .custom-icon {
@@ -66,7 +64,7 @@ p {
 a {
   color: var(--primaryColor);
   text-decoration: none;
-  transition: color 0.5s ease-in-out;
+  transition: color 150ms ease;
 }
 
 nav a {
@@ -87,13 +85,14 @@ nav a {
 button, a[class*="bg-blue"] {
   font-weight: 600;
   letter-spacing: 0.02em;
-  transition: 0.5s ease-in;
+  transition: 150ms ease;
+  cursor: pointer;
 }
 
 button:hover, button-focus, a[class*="bg-blue"]:hover {
   transform: translateY(-2px);
-  transition: transform 0.5s ease-in;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  scale: 1.05;
 }
 
 button-focus, input:focus, textarea:focus {
@@ -110,6 +109,13 @@ section {
   min-height: 0vh;
   width: 100%;
   padding: 3rem 0;
+}
+
+.option {
+  font-size: 1rem;
+  font-weight: 400;
+  font-boldness: 300;
+  padding: 0.5rem 1.25rem;
 }
 
 .bg-accent {
@@ -148,12 +154,12 @@ input, textarea {
 
 @keyframes pulse {
   0% { transform: scale(0.95); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.85); }
   100% { transform: scale(0.95); }
 }
 
 .pulse {
-  animation: pulse 1s infinite;
+  animation: pulse 2ms infinite;
   will-change: transform;
 }
 

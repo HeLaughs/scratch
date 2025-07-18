@@ -96,15 +96,15 @@ function App() {
             <a class="rounded-lg font-medium hover:text-gray-100 px-4 py-2" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </div>
       </nav>
-      <div id="home" class="relative text-gray-900 h-screen overflow-hidden">
+      <div id="home" class="relative text-gray-900 h-screen overflow-hidden animate__animated animate__fadeInDown">
         <div class="absolute inset-0">
           <img src={hero} alt="hero image" loading="lazy" class="object-cover object-center w-full h-full opacity-85" decoding="async" />
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
-          <h1 class="text-5xl md:text-7xl text-blue-300 font-bold mt-2 mb-6 max-w-full">Premium <span class="text-gray-100 italic">ClickSafe</span> Cards.</h1>
+          <h1 class="text-5xl md:text-7xl text-blue-300 font-bold mt-2 mb-6 max-w-full animate__animated animate__fadeInDown">Premium <span class="text-gray-100 italic">ClickSafe</span> Cards.</h1>
           <p class="text-gray-100 font-bold text-4xl mb-8 max-w-4xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
           <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="/order" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg">
+                    <a href="/order" class="bg-blue-300 text-gray-900 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg transition-bg">
                         Secure your card
                     </a>
                 </div>
@@ -337,7 +337,7 @@ function App() {
         <p class="block mt-2 font-medium text-gray-900 items-center">Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
         <div class="mt-6 flex flex-wrap gap-6 w-fit"> 
           <a href="get-cards#" class="p-3 rounded-lg grow border border-gray-300 w-fit text-gray-900 font-bold text-center hover:bg-blue-400">Order Cards</a>
-          <a href="more-cards#" class="p-3 rounded-lg grow border w-fit text center text-gray-100 bg-blue-300 hover:bg-blue-400">Compare Cards</a>
+          <a href="more-cards#" class="p-3 rounded-lg grow w-fit text center text-gray-100 bg-blue-300 hover:bg-blue-400">Compare Cards</a>
         </div>
       </div>
       <div class="relative flex items-center">
@@ -420,7 +420,7 @@ function App() {
                   name="card"
                   value={formData.card}
                   onChange={handleInputChange}
-                  class="w-full p-3 rounded-lg bg-blue-200 text-gray-900"
+                  class="w-full p-3 font-semibold rounded-lg bg-blue-200 text-gray-900"
                   required
                 >
                   <option value="">Select a card</option>
@@ -560,7 +560,7 @@ function App() {
 </section>
 
 <footer id="footer" aria-label="Footer" class="bg-blue-300">
-  <div class="px-2 py-4 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-y-2">
+  <div class="px-2 py-2 text-gray-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-4 space-x-2">
     <div class="p-5">
     <DiRedhat size={50} color="white" />
       <h3 class="font-bold text-2xl text-blue-500">ClickSafe</h3>
@@ -568,30 +568,30 @@ function App() {
      </p>
     </div>
     <div class="p-5">
-      <div class="uppercase font-bold text-blue-500">Products</div>
-      <a class="my-3 block hover:text-gray-100" href="virtual#">Virtual Cards</a>
-      <a class="my-3 block hover:text-gray-100" href="physical#">Prepaid Cards</a>
-      <a class="my-3 block hover:text-gray-100" href="business#">Business Cards</a>
-      <a class="my-3 block hover:text-gray-100" href="loyalty#">Loyalty cards</a>
+      <div class="text-2xl font-semibold text-gray-900">Products</div>
+      <a class="my-2 block hover:text-gray-100" href="virtual#">Virtual Cards</a>
+      <a class="my-2 block hover:text-gray-100" href="physical#">Prepaid Cards</a>
+      <a class="my-2 block hover:text-gray-100" href="business#">Business Cards</a>
+      <a class="my-2 block hover:text-gray-100" href="loyalty#">Loyalty cards</a>
     </div>
     <div class="p-5">
-      <div class="uppercase font-bold text-blue-500">Resources</div>
-      <a class="block my-3 hover:text-gray-100" href="services#">Card Security</a>
-      <a class="my-3 block hover:text-gray-100" href="tutorials#">Card Management</a>
-      <a class="my-3 block hover:text-gray-100" href="docs#">Fee Schedule</a>
-      <a class="my-3 block hover:text-gray-100" href="help-site#">Support Center</a>
+      <div class="text-2xl font-semibold text-gray-900">Resources</div>
+      <a class="my-2 block hover:text-gray-100" href="services#">Card Security</a>
+      <a class="my-2 block hover:text-gray-100" href="tutorials#">Card Management</a>
+      <a class="my-2 block hover:text-gray-100" href="docs#">Fee Schedule</a>
+      <a class="my-2 block hover:text-gray-100" href="help-site#">Support Center</a>
     </div>
     <div class="p-5">
-      <div class="uppercase font-bold text-blue-500">Company</div>
-      <a class="my-3 block hover:text-gray-100" href="t&c#">About Us</a>
-      <a class="my-3 block hover:text-gray-100" href="cookies#">Careers</a>
-      <a class="my-3 block hover:text-gray-100" href="sitemap#">Partners</a>
+      <div class="text-2xl font-semibold text-gray-900">Company</div>
+      <a class="my-2 block hover:text-gray-100" href="t&c#">About Us</a>
+      <a class="my-2 block hover:text-gray-100" href="cookies#">Careers</a>
+      <a class="my-2 block hover:text-gray-100" href="sitemap#">Partners</a>
     </div>
     <div class="p-5">
-      <div class="uppercase text-blue-500 font-bold">Contact</div>
-      <a class="my-3 block hover:text-gray-100" href="contact#">+000 777 3930, Universe.VA</a>
-      <a class="my-3 block hover:text-gray-100" href="#">support@clicksafe.com</a>
-      <a class="my-3 block hover:text-gray-100" href="info#">info.us</a> 
+      <div class="text-2xl font-semibold text-gray-900">Contact</div>
+      <a class="my-2 block hover:text-gray-100" href="contact#">+000 777 3930, Universe.VA</a>
+      <a class="my-2 block hover:text-gray-100" href="#">support@clicksafe.com</a>
+      <a class="my-2 block hover:text-gray-100" href="info#">info.us</a> 
     </div>
     <div class="mt-6">
       <h4 class="text-gray-900 mb-3">ClickSafe Security Updates</h4>
