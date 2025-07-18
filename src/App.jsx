@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'animate.css';
 import { DiRedhat } from "react-icons/di";
+import { GiCardExchange } from "react-icons/gi";
+import { BsCreditCard } from "react-icons/bs";
+import { BiSolidCreditCardAlt } from "react-icons/bi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import hero from './assets/her1.jpg';
@@ -54,7 +57,7 @@ function App() {
     return (
       <div class="min-h-screen bg-gray-100 flex flex-col">
         <div class="bg-blue-200 h-16 w-full flex items-center px-8 animate-pulse">
-          <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+          <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
           <div class="w-32 h-8 bg-gray-300 rounded"></div>
         </div>
         <div class="flex-1 flex flex-col items-center justify-center space-y-6 animate-pulse">
@@ -115,6 +118,7 @@ function App() {
                 </div>
                 <div class="grid grid-cols-1 gap-8">
                     <div class="bg-blue-300 rounded-lg p-8">
+                    <BsCreditCard class="text-4xl mb-3" />
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Platinum Credit Card</h3>
                         <p class="text-gray-900 mb-4">Premium benefits with travel rewards and concierge service.</p>
                         <a href="/cards/platinum" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
@@ -125,6 +129,7 @@ function App() {
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
+                        <GiCardExchange className="text-4xl mb-3" />
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Business Expense Card</h3>
                         <p class="text-gray-900 mb-4">Real-time transaction with smart spending controls and expense reporting</p>
                         <a href="/cards/business" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
@@ -135,6 +140,7 @@ function App() {
                         </a>
                     </div>
                     <div class="bg-blue-300 rounded-lg p-8">
+                        <BsCreditCard class="text-4xl mb-3" />
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Virtual Debit Card</h3>
                         <p class="text-gray-900 mb-4">Automatic instant digital card for online purchases with enhanced security.</p>
                         <a href="/cards/virtual" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
@@ -145,6 +151,7 @@ function App() {
       </a>
      </div>
        <div class="bg-blue-300 rounded-lg p-8">
+                        <BiSolidCreditCardAlt class="text-4xl mb-3" />
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Rewards Mastercard</h3>
                         <p class="text-gray-900 mb-4">Earn cashback on every purchase with premium benefits.</p>
                         <a href="/cards/rewards" class="text-gray-100 text-xl flex items-center gap-1 hover:text-gray-900">
@@ -295,11 +302,7 @@ function App() {
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
-          </svg>
+          <GiCardExchange class="w-12 h-12 mb-3 inline-block" />
           <h2 class="text-3xl text-blue-400">380K</h2>
           <p class="text-gray-900">Daily Transactions</p>
         </div>
