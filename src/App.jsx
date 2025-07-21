@@ -19,6 +19,7 @@ import card2 from './assets/card2.png';
 import badge from './assets/badge.jpg';
 
 
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,8 @@ function App() {
     });
   };
   const [showScrollButton, setShowScrollButton] = useState(false);
+
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +57,8 @@ function App() {
     alert('Form submitted successfully!');
     setFormData({ email: '', card: '', message: '' });
   };
+
+  
   if (loading) {
     return (
       <div class="min-h-screen bg-gray-100 flex flex-col">
@@ -70,6 +75,9 @@ function App() {
       </div>
     );
   }
+
+  
+  
 
   return (
     <>
@@ -131,7 +139,7 @@ function App() {
     </svg>
                         </a>
                     </div>
-                    <div class="bg-blue-300 rounded-lg p-8">
+                    <div class="bg-blue-300 rounded-lg p-8 card data-tilt">
                         <GiCardExchange className="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Business Expense Card</h2>
                         <p class="text-blue-900 mb-4">Real-time transaction with smart spending controls and expense reporting</p>
@@ -540,98 +548,113 @@ function App() {
     </div>
   </div>
 </section>
-<section id="faq" class="bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
-  <div class="px-4 mx-auto max-w-7xl">
-    <div class="text-center mx-auto max-w-2xl">
-      <h2 class="text-blue-900 font-bold text-3xl mb-4">Frequently Asked Questions</h2>
-      <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Hints to common questions about ClickSafe cards.</p>
-    </div>
-    <div class="space-y-4">
-              <div class="bg-blue-300 rounded-lg p-4">
-                <button type="button" id="faq1"
-                  class="w-full text-left text-xl font-bold text-blue-900"
-                  onClick={() => toggleFaq(1)}
-                >
-                  What is ClickSafe?
-                </button>
-                {faqOpen[1] && (
-                  <p class="mt-2 text-blue-900">ClickSafe offers smart banking cards with advanced security features for safe and convenient transactions.</p>
-                )}
-              </div>
-              <div class="bg-blue-300 rounded-lg p-4">
-                <button type="button" id="faq2"
-                  class="w-full text-left text-xl font-bold text-blue-900"
-                  onClick={() => toggleFaq(2)}
-                >
-                  How do I apply for a card?
-                </button>
-                {faqOpen[2] && (
-                  <p class="mt-2 text-blue-900">Visit our order page to apply for a ClickSafe card. Choose your card type and fill out the application form.</p>
-                )}
-              </div>
-              <div class="bg-blue-300 rounded-lg p-4">
-                <button type="button" id="faq3"
-                  class="w-full text-left text-xl font-bold text-blue-900"
-                  onClick={() => toggleFaq(3)}
-                >
-                  <span class="flex justify-between text-lg font-semibold text-blue-900 overflow-hidden">What are the security features?</span>  <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6 text-blue-900">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                {faqOpen[3] && (
-                  <p class="mt-2 text-blue-900">Our cards include military-grade encryption, real-time fraud monitoring, instant alerts, and card controls.</p>
-                )}
-              </div>
-            </div>
+
+<section id="faq" className="bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
+      <div className="px-4 mx-auto max-w-7xl">
+        <div className="text-center mx-auto max-w-2xl">
+          <h2 className="text-blue-900 font-bold text-3xl mb-4">Frequently Asked Questions</h2>
+          <p className="text-blue-900 max-w-2xl mx-auto leading-relaxed">
+            Hints to common questions about ClickSafe cards.
+          </p>
+        </div>
+        <div className="space-y-4">
+          <div className="bg-gray-200 rounded-lg p-4">
+            <button
+              type="button"
+              id="faq1"
+              className="w-full text-left text-xl font-bold text-blue-900"
+              onClick={() => toggleFaq(1)}
+            >
+              What is ClickSafe?
+            </button>
+            {faqOpen[1] && (
+              <p className="mt-2 text-blue-900">
+                ClickSafe offers smart banking cards with advanced security features for safe and convenient transactions.
+              </p>
+            )}
           </div>
 
-    {/* <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
-      <div class="bg-white border border-gray-200 shadow-2xl">
-        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400 overflow-hidden">How to get started with cards?</span>
-                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6 text-gray-400">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-        </button>
+          <div className="bg-gray-200 rounded-lg p-4">
+            <button
+              type="button"
+              id="faq2"
+              className="w-full text-left text-xl font-bold text-blue-900"
+              onClick={() => toggleFaq(2)}
+            >
+              <span className="text-lg font-semibold text-blue-900 overflow-hidden">How do I apply for a card?</span><svg
+                id="arrow1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6 text-blue-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            {faqOpen[2] && (
+              <p className="mt-2 text-blue-900">
+                Visit our order page to apply for a ClickSafe card. Choose your card type and fill out the application form.
+              </p>
+            )}
+          </div>
+
+          <div className="bg-gray-200 rounded-lg p-4">
+            <button
+              type="button"
+              id="faq3"
+              className="w-full text-left text-xl font-bold text-blue-900 flex justify-between items-center"
+              onClick={() => toggleFaq(3)}
+            >
+              <span className="text-lg font-semibold text-blue-900 overflow-hidden">
+                What are the security features?
+              </span>
+              <svg
+                id="arrow1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6 text-blue-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            {faqOpen[3] && (
+              <p className="mt-2 text-blue-900">
+                Our cards include military-grade encryption, real-time fraud monitoring, instant alerts, and card controls.
+              </p>
+            )}
+          </div>
+          <div className="bg-gray-200 rounded-lg p-4">
+            <button
+              type="button"
+              id="faq4"
+              className="w-full text-left text-xl font-bold text-blue-900"
+              onClick={() => toggleFaq(4)}
+            >
+              How do I apply for a card?
+            </button>
+            {faqOpen[4] && (
+              <p className="mt-2 text-blue-900">
+                Visit our order page to apply for a ClickSafe card. Choose your card type and fill out the application form.
+              </p>
+            )}
+          </div>
+
         </div>
-    </div>
-    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
-      <div class="bg-white border border-gray-200 shadow-2xl">
-        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400">What security features do your cards have?</span>
-                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6 text-gray-400">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-        </button>
-        </div>
-    </div>
-    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
-      <div class="bg-white border border-gray-200 shadow-2xl">
-        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400">Can I use my card internationally?</span>
-                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6 text-gray-400">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-        </button>
-        </div>
-    </div>
-    <div class="mt-8 space-y-4 mx-auto w-full max-w-2xl">
-      <div class="bg-white border border-gray-200 shadow-2xl">
-        <button class="flex items-center justify-between w-full px-4 py-5" type="button" id="Qn1">
-        <span class="flex text-lg font-semibold text-blue-400">How do contactless payments work?</span>
-                    <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6 text-gray-400">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-        </button>
-        </div>
-    </div> */}
-  
-</section>
+      </div>
+    </section>
 
 <footer id="footer" aria-label="Footer" class="bg-blue-300">
   <div class="px-2 py-2 text-blue-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-6 space-x-2">
