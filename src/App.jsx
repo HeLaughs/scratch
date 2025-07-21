@@ -113,7 +113,7 @@ function App() {
         </div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-6">
           <h1 class="text-5xl md:text-7xl text-gray-100 font-bold mt-2 mb-6 max-w-full animate__animated animate__fadeInDown">Premium ClickSafe Cards.</h1>
-          <p class="text-blue-900 bg-gray-100 rounded-lg font-bold text-4xl mb-8 max-w-4xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
+          <p class="text-blue-900 bg-gray-100 rounded-lg font-bold text-center text-4xl mb-8 max-w-4xl leading-relaxed tracking-wide">Smart banking cards with cutting-edge security.</p>
           <div class="flex flex-col sm:flex-row gap-4">
                     <a href="/order" class="bg-gray-100 py-3 px-8 rounded-lg text-lg font-medium hover:bg-blue-400 shadow-lg transition-bg">
                         Secure your card
@@ -132,7 +132,7 @@ function App() {
                     <BsCreditCard class="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Platinum Credit Card</h2>
                         <p class="text-blue-900 mb-4">Premium benefits with travel rewards and concierge service.</p>
-                        <a href="/cards/platinum" class="text-gray-100 text-xl flex items-center gap-1 justify-end hover:text-blue-900">
+                        <a href="/cards/platinum" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -143,7 +143,7 @@ function App() {
                         <GiCardExchange className="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Business Expense Card</h2>
                         <p class="text-blue-900 mb-4">Real-time transaction with smart spending controls and expense reporting</p>
-                        <a href="/cards/business" class="text-gray-100 text-xl flex items-center gap-1 justify-end hover:text-blue-900">
+                        <a href="/cards/business" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -154,7 +154,7 @@ function App() {
                         <BsCreditCard class="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Virtual Debit Card</h2>
                         <p class="text-blue-900 mb-4">Automatic instant digital card for online purchases with enhanced security.</p>
-                        <a href="/cards/virtual" class="text-gray-100 text-xl flex items-center gap-1 justify-end hover:text-blue-900">
+                        <a href="/cards/virtual" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -165,7 +165,7 @@ function App() {
                         <BiSolidCreditCardAlt class="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Rewards Mastercard</h2>
                         <p class="text-blue-900 mb-4">Earn cashback on every purchase with premium benefits.</p>
-                        <a href="/cards/rewards" class="text-gray-100 text-xl flex items-center gap-1 justify-end hover:text-blue-900">
+                        <a href="/cards/rewards" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -257,7 +257,9 @@ function App() {
     </div>
   </div>
   <div class="bg-gray-100 w-full flex items-center p-4">
-  <div class="mx-auto px-4 pb-2 max-w-48xl">
+  <marquee class="marq text-blue-900 font-bold text-2xl bg-gray-100 w-full"
+  behavior="scroll" direction="left" loop="" scrollamount="10">
+    <div class="mx-auto px-4 pb-2 max-w-48xl">
     <div class="grid grid-cols-4 gap-8 text-blue-900">
       <a class="flex items-center">
       <svg class="w-fit h-18 text-blue-900 hover:text-blue-400" viewBox="0 0 86 29" fill="currentColor"
@@ -293,6 +295,7 @@ function App() {
       </a>
     </div>
   </div>
+  </marquee>
 </div>
 <div class="text-blue-900 bg-gray-100">
   <div class="container mx-auto px-2 py-4">
@@ -473,7 +476,7 @@ function App() {
             <li>Custom Alerts.</li>
             <li>1 Year Protection.</li>
           </ul>
-          <button class="text-gray-100 text-center font-medium py-2 px-4 rounded-lg w-fit bg-blue-400 hover:bg-blue-900">
+          <button class="text-gray-100 text-center font-medium py-2 px-4 rounded-lg w-fit bg-blue-400 transform-element hover:bg-blue-900">
             Buy Now
           </button>
         </div>
