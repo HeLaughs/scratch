@@ -431,7 +431,7 @@ function App() {
             <p class="text-2xl text-blue-900 font-bold mt-1">Now: $39.20</p>
           </div>
           <ul class="text-blue-400 text-sm mb-4 space-y-1">
-            <li>1 Card.</li>
+            <li>Single Card.</li>
             <li>Real-Time Alerts.</li>
             <li>1 Year Protection.</li>
           </ul>
@@ -548,40 +548,55 @@ function App() {
     </div>
   </div>
 </section>
-
-<section id="faq" className="bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
-      <div className="px-4 mx-auto max-w-7xl">
-        <div className="text-center mx-auto max-w-2xl">
-          <h2 className="text-blue-900 font-bold text-3xl mb-4">Frequently Asked Questions</h2>
-          <p className="text-blue-900 max-w-2xl mx-auto leading-relaxed">
+<section id="faq" class="bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
+      <div class="px-4 mx-auto max-w-7xl">
+        <div class="text-center mx-auto max-w-2xl">
+          <h2 class="text-blue-900 font-bold text-3xl mb-4">Frequently Asked Questions</h2>
+          <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">
             Hints to common questions about ClickSafe cards.
           </p>
         </div>
-        <div className="space-y-4">
-          <div className="bg-gray-200 rounded-lg p-4">
+        <div class="space-y-4">
+          <div class="bg-gray-200 rounded-lg p-4">
+          <p class="text-blue-900 font-medium">What is ClickSafe?</p>
             <button
               type="button"
-              id="faq1"
-              className="w-full text-left text-xl font-bold text-blue-900"
+              id="faq2"
+              class="w-full text-left text-xl font-bold text-blue-900 flex justify-end items-center"
               onClick={() => toggleFaq(1)}
             >
-              What is ClickSafe?
+              <svg
+                id="arrow1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6 text-blue-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {faqOpen[1] && (
-              <p className="mt-2 text-blue-900">
+              <p class="mt-2 text-blue-900">
                 ClickSafe offers smart banking cards with advanced security features for safe and convenient transactions.
               </p>
             )}
           </div>
 
-          <div className="bg-gray-200 rounded-lg p-4">
+          <div class="bg-gray-200 rounded-lg p-4">
+          <p class="text-blue-900 font-medium">How to apply for card security features?</p>
             <button
               type="button"
               id="faq2"
-              className="w-full text-left text-xl font-bold text-blue-900"
+              class="w-full text-left text-xl font-bold text-blue-900 flex justify-end items-center"
               onClick={() => toggleFaq(2)}
             >
-              <span className="text-lg font-semibold text-blue-900 overflow-hidden">How do I apply for a card?</span><svg
+              <svg
                 id="arrow1"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -598,22 +613,20 @@ function App() {
               </svg>
             </button>
             {faqOpen[2] && (
-              <p className="mt-2 text-blue-900">
+              <p class="mt-2 text-blue-900">
                 Visit our order page to apply for a ClickSafe card. Choose your card type and fill out the application form.
               </p>
             )}
           </div>
 
-          <div className="bg-gray-200 rounded-lg p-4">
+          <div class="bg-gray-200 rounded-lg p-2">
+          <p class="text-blue-900 font-medium">What are the security features?</p>
             <button
               type="button"
               id="faq3"
-              className="w-full text-left text-xl font-bold text-blue-900 flex justify-between items-center"
+              class="w-full text-left text-xl font-bold text-blue-900 flex justify-end items-center"
               onClick={() => toggleFaq(3)}
             >
-              <span className="text-lg font-semibold text-blue-900 overflow-hidden">
-                What are the security features?
-              </span>
               <svg
                 id="arrow1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -631,22 +644,37 @@ function App() {
               </svg>
             </button>
             {faqOpen[3] && (
-              <p className="mt-2 text-blue-900">
+              <p class="mt-2 text-blue-900">
                 Our cards include military-grade encryption, real-time fraud monitoring, instant alerts, and card controls.
               </p>
             )}
           </div>
-          <div className="bg-gray-200 rounded-lg p-4">
+          <div class="bg-gray-200 rounded-lg p-4">
+          <p class="text-blue-900 font-medium">What are the security features?</p>
             <button
               type="button"
               id="faq4"
-              className="w-full text-left text-xl font-bold text-blue-900"
+              class="w-full text-left text-xl font-bold text-blue-900 flex justify-end items-center"
               onClick={() => toggleFaq(4)}
             >
-              How do I apply for a card?
+              <svg
+                id="arrow1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6 text-blue-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {faqOpen[4] && (
-              <p className="mt-2 text-blue-900">
+              <p class="mt-2 text-blue-900">
                 Visit our order page to apply for a ClickSafe card. Choose your card type and fill out the application form.
               </p>
             )}
@@ -704,7 +732,7 @@ function App() {
         <div class="my-5">® 2025 ClickSafe. All terms and conditions apply.</div>
     <button
           onClick={scrollToTop}
-          className={`fixed bottom-6 right-6 z-50 bg-blue-300 text-blue-900 p-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-110 ${
+          class={`fixed bottom-6 right-6 z-50 bg-blue-300 text-blue-900 p-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-110 ${
             showScrollButton 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-10 pointer-events-none'
@@ -713,7 +741,7 @@ function App() {
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            className="h-6 w-6" 
+            class="h-6 w-6" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
