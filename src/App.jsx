@@ -124,7 +124,7 @@ function App() {
       <section id="about" class="section py-18 px-2 bg-gray-100 animate__animated animate__bounce">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-blue-900 mb-4">ClickSafe Secure Cards Features</h2>
+                    <h1 class="font-medium text-blue-900 mb-4">ClickSafe Secure Cards</h1>
                     <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-8">
@@ -177,7 +177,7 @@ function App() {
         </section>
       <section id="feature" class="section py-8 px-2 bg-gray-100 mb-6 animate__animated animate__fadeIn">
             <div class="text-center">
-                    <h2 class="text-3xl font-bold text-blue-900 mt-2">ClickSafe Security Features</h2>
+                    <h1 class="font-medium text-blue-900 mt-2">ClickSafe Security Features</h1>
                     <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
                 </div>
   <div class="w-full h-full flex flex-col items-center py-10">
@@ -236,6 +236,7 @@ function App() {
   </div>
 </div>
 </section>
+
 <section id="features" class="section flex flex-col items-center justify-center gap-10 mt-4 p-10 bg-gray-100 w-full text-center">
   <h2 class="text-3xl font-bold text-blue-900 animate__bounceOut">Why choose ClickSafe?</h2>
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
