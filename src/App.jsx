@@ -121,7 +121,7 @@ function App() {
                 </div>
         </div>
       </div>
-      <section id="about" class="py-18 px-2 bg-gray-100 animate__animated animate__bounce">
+      <section id="about" class="section py-18 px-2 bg-gray-100 animate__animated animate__bounce">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-blue-900 mb-4">ClickSafe Secure Cards Features</h2>
@@ -175,7 +175,7 @@ function App() {
                 </div>
             </div>
         </section>
-      <section id="feature" class="py-8 px-2 bg-gray-100 mb-6 animate__animated animate__fadeIn">
+      <section id="feature" class="section py-8 px-2 bg-gray-100 mb-6 animate__animated animate__fadeIn">
             <div class="text-center">
                     <h2 class="text-3xl font-bold text-blue-900 mt-2">ClickSafe Security Features</h2>
                     <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
@@ -183,7 +183,7 @@ function App() {
   <div class="w-full h-full flex flex-col items-center py-10">
     <div
       class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
-      <img class="w-full px-2 py-4 rounded-lg" src={Feature} alt="Contactless payment technology" decoding="async" />
+      <img class="w-full px-2 py-4" src={Feature} alt="Contactless payment technology" decoding="async" />
       <div class="w-full rounded-lg p-4">
         <h2 class="text-3xl font-semibold text-blue-900 items-center md:text-4xl">Advanced contactless technology.</h2>
         <p class="block items-center ml-0 mt-4 mb-4 px-4 py-6 text-blue-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
@@ -198,7 +198,7 @@ function App() {
         <p class="block items-center ml-0 mt-4 mb-4 px-4 py-6 text-blue-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
         <button class="px-4 py-2 bg-blue-400 hover:bg-blue-900 text-gray-100 text-center rounded-lg"onClick={() => window.location.href = '/security'}>Security Features</button>
       </div>
-      <img class="w-full px-2 py-4 rounded-xl" src={Feature1} alt="feature1" decoding="async" />
+      <img class="w-full px-2 py-4" src={Feature1} alt="feature1" decoding="async" />
     </div>
   </div>
 
@@ -236,7 +236,7 @@ function App() {
   </div>
 </div>
 </section>
-<section id="features" class="flex flex-col items-center justify-center gap-10 mt-4 p-10 bg-gray-100 w-full text-center">
+<section id="features" class="section flex flex-col items-center justify-center gap-10 mt-4 p-10 bg-gray-100 w-full text-center">
   <h2 class="text-3xl font-bold text-blue-900 animate__bounceOut">Why choose ClickSafe?</h2>
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
     <div class="flex flex-col items-center p-6 w-80">
@@ -412,16 +412,14 @@ function App() {
   </div>
 </div>
 </section>
-    <section id="pricing" class="bg-white px-2 py-4 text-center">
+    <section id="pricing" class="section bg-white px-2 py-4 text-center">
       <h2 class="text-blue-900 text-3xl md:text-4xl font-bold mb-2">
         Choose Your ClickSafe Protection Plan
       </h2>
       <p class="text-blue-900 text-center font-semibold text-sm mt-2 mb-6">Yearly Money-Back Guarantee.</p>
-
       <div class="flex flex-wrap justify-center gap-6">
-        
-        <div class="relative max-w-sm w-full rounded-xl shadow-sm p-6 text-left bg-gray-100">
-          <h3 class="text-lg text-blue-900 font-semibold mb-1">Basic</h3>
+        <div class="relative max-w-sm w-full rounded-br-[50%] shadow-sm p-6 text-left bg-gray-100">
+          <h3 class="text-lg text-blue-900 font-semibold mb-1">Basic Plan</h3>
           <div class="mb-2">
             <p class="line-through text-blue-400 text-sm">Before: $49</p>
             <p class="text-2xl text-blue-900 font-bold mt-1">Now: $30</p>
@@ -435,7 +433,7 @@ function App() {
             Buy Now
           </button>
         </div>
-        <div class="relative max-w-sm w-full rounded-xl shadow-sm p-6 text-left bg-gray-100">
+        <div class="relative max-w-sm w-full rounded-br-[50%] shadow-sm p-6 text-left bg-gray-100">
           <h3 class="text-lg text-blue-900 font-semibold mb-1">Plus</h3>
           <div class="mb-2">
             <p class="line-through text-blue-400 text-sm">Before: $99</p>
@@ -450,7 +448,10 @@ function App() {
             Buy Now
           </button>
         </div>
-        <div class="relative max-w-sm w-full rounded-xl shadow-sm p-6 text-left bg-gray-100">
+        <div class="relative max-w-sm w-full rounded-br-[50%] shadow-sm p-6 text-left bg-gray-100">
+        <div class="absolute mx-auto right-[-3px] top-[-3px] z-10 h-24 w-20 overflow-hidden">
+        <div class="before:border-t-solid before:border-l-solid before:border-r-solid after:border-t-solid after:border-l-solid after:border-r-solid relative left-[-4px] top-3.5 w-28 rotate-45 transform bg-[#cfe1f0] bg-gradient-to-b from-[#0d47a1] via-[#000080] to-[#0d47a1] px-0 py-1.5 text-center text-gray-100 shadow-[0px_0px_3px_#0000004d] drop-shadow-[#ffffff80_0px_1px_0px] before:absolute before:bottom-[-3px] before:left-0 before:border-l-[3px] before:border-r-[3px] before:border-t-[3px] before:border-l-transparent before:border-r-transparent before:border-t-[#50504f] before:content-[''] after:absolute after:bottom-[-3px] after:right-0 after:border-l-[3px] after:border-r-[3px] after:border-t-[3px] after:border-l-transparent after:border-r-transparent after:border-t-[#50504f] after:content-['']">Hot Deals</div>
+        </div>
           <h3 class="text-lg text-blue-900 font-semibold mb-1">Pro</h3>
           <div class="mb-2">
             <p class="line-through text-blue-400 text-sm">Before: $159</p>
@@ -465,7 +466,7 @@ function App() {
             Buy Now
           </button>
         </div>
-        <div class="relative max-w-sm w-full rounded-xl shadow-sm p-6 text-left bg-gray-100">
+        <div class="relative max-w-sm w-full rounded-br-[50%] shadow-sm p-6 text-left bg-gray-100">
           <h3 class="text-lg text-blue-900 font-semibold mb-1">Enterprise</h3>
           <div class="mb-2">
             <p class="line-through text-blue-400 text-sm">Before: $299</p>
@@ -482,7 +483,7 @@ function App() {
         </div>
       </div>
     </section>
-<section id="contact" class="p-4 mt-2 mx-auto max-w-5xl">
+<section id="contact" class="section p-4 mt-2 mx-auto max-w-5xl">
   <h2 class="text-blue-900 text-3xl font-semibold mb-4">ClickSafe Support</h2>
   <div class="flex flex-col md:flex-row gap-8">
     <form onSubmit={handleFormSubmit} class="w-full md:w-1/2 bg-gray-100 rounded-lg shadow p-4 mb-8">
@@ -544,7 +545,7 @@ function App() {
     </div>
   </div>
 </section>
-<section id="faq" class="bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
+<section id="faq" class="section bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
       <div class="px-4 mx-auto max-w-7xl">
         <div class="text-center mx-auto max-w-2xl">
           <h2 class="text-blue-900 font-bold text-3xl mb-4">Frequently Asked Questions</h2>
@@ -680,7 +681,7 @@ function App() {
       </div>
     </section>
 
-<footer id="footer" aria-label="Footer" class="bg-blue-300">
+<footer id="footer" aria-label="Footer" class="footer bg-blue-300">
   <div class="px-2 py-2 text-blue-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-6 space-x-2">
     <div class="p-2">
     <DiRedhat size={50} color="white" />
