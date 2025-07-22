@@ -2,8 +2,6 @@
   --grayColor: #cfe1f0;
   --primaryColor: #000080;
   --secondaryColor: #0d47a1;
-  --accentColor: #00A878;
-  --alertColor: #DC2626;
   --neutralColor: #F9FAFB;
 }
 
@@ -63,6 +61,7 @@ p {
   line-height: 1.6;
 }
 
+
 .marq {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -90,7 +89,7 @@ nav a {
   color: var(--primaryColor);
 }
 
-.bg-blue-300 h3 {
+.bg-blue-300 {
   margin-bottom: 0.5rem;
 }
 
@@ -131,16 +130,11 @@ section {
   padding: 0.5rem 1.25rem;
 }
 
-.text-accent {
-  color: var(--accentColor) !important;
-}
-
-.bg-alert {
-  background-color: var(--alertColor) !important;
-}
-
-.text-alert {
-  color: var(--alertColor) !important;
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .bg-neutral {
@@ -203,7 +197,8 @@ footer p {
 }
 
 footer {
-  padding-bottom: 1.875rem;
+  padding-bottom: 2rem;
+  border-radius: 100px 100px 0px 0px;
 }
 
 .bg-primary {

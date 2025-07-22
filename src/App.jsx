@@ -691,27 +691,27 @@ function App() {
     <div class="p-2">
       <div class="text-2xl font-semibold text-blue-900">Products</div>
       <a class="my-2 block hover:text-gray-100" href="virtual#">Virtual Cards</a>
-      <a class="my-2 block hover:text-gray-100" href="physical#">Prepaid Cards</a>
+      <a class="my-2 block hover:text-gray-100" href="prepaid#">Prepaid Cards</a>
       <a class="my-2 block hover:text-gray-100" href="business#">Business Cards</a>
       <a class="my-2 block hover:text-gray-100" href="loyalty#">Loyalty cards</a>
     </div>
     <div class="p-2">
       <div class="text-2xl font-semibold text-blue-900">Resources</div>
-      <a class="my-2 block hover:text-gray-100" href="services#">Card Security</a>
-      <a class="my-2 block hover:text-gray-100" href="tutorials#">Card Management</a>
-      <a class="my-2 block hover:text-gray-100" href="docs#">Fee Schedule</a>
-      <a class="my-2 block hover:text-gray-100" href="help-site#">Support Center</a>
+      <a class="my-2 block hover:text-gray-100" href="security#">Card Security</a>
+      <a class="my-2 block hover:text-gray-100" href="card-management#">Card Management</a>
+      <a class="my-2 block hover:text-gray-100" href="fee#">Fee Schedule</a>
+      <a class="my-2 block hover:text-gray-100" href="support#">Support Center</a>
     </div>
     <div class="p-2">
       <div class="text-2xl font-semibold text-blue-900">Company</div>
-      <a class="my-2 block hover:text-gray-100" href="t&c#">About Us</a>
-      <a class="my-2 block hover:text-gray-100" href="cookies#">Careers</a>
-      <a class="my-2 block hover:text-gray-100" href="sitemap#">Partners</a>
+      <a class="my-2 block hover:text-gray-100" href="about#">About Us</a>
+      <a class="my-2 block hover:text-gray-100" href="careers#">Careers</a>
+      <a class="my-2 block hover:text-gray-100" href="partners#">Partners</a>
     </div>
     <div class="p-2">
       <div class="text-2xl font-semibold text-blue-900">Contact</div>
       <a class="my-2 block hover:text-gray-100" href="contact#"><span><FiPhoneCall /></span> +000 777 3930, Universe.VA</a>
-      <a class="my-2 block hover:text-gray-100" href="#">support@clicksafe.com</a>
+      <a class="my-2 block hover:text-gray-100" href="email#">support@clicksafe.com</a>
       <a class="my-2 block hover:text-gray-100" href="info#">info.us</a> 
     </div>
     <div class="mt-6">
