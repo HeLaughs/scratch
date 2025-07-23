@@ -32,6 +32,16 @@ function App() {
     });
   };
   const [showScrollButton, setShowScrollButton] = useState(false);
+  function handleExploreClickSafe() {
+    window.location.href = '/contactless'
+  };
+  function handleSecurityFeatures() {
+    window.location.href = '/security'
+  };
+  const goToGlobal = () => window.location.href = '/global';
+  const goToAlerts = () => window.location.href = '/alerts';
+  const goToWallet = () => window.location.href = '/wallet';
+  const goToControls = () => window.location.href = '/controls';
 
   
 
@@ -81,7 +91,6 @@ function App() {
 
   return (
     <>
-    
     <div class="min-h-screen flex flex-col scroll-smooth">
     <main class="flex-grow">
       <nav class="flex justify-between items-center bg-blue-300 p-2 fixed top-0 z-10 text-blue-900 shadow-md w-full" aria-label="Main navigation">
@@ -121,31 +130,31 @@ function App() {
                 </div>
         </div>
       </div>
-      <section id="about" class="section py-18 px-2 bg-gray-100 animate__animated animate__bounce">
+      <section id="about" class="section py-4 px-2 bg-gray-100 animate__animated animate__bounce">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
+                <div class="text-center mb-2">
                     <h1 class="font-medium text-blue-900 mb-4">ClickSafe Secure Cards</h1>
                     <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Discover our innovative features designed to elevate your card solutions to the next level.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-8">
                     <div class="bg-blue-300 rounded-lg p-8">
-                    <BsCreditCard class="text-4xl w-fit h-18 mb-3" />
+                    <BsCreditCard class="text-4xl w-fit h-18 mb-2" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Platinum Credit Card</h2>
                         <p class="text-blue-900 mb-4">Premium benefits with travel rewards and concierge service.</p>
-                        <a href="/cards/platinum" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
+                        <a href="/cards/platinum" target="_blank" rel="noopener noreferrer" class="group text-blue-900 text-xl flex items-center gap-1 justify-end transition-all duration-200 hover:text-gray-100">
                             Learn more
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
     </svg>
                         </a>
                     </div>
-                    <div class="bg-blue-300 rounded-lg p-8 card data-tilt">
+                    <div class="bg-blue-300 rounded-lg p-8">
                         <GiCardExchange className="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Business Expense Card</h2>
                         <p class="text-blue-900 mb-4">Real-time transaction with smart spending controls and expense reporting</p>
-                        <a href="/cards/business" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
+                        <a href="/cards/business" target="_blank" rel="noopener noreferrer" class="group text-blue-900 text-xl flex items-center gap-1 justify-end transition-all duration-200 hover:text-gray-100">
                             Learn more
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
     </svg>
                         </a>
@@ -154,9 +163,9 @@ function App() {
                         <BsCreditCard class="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Virtual Debit Card</h2>
                         <p class="text-blue-900 mb-4">Automatic instant digital card for online purchases with enhanced security.</p>
-                        <a href="/cards/virtual" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
+                        <a href="/cards/virtual" target="_blank" rel="noopener noreferrer" class="group text-blue-900 text-xl flex items-center gap-1 justify-end transition-all duration-200 hover:text-gray-100">
                             Learn more
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
     </svg>
       </a>
@@ -165,9 +174,9 @@ function App() {
                         <BiSolidCreditCardAlt class="text-4xl w-fit h-18 mb-3" />
                         <h2 class="text-xl font-bold text-blue-900 mb-3">Rewards Mastercard</h2>
                         <p class="text-blue-900 mb-4">Earn cashback on every purchase with premium benefits.</p>
-                        <a href="/cards/rewards" class="text-blue-900 text-xl flex items-center gap-1 justify-end hover:text-gray-100">
+                        <a href="/cards/rewards" target="_blank" rel="noopener noreferrer" class="group text-blue-900 text-xl flex items-center gap-1 justify-end transition-all duration-200 hover:text-gray-100">
                             Learn more
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
     </svg>
                         </a>
@@ -180,61 +189,130 @@ function App() {
                     <h1 class="font-medium text-blue-900 mt-2">ClickSafe Security Features</h1>
                     <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
                 </div>
-  <div class="w-full h-full flex flex-col items-center py-10">
-    <div
-      class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
-      <img class="w-full px-2 py-4" src={Feature} alt="Contactless payment technology" decoding="async" />
-      <div class="w-full rounded-lg p-4">
-        <h2 class="text-3xl font-semibold text-blue-900 items-center md:text-4xl">Advanced contactless technology.</h2>
-        <p class="block items-center ml-0 mt-4 mb-4 px-4 py-6 text-blue-900 max-w-md">Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.</p>
-          <button class="px-4 py-2 bg-blue-400 hover:bg-blue-900 text-gray-100 text-center rounded-lg" onClick={() => window.location.href = '/contactless'}>Explore ClickSafe
-  </button>
-      </div>
-    </div>
-    <div
-      class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-2">
-      <div class="w-full rounded-lg p-4">
-        <h2 class="text-3xl font-semibold text-blue-900 items-center md:text-4xl">Bank-level security.</h2>
-        <p class="block items-center ml-0 mt-4 mb-4 px-4 py-6 text-blue-900 max-w-md">All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.</p>
-        <button class="px-4 py-2 bg-blue-400 hover:bg-blue-900 text-gray-100 text-center rounded-lg"onClick={() => window.location.href = '/security'}>Security Features</button>
-      </div>
-      <img class="w-full px-2 py-4" src={Feature1} alt="feature1" decoding="async" />
-    </div>
-  </div>
 
-  <div class="px-4 mx-auto max-w-7xl">
-    <div class="text-center">
-      <h2 class="text-blue-900 font-bold text-3xl animate__bounceOut">ClickSafe Cards for secure payments.</h2>
+  <div class="w-full h-full flex flex-col items-center py-10">
+      <div class="w-full mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center mt-4">
+        <img
+          class="w-full md:w-1/2 px-2 py-4 rounded-md hover:scale-105 transition-transform duration-300 shadow"
+          src={Feature}
+          alt="Contactless payment technology"
+          decoding="async"
+        />
+        <div class="w-full md:w-1/2 rounded-lg p-4">
+          <h2 class="text-3xl font-semibold text-blue-900 md:text-4xl">Advanced contactless technology.</h2>
+          <p class="mt-4 mb-6 px-2 py-4 text-blue-900 max-w-md">
+            Our cards feature next-generation contactless payment technology for faster, more secure transactions. Tap to pay with enhanced encryption and transaction limits to protect your funds.
+          </p>
+          <button
+            onClick={handleExploreClickSafe}
+            class="px-2 py-4 bg-blue-400 hover:bg-blue-900 text-gray-100 text-lg rounded-lg shadow-md transition-all duration-300 transform hover:scale-105"
+          >
+            Explore ClickSafe
+          </button>
+        </div>
+      </div>
+      <div class="w-full mx-auto flex md:flex-row flex-col-reverse gap-2 justify-center mt-10">
+        <div class="w-full md:w-1/2 rounded-lg p-4">
+          <h2 class="text-3xl font-semibold text-blue-900 md:text-4xl">Bank-level security.</h2>
+          <p class="mt-4 mb-6 px-2 py-4 text-blue-900 max-w-md">
+            All our cards come with military-grade encryption, real-time fraud monitoring, and instant transaction blocking. Your financial security is our top priority with 24/7 monitoring.
+          </p>
+          <button
+            onClick={handleSecurityFeatures}
+            class="px-2 py-4 bg-blue-400 hover:bg-blue-900 text-gray-100 text-lg rounded-lg shadow-md transition-all duration-300 transform hover:scale-105"
+          >
+            Security Features
+          </button>
+        </div>
+        <img
+          class="w-full md:w-1/2 px-2 py-4 rounded-md hover:scale-105 transition-transform duration-300 shadow"
+          src={Feature1}
+          alt="Security feature"
+          decoding="async"
+        />
+      </div>
     </div>
+<div class="px-4 mx-auto max-w-7xl">
+      <div class="text-center">
+        <h2 class="text-blue-900 font-bold text-3xl animate__bounceOut">
+          ClickSafe Cards for secure payments.
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-2">
+        <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden min-h-[300px]">
+          <img
+            src={secure2}
+            alt="Global card acceptance"
+            class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl"
+            decoding="async"
+          />
+          <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Global Acceptance</h2>
+          <p class="z-10 text-blue-900">
+            Accepted at millions of locations worldwide with real-time currency conversion. Experience the future of payments with our advanced card technology...
+          </p>
+          <button
+            onClick={goToGlobal}
+            class="p-4 bg-blue-400 hover:bg-blue-900 text-gray-100 px-2 py-2 text-center w-fit rounded-lg z-10 transition-transform duration-200 hover:scale-105"
+          >
+            See more
+          </button>
+        </div>
+        <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden min-h-[300px]">
+          <img
+            src={secure}
+            alt="Instant alerts"
+            class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl"
+            decoding="async"
+          />
+          <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Instant Alerts</h2>
+          <p class="z-10 text-blue-900">
+            Add your card to Apple Pay, Google Pay, and Samsung Pay. Experience the future of payments with our advanced card technology...
+          </p>
+          <button
+            onClick={goToAlerts}
+            class="p-4 bg-blue-400 hover:bg-blue-900 text-gray-100 px-2 py-2 text-center w-fit rounded-lg z-10 transition-transform duration-200 hover:scale-105"
+          >
+            See more
+          </button>
+        </div>
+        <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden min-h-[300px]">
+          <img
+            src={secure}
+            alt="Digital Wallet"
+            class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl"
+            decoding="async"
+          />
+          <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Digital Wallet Integration</h2>
+          <p class="z-10 text-blue-900">
+            Real-time notifications for every transaction on your card. Experience the future of payments with our advanced card technology...
+          </p>
+          <button
+            onClick={goToWallet}
+            class="p-4 bg-blue-400 hover:bg-blue-900 text-white px-2 py-2 text-center w-fit rounded-lg z-10 transition-transform duration-200 hover:scale-105"
+          >
+            See more
+          </button>
+        </div>
+        <div className="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden min-h-[300px]">
+          <img
+            src={secure2}
+            alt="Card Controls"
+            class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl"
+            decoding="async"
+          />
+          <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Card Controls</h2>
+          <p class="z-10 text-blue-900">
+            Freeze/unfreeze, set spending limits, and manage locations. Experience the future of payments with our advanced card technology...
+          </p>
+          <button
+            onClick={goToControls}
+            class="p-4 bg-blue-400 hover:bg-blue-900 text-white px-2 py-2 text-center w-fit rounded-lg z-10 transition-transform duration-200 hover:scale-105"
+          >
+            See more
+          </button>
+        </div>
+      </div>
     </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 mb-16">
-  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="Global card acceptance" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl image high-quality" decoding="async" />
-    <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Global Acceptance</h2>
-    <p class="z-10 text-blue-900">Accepted at millions of locations worldwide with real-time currency conversion. Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
-    <button class="p-4 bg-blue-400 hover:bg-blue-900 text-gray-100 px-4 py-2 w-fit rounded-lg z-10" onClick={() => window.location.href = '/global'}>See more</button>
-  </div>
-  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
-    <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Instant Alerts</h2>
-    <p class="z-10 text-blue-900">Add your card to Apple Pay, Google Pay, and Samsung Pay. Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
-    <button class="p-4 bg-blue-400 hover:bg-blue-900 text-gray-100 px-4 py-2 w-fit rounded-lg z-10" onClick={() => window.location.href = '/alerts'}>See more</button>
-  </div>
-  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
-    <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Digital Wallet Integration</h2>
-    <p class="z-10 text-blue-900">Real-time notifications for every transaction on your card. Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.</p>
-    <button class="p-4 bg-blue-400 hover:bg-blue-900 text-gray-100 px-4 py-2 w-fit rounded-lg z-10" onClick={() => window.location.href = '/wallet'}>See more</button>
-  </div>
-  <div class="relative flex flex-col p-6 gap-4 rounded-2xl bg-cover bg-center overflow-hidden h-full min-h-[300px]">
-    <img src={secure2} alt="card image" class="absolute inset-0 w-full h-full object-cover opacity-20 rounded-2xl" decoding="async" />
-    <h2 class="text-3xl text-blue-900 font-bold z-10 animate__bounceOut">Card Controls</h2>
-    <p class="z-10 text-blue-900">Freeze/unfreeze, set spending limits, and manage locations.
-    Experience the future of payments with our advanced card technology that seamlessly integrates cutting-edge security features with an effortless payment experience. Our cards offer contactless payments for quick transactions, digital wallet integration for convenience, and real-time spending controls that empower you to manage your finances with ease. Say goodbye to traditional barriers and hello to a new era of financial freedom where innovation meets simplicity in every swipe.
-    </p>
-    <button class="p-4 bg-blue-400 hover:bg-blue-900 text-gray-100 px-4 py-2 w-fit rounded-lg z-10" onClick={() => window.location.href = '/controls'}>See more</button>
-  </div>
-</div>
 </section>
 
 <section id="features" class="section flex flex-col items-center justify-center gap-10 mt-4 p-10 bg-gray-100 w-full text-center">

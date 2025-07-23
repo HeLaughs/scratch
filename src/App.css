@@ -65,6 +65,7 @@ p {
 .marq {
   padding-top: 30px;
   padding-bottom: 30px;
+  gap: 1rem;
 }
 
 .text-10xl {
@@ -118,7 +119,7 @@ button-focus, input:focus, textarea:focus {
 }
 
 section {
-  min-height: 0vh;
+  min-height: 40vh;
   width: 100%;
   padding: 3rem 0;
 }
