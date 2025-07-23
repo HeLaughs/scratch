@@ -96,7 +96,7 @@ function App() {
       <nav class="flex justify-between items-center bg-blue-300 p-2 fixed top-0 z-10 text-blue-900 shadow-md w-full" aria-label="Main navigation">
         <div class="flex font-bold">
         <DiRedhat size={50} color="white" />
-          <a href="/" class="text-4xl text-blue-900">ClickSafe</a>
+          <a href="/" class="text-2xl text-blue-900">ClickSafe</a>
             </div>
         <button
             class="flex flex-col justify-center items-center md:hidden"
