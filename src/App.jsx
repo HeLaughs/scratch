@@ -184,7 +184,6 @@ function App() {
                 </div>
             </div>
         </section>
-      <section id="feature" class="section py-8 px-2 bg-gray-100 mb-6 animate__animated animate__fadeIn">
             <div class="text-center">
                     <h1 class="font-medium text-blue-900 mt-2">ClickSafe Security Features</h1>
                     <p class="text-blue-900 max-w-2xl mx-auto leading-relaxed">Advanced protection for your financial transactions.</p>
@@ -313,23 +312,21 @@ function App() {
         </div>
       </div>
     </div>
-</section>
-
-<section id="features" class="section flex flex-col items-center justify-center gap-10 mt-4 p-10 bg-gray-100 w-full text-center">
+    <div class="section flex flex-col items-center justify-center gap-10 mt-2 p-4 bg-gray-100 w-full text-center">
   <h2 class="text-3xl font-bold text-blue-900 animate__bounceOut">Why choose ClickSafe?</h2>
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
-    <div class="flex flex-col items-center p-6 w-80">
+    <div class="flex flex-col items-center p-4 w-80">
   <img src={badge} alt="Zero fraud liability badge" class="rounded-2xl" decoding="async" />
       <h2 class="text-xl font-bold text-blue-900 mb-2">Zero Fraud Liability</h2>
       <p class="text-blue-900 text-sm leading-relaxed">You're not responsible for unauthorized transactions with our advanced security measures.</p>
     </div>
-    <div class="flex flex-col items-center p-6 w-80">
+    <div class="flex flex-col items-center p-4 w-80">
   <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
       <h2 class="text-3xl font-bold text-blue-900 mb-2">No Annual Fees</h2>
       <p class="text-blue-900 text-sm leading-relaxed">Premium card benefits without the premium price tag.</p>
     </div>
 
-    <div class="flex flex-col items-center p-6 w-80">
+    <div class="flex flex-col items-center p-4 w-80">
   <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
       <h2 class="text-3xl font-bold text-blue-900 mb-2">Spending Analytics</h2>
       <p class="text-blue-900 text-sm leading-relaxed">Detailed spending reports and budgeting tools right in our app.</p>
@@ -381,7 +378,7 @@ function App() {
     <div class="flex flex-wrap text-center">
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-          <div class="mb-3 w-12 h-12 items-center mx-auto">
+          <div class="mb-1 w-12 h-12 items-center mx-auto">
             <img src={card2} alt="Virtual cards issued" /></div>
           <h2 class="text-3xl text-blue-900">7M+</h2>
           <p class="text-blue-900">Virtual-Cards Issued</p>
@@ -389,14 +386,14 @@ function App() {
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-          <GiCardExchange class="w-12 h-12 mb-3 inline-block" />
+          <GiCardExchange class="w-12 h-12 mb-1 inline-block" />
           <h2 class="text-3xl text-blue-900">380K</h2>
           <p class="text-blue-900">Daily Transactions</p>
         </div>
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="text-blue-900 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="text-blue-900 w-12 h-12 mb-1 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
@@ -407,7 +404,7 @@ function App() {
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="px-2 py-4">
-        <div class="mb-3 w-12 h-12 items-center mx-auto">
+        <div class="mb-1 w-12 h-12 items-center mx-auto">
         <img src={card2} alt="Virtual cards issued" /></div>
           <h2 class="text-3xl text-blue-900">$5B</h2>
           <p class="text-blue-900">Annual Transactions</p>
@@ -475,7 +472,7 @@ function App() {
       </div>
       <div class="p-4 w-full md:w-1/4 sm:w-1/2">
         <div class="border border-gray-300 px-4 py-6 rounded-lg">
-        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="text-blue-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="text-blue-400 w-12 h-12 mb-1 inline-block" viewBox="0 0 24 24">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
@@ -490,7 +487,7 @@ function App() {
     </div>
   </div>
 </div>
-</section>
+</div>
     <section id="pricing" class="section bg-white px-2 py-4 text-center">
       <h2 class="text-blue-900 text-3xl md:text-4xl font-bold mb-2">
         Choose Your ClickSafe Protection Plan
