@@ -76,6 +76,7 @@ p {
 a {
   text-decoration: none;
   transition: color 150ms ease;
+  text-align: center;
 }
 
 nav a {
@@ -191,7 +192,7 @@ input, textarea {
   }
 }
 
-footer p {
+footer p a {
   font-size: 1.25rem;
   line-height: 1.6;
   font-weight: 400;
@@ -199,7 +200,6 @@ footer p {
 
 footer {
   padding-bottom: 2rem;
-  border-radius: 100px 100px 0px 0px;
 }
 
 .bg-primary {

@@ -16,12 +16,13 @@ import star from './assets/stars-5-1.svg';
 import Feature from './assets/Feature.jpg';
 import Feature1 from './assets/security.jpg';
 import card2 from './assets/card2.png';
-import badge from './assets/badge.jpg';
+import paycard from './assets/paycard.png';
+import credit from './assets/credit.png';
+import securrr from './assets/securrr.png';
 
 
 
 function App() {
-  const [loading, setLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [faqOpen, setFaqOpen] = useState({});
   const [formData, setFormData] = useState({ email: '', card: '', message: '' });
@@ -52,7 +53,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  setTimeout(() => setLoading(false), 2500);
+
   AOS.init();
   const toggleFaq = (id) => {
     setFaqOpen((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -66,27 +67,7 @@ function App() {
     console.log('Form submitted:', formData);
     alert('Form submitted successfully!');
     setFormData({ email: '', card: '', message: '' });
-  };
-
-  
-  if (loading) {
-    return (
-      <div class="min-h-screen bg-gray-100 flex flex-col">
-        <div class="bg-blue-200 h-16 w-full flex items-center px-8 animate-pulse">
-          <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-          <div class="w-32 h-8 bg-gray-300 rounded"></div>
-        </div>
-        <div class="flex-1 flex flex-col items-center justify-center space-y-6 animate-pulse">
-          <div class="w-80 h-75 bg-gray-300 rounded"></div>
-          <div class="w-2/3 h-6 bg-gray-300 rounded"></div>
-          <div class="w-1/2 h-6 bg-gray-300 rounded"></div>
-          <div class="w-1/4 h-6 bg-blue-200 rounded"></div>
-        </div>
-      </div>
-    );
-  }
-
-  
+  };  
   
 
   return (
@@ -95,7 +76,7 @@ function App() {
     <main class="flex-grow">
       <nav class="flex justify-between items-center bg-blue-300 p-2 fixed top-0 z-10 text-blue-900 shadow-md w-full" aria-label="Main navigation">
         <div class="flex font-bold">
-        <DiRedhat size={50} color="white" />
+        <DiRedhat size={50} color="white" class="text-center h-8"/>
           <a href="/" class="text-2xl text-blue-900">ClickSafe</a>
             </div>
         <button
@@ -316,18 +297,18 @@ function App() {
   <h2 class="text-3xl font-bold text-blue-900 animate__bounceOut">Why choose ClickSafe?</h2>
   <div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-6xl">
     <div class="flex flex-col items-center p-4 w-80">
-  <img src={badge} alt="Zero fraud liability badge" class="rounded-2xl" decoding="async" />
+  <img src={credit} alt="Zero fraud liability badge" class="rounded-2xl" decoding="async" />
       <h2 class="text-xl font-bold text-blue-900 mb-2">Zero Fraud Liability</h2>
       <p class="text-blue-900 text-sm leading-relaxed">You're not responsible for unauthorized transactions with our advanced security measures.</p>
     </div>
     <div class="flex flex-col items-center p-4 w-80">
-  <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
+  <img src={securrr} alt="securrr" class="rounded-2xl" decoding="async" />
       <h2 class="text-3xl font-bold text-blue-900 mb-2">No Annual Fees</h2>
       <p class="text-blue-900 text-sm leading-relaxed">Premium card benefits without the premium price tag.</p>
     </div>
 
     <div class="flex flex-col items-center p-4 w-80">
-  <img src={badge} alt="card" class="rounded-2xl" decoding="async" />
+  <img src={paycard} alt="paycard" class="rounded-2xl" decoding="async" />
       <h2 class="text-3xl font-bold text-blue-900 mb-2">Spending Analytics</h2>
       <p class="text-blue-900 text-sm leading-relaxed">Detailed spending reports and budgeting tools right in our app.</p>
     </div>
@@ -488,7 +469,7 @@ function App() {
   </div>
 </div>
 </div>
-    <section id="pricing" class="section bg-white px-2 py-4 text-center">
+    <section id="pricing" class="section bg-gray-100 px-2 py-4 text-center">
       <h2 class="text-blue-900 text-3xl md:text-4xl font-bold mb-2">
         Choose Your ClickSafe Protection Plan
       </h2>
@@ -559,6 +540,7 @@ function App() {
         </div>
       </div>
     </section>
+    
 <section id="contact" class="section p-4 mt-2 mx-auto max-w-5xl">
   <h2 class="text-blue-900 text-3xl font-semibold mb-4">ClickSafe Support</h2>
   <div class="flex flex-col md:flex-row gap-8">
@@ -621,7 +603,7 @@ function App() {
     </div>
   </div>
 </section>
-<section id="faq" class="section bg-gray-100 py-18 px-2 mx-auto max-w-5xl">
+<section id="faq" class="section bg-gray-100 py-12 px-2 mx-auto max-w-5xl">
       <div class="px-4 mx-auto max-w-7xl">
         <div class="text-center mx-auto max-w-2xl">
           <h2 class="text-blue-900 font-bold text-3xl mb-4">Frequently Asked Questions</h2>
@@ -757,41 +739,42 @@ function App() {
       </div>
     </section>
 
-<footer id="footer" aria-label="Footer" class="footer bg-blue-300">
+    <footer id="footer" aria-label="Footer" class="footer bg-blue-300">
+
   <div class="px-2 py-2 text-blue-900 mx-auto max-w-screen sm:px-6 sm:grid sm:grid-cols-6 space-x-2">
     <div class="p-2">
     <DiRedhat size={50} color="white" />
       <h3 class="font-bold text-2xl text-blue-900">ClickSafe</h3>
-      <p class="text-gray-100 mb-6">Creating innovative ClickSafe solutions for modern businesses. Scalable, secure, and with user-friendly modern banking needs.
+      <p class="text-gray-100 mb-4">Creating innovative ClickSafe solutions for modern businesses. Scalable, secure, and with user-friendly modern banking needs.
      </p>
     </div>
-    <div class="p-2">
+    <div class="p-6">
       <div class="text-2xl font-semibold text-blue-900">Products</div>
       <a class="my-2 block hover:text-gray-100" href="virtual#">Virtual Cards</a>
       <a class="my-2 block hover:text-gray-100" href="prepaid#">Prepaid Cards</a>
       <a class="my-2 block hover:text-gray-100" href="business#">Business Cards</a>
       <a class="my-2 block hover:text-gray-100" href="loyalty#">Loyalty cards</a>
     </div>
-    <div class="p-2">
+    <div class="p-6">
       <div class="text-2xl font-semibold text-blue-900">Resources</div>
       <a class="my-2 block hover:text-gray-100" href="security#">Card Security</a>
       <a class="my-2 block hover:text-gray-100" href="card-management#">Card Management</a>
       <a class="my-2 block hover:text-gray-100" href="fee#">Fee Schedule</a>
       <a class="my-2 block hover:text-gray-100" href="support#">Support Center</a>
     </div>
-    <div class="p-2">
+    <div class="p-6">
       <div class="text-2xl font-semibold text-blue-900">Company</div>
       <a class="my-2 block hover:text-gray-100" href="about#">About Us</a>
       <a class="my-2 block hover:text-gray-100" href="careers#">Careers</a>
       <a class="my-2 block hover:text-gray-100" href="partners#">Partners</a>
     </div>
-    <div class="p-2">
+    <div class="p-6">
       <div class="text-2xl font-semibold text-blue-900">Contact</div>
       <a class="my-2 block hover:text-gray-100" href="contact#"><span><FiPhoneCall /></span> +000 777 3930, Universe.VA</a>
       <a class="my-2 block hover:text-gray-100" href="email#">support@clicksafe.com</a>
       <a class="my-2 block hover:text-gray-100" href="info#">info.us</a> 
     </div>
-    <div class="mt-6">
+    <div class="mt-6 p-6">
       <h4 class="text-blue-900 mb-3">ClickSafe Security Updates</h4>
       <form class="flex">
           <input id="email" type="email" placeholder="Enter email" aria-required="true" class="bg-gray-100 text-blue-900 px-4 py-2 rounded-lg w-full" />
@@ -800,9 +783,13 @@ function App() {
       </form>
     </div>
   </div>
-  <div class="bg-gray-200 pt-1">
-      <div class="flex flex-col max-w-screen items-center px-2 pb-0 text-blue-900">
-        <div class="my-5">® 2025 ClickSafe. All terms and conditions apply.</div>
+  <div class="bg-gray-200 pt-2">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
+      text-center pt-2 text-blue-900 text-sm pb-2">
+        <span>© 2025 ClickSafe. All terms and conditions reserved.</span>
+        <span>Privacy Policy</span>
+      </div>
+      </div>
     <button
           onClick={scrollToTop}
           class={`fixed bottom-6 right-6 z-50 bg-blue-300 text-blue-900 p-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-110 ${
@@ -827,8 +814,6 @@ function App() {
             />
           </svg>
         </button>
-      </div>
-    </div>
 </footer>
 </main>
     </div>
