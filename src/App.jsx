@@ -9,8 +9,6 @@ import { FiPhoneCall } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import hero from "./assets/her1.jpg";
-import secure from "./assets/secure.jpg";
-import secure2 from "./assets/secure2.jpg";
 import stars from "./assets/stars-1.svg";
 import star from "./assets/stars-5-1.svg";
 import Feature from "./assets/Feature.jpg";
@@ -41,11 +39,7 @@ function App() {
   function handleSecurityFeatures() {
     window.location.href = "/security";
   }
-  const goToGlobal = () => (window.location.href = "/global");
-  const goToAlerts = () => (window.location.href = "/alerts");
-  const goToWallet = () => (window.location.href = "/wallet");
-  const goToControls = () => (window.location.href = "/controls");
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollButton(window.scrollY > 250);
@@ -257,351 +251,79 @@ function App() {
             >
               <h1
                 class="
-                  max-w-full
-                  mt-2 mb-6
-                  text-5xl text-gray-100 font-bold
-                  animate__animated animate__fadeInDown
-                  md:text-7xl
+                  max-w-5xl
+                  mt-2 mb-2
+                  text-4xl text-gray-100 font-bold
+                  animate__fadeInDown
+                  md:text-5xl
                 "
               >
-                Premium ClickSafe Cards.
+                Secure Your Credit & Debit Cards with ClickSafe.
               </h1>
               <p
                 class="
                   max-w-4xl
-                  mb-8
-                  text-blue-900 font-bold text-center text-4xl leading-relaxed tracking-wide
+                  mb-6
+                  text-blue-900 font-bold text-center text-lg leading-relaxed tracking-wide
                   bg-gray-100
                   rounded-lg
                 "
               >
-                Smart banking cards with cutting-edge security.
+                Protect both your credit and debit cards with military-grade encryption, real-time fraud detection, 
+      and instant transaction alerts. Verified. Secured. Trusted.
               </p>
-              <div
-                class="
-                  flex flex-col
-                  gap-4
-                  sm:flex-row
-                "
-              >
-                <a
-                  href="/order"
-                  class="
-                    py-3 px-8
-                    text-lg font-medium
-                    bg-gray-100
-                    rounded-lg
-                    shadow-lg transition-bg
-                    hover:bg-blue-400
-                  "
-                >
-                  Secure your card
-                </a>
-              </div>
+              
+              <button
+      onClick={handleExploreClickSafe}
+      className="px-6 py-3 text-lg text-gray-100 bg-blue-400 rounded-lg shadow-md hover:bg-blue-900 transition-all duration-300 transform hover:scale-105"
+    >
+      Get Started
+    </button>
             </div>
           </div>
-          <section
-            id="about"
-            class="
-              py-4 px-2
-              bg-gray-100
-              section animate__animated animate__bounce
-            "
-          >
-            <div
-              class="
-                max-w-6xl
-                mx-auto
-              "
-            >
-              <div
-                class="
-                  mb-2
-                  text-center
-                "
-              >
-                <h1
-                  class="
-                    mb-4
-                    font-medium text-blue-900
-                  "
-                >
-                  ClickSafe Secure Cards
-                </h1>
-                <p
-                  class="
-                    max-w-2xl
-                    mx-auto
-                    text-blue-900 leading-relaxed
-                  "
-                >
-                  Discover our innovative features designed to elevate your card
-                  solutions to the next level.
-                </p>
-              </div>
-              <div
-                class="
-                  grid grid-cols-1
-                  gap-8
-                "
-              >
-                <div
-                  class="
-                    p-8
-                    bg-blue-300
-                    rounded-lg
-                  "
-                >
-                  <BsCreditCard
-                    class="
-                      w-fit h-18
-                      mb-2
-                      text-4xl
-                    "
-                  />
-                  <h2
-                    class="
-                      mb-3
-                      text-xl font-bold text-blue-900
-                    "
-                  >
-                    Platinum Credit Card
-                  </h2>
-                  <p
-                    class="
-                      mb-4
-                      text-blue-900
-                    "
-                  >
-                    Premium benefits with travel rewards and concierge service.
-                  </p>
-                  <a
-                    href="/cards/platinum"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="
-                      flex
-                      text-blue-900 text-xl
-                      transition-all
-                      group items-center gap-1 justify-end duration-200 hover:text-gray-100
-                    "
-                  >
-                    Learn more
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="
-                        h-5 w-5
-                        transition-transform
-                        duration-200 group-hover:translate-x-1
-                      "
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div
-                  class="
-                    p-8
-                    bg-blue-300
-                    rounded-lg
-                  "
-                >
-                  <GiCardExchange
-                    class="
-                      w-fit h-18
-                      mb-3
-                      text-4xl
-                    "
-                  />
-                  <h2
-                    class="
-                      mb-3
-                      text-xl font-bold text-blue-900
-                    "
-                  >
-                    Business Expense Card
-                  </h2>
-                  <p
-                    class="
-                      mb-4
-                      text-blue-900
-                    "
-                  >
-                    Real-time transaction with smart spending controls and
-                    expense reporting
-                  </p>
-                  <a
-                    href="/cards/business"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="
-                      flex
-                      text-blue-900 text-xl
-                      transition-all
-                      group items-center gap-1 justify-end duration-200 hover:text-gray-100
-                    "
-                  >
-                    Learn more
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="
-                        h-5 w-5
-                        transition-transform
-                        duration-200 group-hover:translate-x-1
-                      "
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div
-                  class="
-                    p-8
-                    bg-blue-300
-                    rounded-lg
-                  "
-                >
-                  <BsCreditCard
-                    class="
-                      w-fit h-18
-                      mb-3
-                      text-4xl
-                    "
-                  />
-                  <h2
-                    class="
-                      mb-3
-                      text-xl font-bold text-blue-900
-                    "
-                  >
-                    Virtual Debit Card
-                  </h2>
-                  <p
-                    class="
-                      mb-4
-                      text-blue-900
-                    "
-                  >
-                    Automatic instant digital card for online purchases with
-                    enhanced security.
-                  </p>
-                  <a
-                    href="/cards/virtual"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="
-                      flex
-                      text-blue-900 text-xl
-                      transition-all
-                      group items-center gap-1 justify-end duration-200 hover:text-gray-100
-                    "
-                  >
-                    Learn more
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="
-                        h-5 w-5
-                        transition-transform
-                        duration-200 group-hover:translate-x-1
-                      "
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div
-                  class="
-                    p-8
-                    bg-blue-300
-                    rounded-lg
-                  "
-                >
-                  <BiSolidCreditCardAlt
-                    class="
-                      w-fit h-18
-                      mb-3
-                      text-4xl
-                    "
-                  />
-                  <h2
-                    class="
-                      mb-3
-                      text-xl font-bold text-blue-900
-                    "
-                  >
-                    Rewards Mastercard
-                  </h2>
-                  <p
-                    class="
-                      mb-4
-                      text-blue-900
-                    "
-                  >
-                    Earn cashback on every purchase with premium benefits.
-                  </p>
-                  <a
-                    href="/cards/rewards"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="
-                      flex
-                      text-blue-900 text-xl
-                      transition-all
-                      group items-center gap-1 justify-end duration-200 hover:text-gray-100
-                    "
-                  >
-                    Learn more
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="
-                        h-5 w-5
-                        transition-transform
-                        duration-200 group-hover:translate-x-1
-                      "
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
+
+          <section id="about" class="py-12 px-4 bg-gray-100">
+          <div class="py-12 px-4 bg-gray-100">
+  <div class="max-w-full mx-auto text-center">
+    <h2 class="text-3xl font-bold text-blue-900 mb-8 animate__bounceIn">Why Choose ClickSafe?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={credit} alt="Zero fraud liability" class="rounded-2xl mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Zero Fraud Liability</h3>
+        <p class="text-blue-900 text-sm">
+          You're not responsible for unauthorized transactions on any linked credit or debit card. 
+          Verified protection from day one.
+        </p>
+      </div>
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={securrr} alt="Instant alerts" class="rounded-2xl mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Instant Transaction Alerts</h3>
+        <p class="text-blue-900 text-sm">
+          Receive real-time push or SMS alerts for every purchase — credit or debit — so you can act fast.
+        </p>
+      </div>
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={Feature1} alt="Freeze cards" class="rounded-2xl mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Freeze Any Card Instantly</h3>
+        <p class="text-blue-900 text-sm">
+          Lost your card? Freeze your credit or debit card in one tap. No more waiting for customer service.
+        </p>
+      </div>
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={paycard} alt="Global acceptance" class="mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Works Worldwide</h3>
+        <p class="text-blue-900 text-sm">
+          Accepted at millions of locations globally. Verified, secure, and ready for travel.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
           <section id="feature" class="py-12 px-4 bg-gray-100">
   <div class="max-w-6xl mx-auto text-center">
-    <h1 class="text-3xl font-bold text-blue-900 mb-2">Advanced Security for Your Card.</h1>
+    <h1 class="text-3xl font-bold max-w-5xl text-blue-900 mb-2">Advanced Security for Your Card.</h1>
     <p class="max-w-2xl mx-auto text-blue-900 leading-relaxed mb-10">
       Whether it’s a credit or debit card, ClickSafe ensures full protection with verified linking, 
       end-to-end encryption, and AI-powered fraud monitoring.
@@ -807,295 +529,9 @@ function App() {
               px-4 mx-auto
             "
           >
-            <div
-              class="
-                text-center
-              "
-            >
-              <h2
-                class="
-                  text-blue-900 font-bold text-3xl
-                  animate__bounceOut
-                "
-              >
-                ClickSafe Cards for secure payments.
-              </h2>
+            
             </div>
-            <div
-              class="
-                grid grid-cols-1
-                p-6 mb-2
-                gap-6
-                sm:grid-cols-2
-              "
-            >
-              <div
-                class="
-                  flex flex-col overflow-hidden
-                  min-h-[300px]
-                  p-6
-                  bg-cover bg-center
-                  rounded-2xl
-                  relative gap-4
-                "
-              >
-                <img
-                  src={secure2}
-                  alt="Global card acceptance"
-                  decoding="async"
-                  class="
-                    object-cover
-                    w-full h-full
-                    rounded-2xl
-                    opacity-20
-                    absolute inset-0
-                  "
-                />
-                <h2
-                  class="
-                    z-10
-                    text-3xl text-blue-900 font-bold
-                    animate__bounceOut
-                  "
-                >
-                  Global Acceptance
-                </h2>
-                <p
-                  class="
-                    z-10
-                    text-blue-900
-                  "
-                >
-                  Accepted at millions of locations worldwide with real-time
-                  currency conversion. Experience the future of payments with
-                  our advanced card technology...
-                </p>
-                <button
-                  onClick={goToGlobal}
-                  class="
-                    z-10
-                    w-fit
-                    p-4 px-2 py-2
-                    text-gray-100 text-center
-                    bg-blue-400
-                    rounded-lg
-                    transition-transform
-                    hover:bg-blue-900 duration-200 hover:scale-105
-                  "
-                >
-                  See more
-                </button>
-              </div>
-              <div
-                class="
-                  flex flex-col overflow-hidden
-                  min-h-[300px]
-                  p-6
-                  bg-cover bg-center
-                  rounded-2xl
-                  relative gap-4
-                "
-              >
-                <img
-                  src={secure}
-                  alt="Instant alerts"
-                  decoding="async"
-                  class="
-                    object-cover
-                    w-full h-full
-                    rounded-2xl
-                    opacity-20
-                    absolute inset-0
-                  "
-                />
-                <h2
-                  class="
-                    z-10
-                    text-3xl text-blue-900 font-bold
-                    animate__bounceOut
-                  "
-                >
-                  Instant Alerts
-                </h2>
-                <p
-                  class="
-                    z-10
-                    text-blue-900
-                  "
-                >
-                  Add your card to Apple Pay, Google Pay, and Samsung Pay.
-                  Experience the future of payments with our advanced card
-                  technology...
-                </p>
-                <button
-                  onClick={goToAlerts}
-                  class="
-                    z-10
-                    w-fit
-                    p-4 px-2 py-2
-                    text-gray-100 text-center
-                    bg-blue-400
-                    rounded-lg
-                    transition-transform
-                    hover:bg-blue-900 duration-200 hover:scale-105
-                  "
-                >
-                  See more
-                </button>
-              </div>
-              <div
-                class="
-                  flex flex-col overflow-hidden
-                  min-h-[300px]
-                  p-6
-                  bg-cover bg-center
-                  rounded-2xl
-                  relative gap-4
-                "
-              >
-                <img
-                  src={secure}
-                  alt="Digital Wallet"
-                  decoding="async"
-                  class="
-                    object-cover
-                    w-full h-full
-                    rounded-2xl
-                    opacity-20
-                    absolute inset-0
-                  "
-                />
-                <h2
-                  class="
-                    z-10
-                    text-3xl text-blue-900 font-bold
-                    animate__bounceOut
-                  "
-                >
-                  Digital Wallet Integration
-                </h2>
-                <p
-                  class="
-                    z-10
-                    text-blue-900
-                  "
-                >
-                  Real-time notifications for every transaction on your card.
-                  Experience the future of payments with our advanced card
-                  technology...
-                </p>
-                <button
-                  onClick={goToWallet}
-                  class="
-                    z-10
-                    w-fit
-                    p-4 px-2 py-2
-                    text-white text-center
-                    bg-blue-400
-                    rounded-lg
-                    transition-transform
-                    hover:bg-blue-900 duration-200 hover:scale-105
-                  "
-                >
-                  See more
-                </button>
-              </div>
-              <div
-                class="
-                  flex flex-col overflow-hidden
-                  min-h-[300px]
-                  p-6
-                  bg-cover bg-center
-                  rounded-2xl
-                  relative gap-4
-                "
-              >
-                <img
-                  src={secure2}
-                  alt="Card Controls"
-                  decoding="async"
-                  class="
-                    object-cover
-                    w-full h-full
-                    rounded-2xl
-                    opacity-20
-                    absolute inset-0
-                  "
-                />
-                <h2
-                  class="
-                    z-10
-                    text-3xl text-blue-900 font-bold
-                    animate__bounceOut
-                  "
-                >
-                  Card Controls
-                </h2>
-                <p
-                  class="
-                    z-10
-                    text-blue-900
-                  "
-                >
-                  Freeze/unfreeze, set spending limits, and manage locations.
-                  Experience the future of payments with our advanced card
-                  technology...
-                </p>
-                <button
-                  onClick={goToControls}
-                  class="
-                    z-10
-                    w-fit
-                    p-4 px-2 py-2
-                    text-white text-center
-                    bg-blue-400
-                    rounded-lg
-                    transition-transform
-                    hover:bg-blue-900 duration-200 hover:scale-105
-                  "
-                >
-                  See more
-                </button>
-              </div>
-            </div>
-          </div>
           
-            <div class="py-12 px-4 bg-gray-100">
-  <div class="max-w-full mx-auto text-center">
-    <h2 class="text-3xl font-bold text-blue-900 mb-8 animate__bounceIn">Why Choose ClickSafe?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={credit} alt="Zero fraud liability" class="rounded-2xl mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Zero Fraud Liability</h3>
-        <p class="text-blue-900 text-sm">
-          You're not responsible for unauthorized transactions on any linked credit or debit card. 
-          Verified protection from day one.
-        </p>
-      </div>
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={securrr} alt="Instant alerts" class="rounded-2xl mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Instant Transaction Alerts</h3>
-        <p class="text-blue-900 text-sm">
-          Receive real-time push or SMS alerts for every purchase — credit or debit — so you can act fast.
-        </p>
-      </div>
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={Feature1} alt="Freeze cards" class="rounded-2xl mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Freeze Any Card Instantly</h3>
-        <p class="text-blue-900 text-sm">
-          Lost your card? Freeze your credit or debit card in one tap. No more waiting for customer service.
-        </p>
-      </div>
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={paycard} alt="Global acceptance" class="mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Works Worldwide</h3>
-        <p class="text-blue-900 text-sm">
-          Accepted at millions of locations globally. Verified, secure, and ready for travel.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 <div
               class="
                 flex
@@ -1494,10 +930,11 @@ function App() {
                           hover:bg-blue-900 grow
                         "
                       >
-                        Compare Cards
+                        Credit validator
                       </button>
                     </div>
                   </div>
+                  
                   <div
                     class="
                       flex
@@ -2000,7 +1437,7 @@ function App() {
                   <li>Upto 10 Cards (Credit & Debit).</li>
                   <li>Geo-fencing  Location Alerts.</li>
                   <li>1 Year Protection.</li>
-                  <li>Seemless Global Transaction.</li>
+                  <li>Instant Global Transaction.</li>
                 </ul>
                 <button
                   class="
@@ -2445,7 +1882,7 @@ function App() {
                 </h3>
                 <p
                   class="
-                    mb-4
+                    mb-2
                     text-gray-100
                   "
                 >
@@ -2455,7 +1892,7 @@ function App() {
               </div>
               <div
                 class="
-                  p-6
+                  p-2
                 "
               >
                 <div
@@ -2508,60 +1945,7 @@ function App() {
               </div>
               <div
                 class="
-                  p-6
-                "
-              >
-                <div
-                  class="
-                    text-2xl font-semibold text-blue-900
-                  "
-                >
-                  Resources
-                </div>
-                <a
-                  href="security#"
-                  class="
-                    block
-                    my-2
-                    hover:text-gray-100
-                  "
-                >
-                  Card Security
-                </a>
-                <a
-                  href="card-management#"
-                  class="
-                    block
-                    my-2
-                    hover:text-gray-100
-                  "
-                >
-                  Card Management
-                </a>
-                <a
-                  href="fee#"
-                  class="
-                    block
-                    my-2
-                    hover:text-gray-100
-                  "
-                >
-                  Fee Schedule
-                </a>
-                <a
-                  href="support#"
-                  class="
-                    block
-                    my-2
-                    hover:text-gray-100
-                  "
-                >
-                  Support Center
-                </a>
-              </div>
-              <div
-                class="
-                  p-6
+                  p-2
                 "
               >
                 <div
@@ -2604,7 +1988,7 @@ function App() {
               </div>
               <div
                 class="
-                  p-6
+                  p-2
                 "
               >
                 <div
@@ -2650,12 +2034,12 @@ function App() {
               </div>
               <div
                 class="
-                  mt-6 p-6
+                  mt-2 p-2
                 "
               >
                 <h4
                   class="
-                    mb-3
+                    mb-2
                     text-blue-900
                   "
                 >
@@ -2696,25 +2080,14 @@ function App() {
             </div>
             <div
               class="
-                pt-2
+                pt-2 mb-2
                 bg-gray-200
               "
             >
-              <div
-                class="
-                  grid grid-cols-1
-                  pt-2 pb-2
-                  text-center text-blue-900 text-sm
-                  gap-10
-                  sm:grid-cols-2
-                  lg:grid-cols-3
-                "
-              >
-                <span>
-                  © 2025 ClickSafe. All terms and conditions reserved.
-                </span>
-                <span>Privacy Policy</span>
-              </div>
+              <div class="text-center pt-2 text-sm text-blue-900 border-gray-200 mb-2">
+    <span>© 2025 ClickSafe. All rights reserved.</span>
+    <span class="mx-4">Privacy Policy</span>
+  </div>
             </div>
             <button
               onClick={scrollToTop}
