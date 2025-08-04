@@ -88,7 +88,7 @@ function App() {
             class="
               flex z-10
               w-full
-              p-2
+              p-1
               text-blue-900
               bg-blue-300
               shadow-md
@@ -165,7 +165,7 @@ function App() {
                 space-x-4
                 bg-blue-300
                 items-center absolute top-full left-0
-                md:flex-row md:flex md:flex md:w-auto md:space-x-4 md:bg-transparent md:static
+                md:flex-row md:flex md:w-auto md:space-x-4 md:bg-transparent md:static
                 ${menuOpen ? "flex" : "hidden"}
               `}
             >
