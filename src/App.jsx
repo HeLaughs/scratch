@@ -415,7 +415,7 @@ function App() {
                   "
                 >
                   <GiCardExchange
-                    className="
+                    class="
                       w-fit h-18
                       mb-3
                       text-4xl
@@ -598,6 +598,46 @@ function App() {
               </div>
             </div>
           </section>
+
+          <section id="feature" class="py-12 px-4 bg-gray-100">
+  <div class="max-w-6xl mx-auto text-center">
+    <h1 class="text-3xl font-bold text-blue-900 mb-2">Advanced Security for Your Card.</h1>
+    <p class="max-w-2xl mx-auto text-blue-900 leading-relaxed mb-10">
+      Whether it’s a credit or debit card, ClickSafe ensures full protection with verified linking, 
+      end-to-end encryption, and AI-powered fraud monitoring.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6">
+        <div class="w-fit mx-auto mb-4 text-blue-900">
+        </div>
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Verified Card Linking</h3>
+        <p class="text-blue-900">
+          Every credit and debit card is verified using SMS, email, or biometric authentication. 
+          Temporary authorization holds confirm ownership securely and comply with PCI-DSS standards.
+        </p>
+      </div>
+      <div class="p-6">
+        <div class="w-fit mx-auto mb-4 text-blue-900">
+        </div>
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Military-Grade Encryption</h3>
+        <p class="text-blue-900">
+          All card data — whether credit or debit — is encrypted in transit and at rest using AES-256. 
+          We never store full card numbers on our servers.
+        </p>
+      </div>
+      <div class="p-6">
+        <div class="w-fit mx-auto mb-4 text-blue-900">
+        </div>
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Real-Time Fraud Monitoring</h3>
+        <p class="text-blue-900">
+          AI analyzes every transaction on your credit and debit cards in real time. 
+          Get instant alerts and freeze cards instantly if suspicious activity is detected.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
           <div
             class="
               text-center
@@ -961,7 +1001,7 @@ function App() {
                 </button>
               </div>
               <div
-                className="
+                class="
                   flex flex-col overflow-hidden
                   min-h-[300px]
                   p-6
@@ -1019,132 +1059,44 @@ function App() {
               </div>
             </div>
           </div>
-          <div
-            class="
-              flex flex-col
-              w-full
-              mt-2 p-4
-              text-center
-              bg-gray-100
-              section items-center justify-center gap-10
-            "
-          >
-            <h2
-              class="
-                text-3xl font-bold text-blue-900
-                animate__bounceOut
-              "
-            >
-              Why choose ClickSafe?
-            </h2>
-            <div
-              class="
-                flex flex-row flex-wrap
-                w-full max-w-6xl
-                justify-center gap-10
-              "
-            >
-              <div
-                class="
-                  flex flex-col
-                  w-80
-                  p-4
-                  items-center
-                "
-              >
-                <img
-                  src={credit}
-                  alt="Zero fraud liability badge"
-                  decoding="async"
-                  class="
-                    rounded-2xl
-                  "
-                />
-                <h2
-                  class="
-                    mb-2
-                    text-xl font-bold text-blue-900
-                  "
-                >
-                  Zero Fraud Liability
-                </h2>
-                <p
-                  class="
-                    text-blue-900 text-sm leading-relaxed
-                  "
-                >
-                  You're not responsible for unauthorized transactions with our
-                  advanced security measures.
-                </p>
-              </div>
-              <div
-                class="
-                  flex flex-col
-                  w-80
-                  p-4
-                  items-center
-                "
-              >
-                <img
-                  src={securrr}
-                  alt="securrr"
-                  decoding="async"
-                  class="
-                    rounded-2xl
-                  "
-                />
-                <h2
-                  class="
-                    mb-2
-                    text-3xl font-bold text-blue-900
-                  "
-                >
-                  No Annual Fees
-                </h2>
-                <p
-                  class="
-                    text-blue-900 text-sm leading-relaxed
-                  "
-                >
-                  Premium card benefits without the premium price tag.
-                </p>
-              </div>
-
-              <div
-                class="
-                  flex flex-col
-                  w-80
-                  p-4
-                  items-center
-                "
-              >
-                <img
-                  src={paycard}
-                  alt="paycard"
-                  decoding="async"
-                  class="
-                    rounded-2xl
-                  "
-                />
-                <h2
-                  class="
-                    mb-2
-                    text-3xl font-bold text-blue-900
-                  "
-                >
-                  Spending Analytics
-                </h2>
-                <p
-                  class="
-                    text-blue-900 text-sm leading-relaxed
-                  "
-                >
-                  Detailed spending reports and budgeting tools right in our
-                  app.
-                </p>
-              </div>
-            </div>
-            <div
+          
+            <div class="py-12 px-4 bg-gray-100">
+  <div class="max-w-full mx-auto text-center">
+    <h2 class="text-3xl font-bold text-blue-900 mb-8 animate__bounceIn">Why Choose ClickSafe?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={credit} alt="Zero fraud liability" class="rounded-2xl mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Zero Fraud Liability</h3>
+        <p class="text-blue-900 text-sm">
+          You're not responsible for unauthorized transactions on any linked credit or debit card. 
+          Verified protection from day one.
+        </p>
+      </div>
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={securrr} alt="Instant alerts" class="rounded-2xl mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Instant Transaction Alerts</h3>
+        <p class="text-blue-900 text-sm">
+          Receive real-time push or SMS alerts for every purchase — credit or debit — so you can act fast.
+        </p>
+      </div>
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={Feature1} alt="Freeze cards" class="rounded-2xl mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Freeze Any Card Instantly</h3>
+        <p class="text-blue-900 text-sm">
+          Lost your card? Freeze your credit or debit card in one tap. No more waiting for customer service.
+        </p>
+      </div>
+      <div class="p-6 flex flex-col items-center text-center">
+        <img src={paycard} alt="Global acceptance" class="mb-3 h-20 object-contain" />
+        <h3 class="text-xl font-bold text-blue-900 mb-2">Works Worldwide</h3>
+        <p class="text-blue-900 text-sm">
+          Accepted at millions of locations globally. Verified, secure, and ready for travel.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div
               class="
                 flex
                 w-full
@@ -1817,7 +1769,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          
           <section
             id="pricing"
             class="
@@ -1837,12 +1789,14 @@ function App() {
               Choose Your ClickSafe Protection Plan
             </h2>
             <p
-              class="
+              class="p-4 justify-center
+                max-w-3xl mx-auto
+                leading-relaxed
                 mt-2 mb-6
                 text-blue-900 text-center font-semibold text-sm
               "
             >
-              Yearly Money-Back Guarantee.
+              Secure your credit and debit cards with flexible plans. Verified linking, real-time alerts and full fraud protection in every tier.
             </p>
             <div
               class="
@@ -1868,7 +1822,7 @@ function App() {
                   "
                 >
                   Basic Plan
-                </h3>
+                </h3>￼
                 <div
                   class="
                     mb-2
@@ -1880,7 +1834,7 @@ function App() {
                       line-through
                     "
                   >
-                    Before: $49
+                    Before: $49/month
                   </p>
                   <p
                     class="
@@ -1888,7 +1842,7 @@ function App() {
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: $30
+                    Now: FREE
                   </p>
                 </div>
                 <ul
@@ -1897,9 +1851,10 @@ function App() {
                     text-blue-400 text-sm
                   "
                 >
-                  <li>Single Card.</li>
-                  <li>Real-Time Alerts.</li>
-                  <li>1 Year Protection.</li>
+                  <li>Single Card  (Credit or Debit).</li>
+                  <li>Instant transaction Alerts.</li>
+                  <li>Freeze/Unfreeze anytime.</li>
+                  <li>Verified Card Setup</li>
                 </ul>
                 <button
                   class="
@@ -1944,7 +1899,7 @@ function App() {
                       line-through
                     "
                   >
-                    Before: $99
+                    Before: $99/year
                   </p>
                   <p
                     class="
@@ -1952,19 +1907,15 @@ function App() {
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: $67
+                    Now: $67/year
                   </p>
                 </div>
-                <ul
-                  class="
-                    mb-4 space-y-1
-                    text-blue-400 text-sm
-                  "
-                >
-                  <li>Upto 3 Cards.</li>
-                  <li>Prior Alerts.</li>
-                  <li>1 Year Protection.</li>
-                </ul>
+                <ul class="mb-4 space-y-2 text-blue-400 text-left text-sm">
+          <li>Up to 10 Cards (Credit/Debit)</li>
+          <li>Geo-Fencing & Location Alerts</li>
+          <li>Verified Biometric Setup</li>
+          <li>24/7 Fraud Monitoring</li>
+        </ul>
                 <button
                   class="
                     w-fit
@@ -2029,7 +1980,7 @@ function App() {
                       line-through
                     "
                   >
-                    Before: $159
+                    Before: $159/year
                   </p>
                   <p
                     class="
@@ -2037,7 +1988,7 @@ function App() {
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: $99
+                    Now: $99/year
                   </p>
                 </div>
                 <ul
@@ -2046,9 +1997,10 @@ function App() {
                     text-blue-400 text-sm
                   "
                 >
-                  <li>Upto 10 Cards.</li>
-                  <li>Geo-fencing Alerts.</li>
+                  <li>Upto 10 Cards (Credit & Debit).</li>
+                  <li>Geo-fencing  Location Alerts.</li>
                   <li>1 Year Protection.</li>
+                  <li>Seemless Global Transaction.</li>
                 </ul>
                 <button
                   class="
@@ -2093,7 +2045,7 @@ function App() {
                       line-through
                     "
                   >
-                    Before: $299
+                    Before: $299/year
                   </p>
                   <p
                     class="
@@ -2101,19 +2053,15 @@ function App() {
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: $199
+                    Now: $199/year
                   </p>
                 </div>
-                <ul
-                  class="
-                    mb-4 space-y-1
-                    text-blue-400 text-sm
-                  "
-                >
-                  <li>Unlimited Cards.</li>
-                  <li>Custom Alerts.</li>
-                  <li>1 Year Protection.</li>
-                </ul>
+                <ul class="mb-4 space-y-2 text-blue-400 text-left text-sm">
+          <li>Unlimited Cards (Credit & Debit)</li>
+          <li>Custom Alerts & Rules</li>
+          <li>Advanced Verification Logs</li>
+          <li>Business-Grade Security</li>
+        </ul>
                 <button
                   class="
                     w-fit
@@ -2145,7 +2093,7 @@ function App() {
                 text-blue-900 text-3xl font-semibold
               "
             >
-              ClickSafe Support
+              Need Help Verifying Your Card?
             </h2>
             <div
               class="
@@ -2327,7 +2275,7 @@ function App() {
                         text-blue-900
                       "
                     >
-                      24/7 Customer Support:
+                      24/7 Customer Support call us for any questions:
                     </p>
                     <p
                       class="
@@ -2345,7 +2293,7 @@ function App() {
                         text-blue-900
                       "
                     >
-                      For lost or stolen cards:
+                      For lost or stolen cards call us immediately:
                     </p>
                     <p
                       class="
