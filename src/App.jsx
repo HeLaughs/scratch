@@ -1281,7 +1281,7 @@ function App() {
                   "
                 >
                   Basic Plan
-                </h3>￼
+                </h3>
                 <div
                   class="
                     mb-2
