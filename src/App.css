@@ -35,19 +35,19 @@ nav .flex-col a {
   border-radius: 10px;
 }
 
-h1 {
+motion.h1 {
   font-size: clamp(2.5rem, 8vw, 6rem);
   line-height: 1.5;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
 
-h2 {
+motion.h2 {
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-h3 {
+Motion.h3 {
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 600;
   margin-bottom: 1rem;
@@ -61,12 +61,12 @@ p {
   line-height: 1.6;
 }
 
-
-.marq {
+/* 
+.marquee {
   padding-top: 30px;
   padding-bottom: 30px;
   gap: 1rem;
-}
+} */
 
 .text-10xl {
   font-size: clamp(2.5rem, 6vw, 4rem) !important;
@@ -222,3 +222,15 @@ footer {
   background-color: var(--grayColor) !important;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

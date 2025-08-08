@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import "./App.css";
 import "animate.css";
 import { DiRedhat } from "react-icons/di";
@@ -6,8 +7,7 @@ import { GiCardExchange } from "react-icons/gi";
 import { BsCreditCard } from "react-icons/bs";
 import { BiSolidCreditCardAlt } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import FraudTimeline from './components/FraudTimeline';
 import hero from "./assets/her1.jpg";
 import stars from "./assets/stars-1.svg";
 import star from "./assets/stars-5-1.svg";
@@ -47,8 +47,6 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  AOS.init();
   const toggleFaq = (id) => {
     setFaqOpen((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -63,14 +61,15 @@ function App() {
     setFormData({ email: "", card: "", message: "" });
   };
 
+  
+
   return (
     <>
       <div
         class="
           flex flex-col
           min-h-screen
-          scroll-smooth
-        "
+          scroll-smooth"
       >
         <main
           class="
@@ -89,11 +88,14 @@ function App() {
               justify-between items-center fixed top-0
             "
           >
-            <div
+            <motion.div
               class="
                 flex
                 font-bold
               "
+              initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}
             >
               <DiRedhat
                 size={50}
@@ -111,7 +113,7 @@ function App() {
               >
                 ClickSafe
               </a>
-            </div>
+            </motion.div>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
@@ -213,19 +215,24 @@ function App() {
               </a>
             </div>
           </nav>
-          <div
+          <motion.div
             id="home"
             class="
               overflow-hidden
               h-screen
               text-blue-900
-              relative animate__animated animate__fadeInDown
             "
+            initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
           >
-            <div
+            <motion.div
               class="
                 absolute inset-0
               "
+              initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}
             >
               <img
                 src={hero}
@@ -239,8 +246,8 @@ function App() {
                 "
               />
               {/* <img src="http://www.zaccohn.com/images/gifs/lookatthat.gif" class="night-vision-effect h-full w-full"></img> */}
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               class="
                 z-10 flex flex-col
                 h-full
@@ -249,17 +256,19 @@ function App() {
                 relative items-center justify-center
               "
             >
-              <h1
+              <motion.h1
                 class="
                   max-w-5xl
                   mt-2 mb-2
                   text-4xl text-gray-100 font-bold
-                  animate__fadeInDown
                   md:text-5xl
                 "
+                initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.5, duration: 0.8 }}
               >
                 Secure Your Credit & Debit Cards with ClickSafe.
-              </h1>
+              </motion.h1>
               <p
                 class="
                   max-w-4xl
@@ -279,39 +288,48 @@ function App() {
     >
       Get Started
     </button>
-            </div>
-          </div>
-
+            </motion.div>
+          </motion.div>
           <section id="about" class="py-12 px-4 bg-gray-100">
           <div class="py-12 px-4 bg-gray-100">
   <div class="max-w-full mx-auto text-center">
-    <h2 class="text-3xl font-bold text-blue-900 mb-8 animate__bounceIn">Why Choose ClickSafe?</h2>
+    <motion.h2 class="text-3xl font-bold text-blue-900 mb-8" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Why Choose ClickSafe?</motion.h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 flex flex-col items-center text-center">
+      <motion.div class="p-6 flex flex-col items-center text-center">
         <img src={credit} alt="Zero fraud liability" class="rounded-2xl mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Zero Fraud Liability</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Zero Fraud Liability</motion.h3>
         <p class="text-blue-900 text-sm">
           You're not responsible for unauthorized transactions on any linked credit or debit card. 
           Verified protection from day one.
         </p>
-      </div>
+      </motion.div>
       <div class="p-6 flex flex-col items-center text-center">
         <img src={securrr} alt="Instant alerts" class="rounded-2xl mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Instant Transaction Alerts</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Instant Transaction Alerts</motion.h3>
         <p class="text-blue-900 text-sm">
           Receive real-time push or SMS alerts for every purchase — credit or debit — so you can act fast.
         </p>
       </div>
       <div class="p-6 flex flex-col items-center text-center">
         <img src={Feature1} alt="Freeze cards" class="rounded-2xl mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Freeze Any Card Instantly</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Freeze Any Card Instantly</motion.h3>
         <p class="text-blue-900 text-sm">
           Lost your card? Freeze your credit or debit card in one tap. No more waiting for customer service.
         </p>
       </div>
       <div class="p-6 flex flex-col items-center text-center">
         <img src={paycard} alt="Global acceptance" class="mb-3 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Works Worldwide</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Works Worldwide</motion.h3>
         <p class="text-blue-900 text-sm">
           Accepted at millions of locations globally. Verified, secure, and ready for travel.
         </p>
@@ -320,10 +338,11 @@ function App() {
   </div>
 </div>
 </section>
-
           <section id="feature" class="py-12 px-4 bg-gray-100">
   <div class="max-w-6xl mx-auto text-center">
-    <h1 class="text-3xl font-bold max-w-5xl text-blue-900 mb-2">Advanced Security for Your Card.</h1>
+    <motion.h1 class="text-3xl font-bold max-w-5xl text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Advanced Security for Your Card.</motion.h1>
     <p class="max-w-2xl mx-auto text-blue-900 leading-relaxed mb-10">
       Whether it’s a credit or debit card, ClickSafe ensures full protection with verified linking, 
       end-to-end encryption, and AI-powered fraud monitoring.
@@ -333,7 +352,9 @@ function App() {
       <div class="p-6">
         <div class="w-fit mx-auto mb-4 text-blue-900">
         </div>
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Verified Card Linking</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Verified Card Linking</motion.h3>
         <p class="text-blue-900">
           Every credit and debit card is verified using SMS, email, or biometric authentication. 
           Temporary authorization holds confirm ownership securely and comply with PCI-DSS standards.
@@ -342,7 +363,9 @@ function App() {
       <div class="p-6">
         <div class="w-fit mx-auto mb-4 text-blue-900">
         </div>
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Military-Grade Encryption</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Military-Grade Encryption</motion.h3>
         <p class="text-blue-900">
           All card data — whether credit or debit — is encrypted in transit and at rest using AES-256. 
           We never store full card numbers on our servers.
@@ -351,7 +374,9 @@ function App() {
       <div class="p-6">
         <div class="w-fit mx-auto mb-4 text-blue-900">
         </div>
-        <h3 class="text-xl font-bold text-blue-900 mb-2">Real-Time Fraud Monitoring</h3>
+        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Real-Time Fraud Monitoring</motion.h3>
         <p class="text-blue-900">
           AI analyzes every transaction on your credit and debit cards in real time. 
           Get instant alerts and freeze cards instantly if suspicious activity is detected.
@@ -359,20 +384,24 @@ function App() {
       </div>
     </div>
   </div>
+  <FraudTimeline />
 </section>
           <div
             class="
               text-center
             "
           >
-            <h1
+            <motion.h1
               class="
-                mt-2
-                font-medium text-blue-900
+                mt-2 
+                font-bold text-3xl text-blue-900
               "
+              initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}
             >
               ClickSafe Security Features
-            </h1>
+            </motion.h1>
             <p
               class="
                 max-w-2xl
@@ -530,8 +559,7 @@ function App() {
             "
           >
             
-            </div>
-          
+            </div>      
 <div
               class="
                 flex
@@ -550,7 +578,8 @@ function App() {
                   w-full
                   text-blue-900 font-bold text-2xl
                   bg-gray-100
-                  marq
+                  marquee
+                  hover:marquee-hover
                 "
               >
                 <div
@@ -567,106 +596,99 @@ function App() {
                     "
                   >
                     <a
-                      class="
-                        flex
-                        items-center
-                      "
-                    >
-                      <svg
-                        viewBox="0 0 86 29"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="
-                          w-fit h-18
-                          text-blue-900
-                          hover:text-blue-400
-                        "
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M11.6008 10.2627V13.2312L18.6907 13.2281C18.4733 14.8653 17.9215 16.0641 17.0826 16.9031C16.0487 17.9378 14.4351 19.0766 11.6008 19.0766C7.23238 19.0766 3.81427 15.5531 3.81427 11.1808C3.81427 6.80853 7.23238 3.28487 11.6008 3.28487C13.9585 3.28487 15.6794 4.21232 16.9503 5.40473L19.0432 3.31011C17.2721 1.6161 14.9144 0.316406 11.6036 0.316406C5.62156 0.316406 0.589844 5.19338 0.589844 11.1808C0.589844 17.1682 5.62156 22.0451 11.6036 22.0451C14.8322 22.0451 17.2694 20.9852 19.1756 18.9979C21.1362 17.0356 21.7451 14.2818 21.7451 12.0546C21.7451 11.3921 21.6949 10.7802 21.5974 10.2627H11.6008ZM71.4046 21.6192V1.11445H68.4101V21.6192H71.4046ZM29.9511 22.0482C33.8151 22.0482 36.9643 19.0797 36.9643 15.0513C36.9643 10.9945 33.8151 8.05451 29.9511 8.05451C26.0857 8.05451 22.9365 10.9945 22.9365 15.0513C22.9365 19.0797 26.0857 22.0482 29.9511 22.0482ZM29.9511 10.8116C32.0691 10.8116 33.8945 12.534 33.8945 15.0513C33.8945 17.5404 32.0691 19.2911 29.9511 19.2911C27.833 19.2911 26.0076 17.5435 26.0076 15.0513C26.0076 12.534 27.833 10.8116 29.9511 10.8116ZM45.0825 22.0482C48.9465 22.0482 52.0957 19.0797 52.0957 15.0513C52.0957 10.9945 48.9465 8.05451 45.0825 8.05451C41.2171 8.05451 38.0679 10.9977 38.0679 15.0513C38.0679 19.0797 41.2171 22.0482 45.0825 22.0482ZM45.0825 10.8116C47.2005 10.8116 49.0259 12.534 49.0259 15.0513C49.0259 17.5404 47.2005 19.2911 45.0825 19.2911C42.9644 19.2911 41.139 17.5435 41.139 15.0513C41.139 12.534 42.9644 10.8116 45.0825 10.8116ZM66.5972 8.48038V21.0387C66.5972 26.2059 63.5512 28.3164 59.9519 28.3164C56.563 28.3164 54.523 26.0482 53.7539 24.1934L56.4265 23.0798C56.903 24.2186 58.0694 25.5624 59.9477 25.5624C62.2525 25.5624 63.6807 24.1397 63.6807 21.4615V20.4552H63.5734C62.8865 21.3037 61.5627 22.0451 59.892 22.0451C56.3958 22.0451 53.1923 18.9977 53.1923 15.0766C53.1923 11.1271 56.3958 8.05451 59.892 8.05451C61.5585 8.05451 62.8837 8.79579 63.5734 9.6192H63.6807V8.48038H66.5972ZM63.8981 15.0766C63.8981 12.6129 62.2553 10.8116 60.1651 10.8116C58.0471 10.8116 56.2732 12.6129 56.2732 15.0766C56.2732 17.5152 58.0471 19.2911 60.1651 19.2911C62.2553 19.2911 63.8981 17.5152 63.8981 15.0766ZM83.0747 17.3542L85.4575 18.9442C84.6883 20.083 82.835 22.0451 79.6315 22.0451C75.6602 22.0451 72.6935 18.9726 72.6935 15.0483C72.6935 10.8874 75.6853 8.05143 79.2887 8.05143C82.9172 8.05143 84.6911 10.941 85.2721 12.5026L85.5898 13.2976L76.2426 17.1713C76.9589 18.5751 78.0708 19.2912 79.6315 19.2912C81.1949 19.2912 82.2804 18.5215 83.0747 17.3542ZM75.7382 14.8369L81.9864 12.2407C81.6436 11.3668 80.6097 10.758 79.3918 10.758C77.8326 10.758 75.6602 12.1366 75.7382 14.8369Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </a>
+          href="#stripe"
+          class="
+            flex
+            items-center
+            justify-center
+          "
+        >
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" 
+            alt="Stripe" 
+            class="
+              h-12
+              object-contain
+              hover:scale-105
+              transition-transform
+              duration-300
+            "
+          />
+        </a>
                     <a
-                      class="
-                        flex
-                        items-center
-                        sm:justify-start
-                        md:justify-center
-                      "
-                    >
-                      <svg
-                        viewBox="0 0 86 29"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="
-                          w-fit h-18
-                          text-blue-900
-                          hover:text-blue-400
-                        "
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M11.6008 10.2627V13.2312L18.6907 13.2281C18.4733 14.8653 17.9215 16.0641 17.0826 16.9031C16.0487 17.9378 14.4351 19.0766 11.6008 19.0766C7.23238 19.0766 3.81427 15.5531 3.81427 11.1808C3.81427 6.80853 7.23238 3.28487 11.6008 3.28487C13.9585 3.28487 15.6794 4.21232 16.9503 5.40473L19.0432 3.31011C17.2721 1.6161 14.9144 0.316406 11.6036 0.316406C5.62156 0.316406 0.589844 5.19338 0.589844 11.1808C0.589844 17.1682 5.62156 22.0451 11.6036 22.0451C14.8322 22.0451 17.2694 20.9852 19.1756 18.9979C21.1362 17.0356 21.7451 14.2818 21.7451 12.0546C21.7451 11.3921 21.6949 10.7802 21.5974 10.2627H11.6008ZM71.4046 21.6192V1.11445H68.4101V21.6192H71.4046ZM29.9511 22.0482C33.8151 22.0482 36.9643 19.0797 36.9643 15.0513C36.9643 10.9945 33.8151 8.05451 29.9511 8.05451C26.0857 8.05451 22.9365 10.9945 22.9365 15.0513C22.9365 19.0797 26.0857 22.0482 29.9511 22.0482ZM29.9511 10.8116C32.0691 10.8116 33.8945 12.534 33.8945 15.0513C33.8945 17.5404 32.0691 19.2911 29.9511 19.2911C27.833 19.2911 26.0076 17.5435 26.0076 15.0513C26.0076 12.534 27.833 10.8116 29.9511 10.8116ZM45.0825 22.0482C48.9465 22.0482 52.0957 19.0797 52.0957 15.0513C52.0957 10.9945 48.9465 8.05451 45.0825 8.05451C41.2171 8.05451 38.0679 10.9977 38.0679 15.0513C38.0679 19.0797 41.2171 22.0482 45.0825 22.0482ZM45.0825 10.8116C47.2005 10.8116 49.0259 12.534 49.0259 15.0513C49.0259 17.5404 47.2005 19.2911 45.0825 19.2911C42.9644 19.2911 41.139 17.5435 41.139 15.0513C41.139 12.534 42.9644 10.8116 45.0825 10.8116ZM66.5972 8.48038V21.0387C66.5972 26.2059 63.5512 28.3164 59.9519 28.3164C56.563 28.3164 54.523 26.0482 53.7539 24.1934L56.4265 23.0798C56.903 24.2186 58.0694 25.5624 59.9477 25.5624C62.2525 25.5624 63.6807 24.1397 63.6807 21.4615V20.4552H63.5734C62.8865 21.3037 61.5627 22.0451 59.892 22.0451C56.3958 22.0451 53.1923 18.9977 53.1923 15.0766C53.1923 11.1271 56.3958 8.05451 59.892 8.05451C61.5585 8.05451 62.8837 8.79579 63.5734 9.6192H63.6807V8.48038H66.5972ZM63.8981 15.0766C63.8981 12.6129 62.2553 10.8116 60.1651 10.8116C58.0471 10.8116 56.2732 12.6129 56.2732 15.0766C56.2732 17.5152 58.0471 19.2911 60.1651 19.2911C62.2553 19.2911 63.8981 17.5152 63.8981 15.0766ZM83.0747 17.3542L85.4575 18.9442C84.6883 20.083 82.835 22.0451 79.6315 22.0451C75.6602 22.0451 72.6935 18.9726 72.6935 15.0483C72.6935 10.8874 75.6853 8.05143 79.2887 8.05143C82.9172 8.05143 84.6911 10.941 85.2721 12.5026L85.5898 13.2976L76.2426 17.1713C76.9589 18.5751 78.0708 19.2912 79.6315 19.2912C81.1949 19.2912 82.2804 18.5215 83.0747 17.3542ZM75.7382 14.8369L81.9864 12.2407C81.6436 11.3668 80.6097 10.758 79.3918 10.758C77.8326 10.758 75.6602 12.1366 75.7382 14.8369Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </a>
+          href="#paypal"
+          class="
+            flex
+            items-center
+            justify-center
+          "
+        >
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" 
+            alt="PayPal" 
+            class="
+              h-12
+              object-contain
+              hover:scale-105
+              transition-transform
+              duration-300
+            "
+          />
+        </a>
                     <a
-                      class="
-                        flex
-                        items-center
-                      "
-                    >
-                      <svg
-                        viewBox="0 0 86 29"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="
-                          w-fit h-18
-                          text-blue-900
-                          hover:text-blue-400
-                        "
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M11.6008 10.2627V13.2312L18.6907 13.2281C18.4733 14.8653 17.9215 16.0641 17.0826 16.9031C16.0487 17.9378 14.4351 19.0766 11.6008 19.0766C7.23238 19.0766 3.81427 15.5531 3.81427 11.1808C3.81427 6.80853 7.23238 3.28487 11.6008 3.28487C13.9585 3.28487 15.6794 4.21232 16.9503 5.40473L19.0432 3.31011C17.2721 1.6161 14.9144 0.316406 11.6036 0.316406C5.62156 0.316406 0.589844 5.19338 0.589844 11.1808C0.589844 17.1682 5.62156 22.0451 11.6036 22.0451C14.8322 22.0451 17.2694 20.9852 19.1756 18.9979C21.1362 17.0356 21.7451 14.2818 21.7451 12.0546C21.7451 11.3921 21.6949 10.7802 21.5974 10.2627H11.6008ZM71.4046 21.6192V1.11445H68.4101V21.6192H71.4046ZM29.9511 22.0482C33.8151 22.0482 36.9643 19.0797 36.9643 15.0513C36.9643 10.9945 33.8151 8.05451 29.9511 8.05451C26.0857 8.05451 22.9365 10.9945 22.9365 15.0513C22.9365 19.0797 26.0857 22.0482 29.9511 22.0482ZM29.9511 10.8116C32.0691 10.8116 33.8945 12.534 33.8945 15.0513C33.8945 17.5404 32.0691 19.2911 29.9511 19.2911C27.833 19.2911 26.0076 17.5435 26.0076 15.0513C26.0076 12.534 27.833 10.8116 29.9511 10.8116ZM45.0825 22.0482C48.9465 22.0482 52.0957 19.0797 52.0957 15.0513C52.0957 10.9945 48.9465 8.05451 45.0825 8.05451C41.2171 8.05451 38.0679 10.9977 38.0679 15.0513C38.0679 19.0797 41.2171 22.0482 45.0825 22.0482ZM45.0825 10.8116C47.2005 10.8116 49.0259 12.534 49.0259 15.0513C49.0259 17.5404 47.2005 19.2911 45.0825 19.2911C42.9644 19.2911 41.139 17.5435 41.139 15.0513C41.139 12.534 42.9644 10.8116 45.0825 10.8116ZM66.5972 8.48038V21.0387C66.5972 26.2059 63.5512 28.3164 59.9519 28.3164C56.563 28.3164 54.523 26.0482 53.7539 24.1934L56.4265 23.0798C56.903 24.2186 58.0694 25.5624 59.9477 25.5624C62.2525 25.5624 63.6807 24.1397 63.6807 21.4615V20.4552H63.5734C62.8865 21.3037 61.5627 22.0451 59.892 22.0451C56.3958 22.0451 53.1923 18.9977 53.1923 15.0766C53.1923 11.1271 56.3958 8.05451 59.892 8.05451C61.5585 8.05451 62.8837 8.79579 63.5734 9.6192H63.6807V8.48038H66.5972ZM63.8981 15.0766C63.8981 12.6129 62.2553 10.8116 60.1651 10.8116C58.0471 10.8116 56.2732 12.6129 56.2732 15.0766C56.2732 17.5152 58.0471 19.2911 60.1651 19.2911C62.2553 19.2911 63.8981 17.5152 63.8981 15.0766ZM83.0747 17.3542L85.4575 18.9442C84.6883 20.083 82.835 22.0451 79.6315 22.0451C75.6602 22.0451 72.6935 18.9726 72.6935 15.0483C72.6935 10.8874 75.6853 8.05143 79.2887 8.05143C82.9172 8.05143 84.6911 10.941 85.2721 12.5026L85.5898 13.2976L76.2426 17.1713C76.9589 18.5751 78.0708 19.2912 79.6315 19.2912C81.1949 19.2912 82.2804 18.5215 83.0747 17.3542ZM75.7382 14.8369L81.9864 12.2407C81.6436 11.3668 80.6097 10.758 79.3918 10.758C77.8326 10.758 75.6602 12.1366 75.7382 14.8369Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </a>
+          href="#mastercard"
+          class="
+            flex
+            items-center
+            justify-center
+          "
+        >
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" 
+            alt="Mastercard" 
+            class="
+              h-12
+              object-contain
+              hover:scale-105
+              transition-transform
+              duration-300
+            "
+          />
+        </a>
+        
                     <a
-                      class="
-                        flex
-                        items-center
-                      "
-                    >
-                      <svg
-                        viewBox="0 0 86 29"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="
-                          w-fit h-18
-                          text-blue-900
-                          hover:text-blue-400
-                        "
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M11.6008 10.2627V13.2312L18.6907 13.2281C18.4733 14.8653 17.9215 16.0641 17.0826 16.9031C16.0487 17.9378 14.4351 19.0766 11.6008 19.0766C7.23238 19.0766 3.81427 15.5531 3.81427 11.1808C3.81427 6.80853 7.23238 3.28487 11.6008 3.28487C13.9585 3.28487 15.6794 4.21232 16.9503 5.40473L19.0432 3.31011C17.2721 1.6161 14.9144 0.316406 11.6036 0.316406C5.62156 0.316406 0.589844 5.19338 0.589844 11.1808C0.589844 17.1682 5.62156 22.0451 11.6036 22.0451C14.8322 22.0451 17.2694 20.9852 19.1756 18.9979C21.1362 17.0356 21.7451 14.2818 21.7451 12.0546C21.7451 11.3921 21.6949 10.7802 21.5974 10.2627H11.6008ZM71.4046 21.6192V1.11445H68.4101V21.6192H71.4046ZM29.9511 22.0482C33.8151 22.0482 36.9643 19.0797 36.9643 15.0513C36.9643 10.9945 33.8151 8.05451 29.9511 8.05451C26.0857 8.05451 22.9365 10.9945 22.9365 15.0513C22.9365 19.0797 26.0857 22.0482 29.9511 22.0482ZM29.9511 10.8116C32.0691 10.8116 33.8945 12.534 33.8945 15.0513C33.8945 17.5404 32.0691 19.2911 29.9511 19.2911C27.833 19.2911 26.0076 17.5435 26.0076 15.0513C26.0076 12.534 27.833 10.8116 29.9511 10.8116ZM45.0825 22.0482C48.9465 22.0482 52.0957 19.0797 52.0957 15.0513C52.0957 10.9945 48.9465 8.05451 45.0825 8.05451C41.2171 8.05451 38.0679 10.9977 38.0679 15.0513C38.0679 19.0797 41.2171 22.0482 45.0825 22.0482ZM45.0825 10.8116C47.2005 10.8116 49.0259 12.534 49.0259 15.0513C49.0259 17.5404 47.2005 19.2911 45.0825 19.2911C42.9644 19.2911 41.139 17.5435 41.139 15.0513C41.139 12.534 42.9644 10.8116 45.0825 10.8116ZM66.5972 8.48038V21.0387C66.5972 26.2059 63.5512 28.3164 59.9519 28.3164C56.563 28.3164 54.523 26.0482 53.7539 24.1934L56.4265 23.0798C56.903 24.2186 58.0694 25.5624 59.9477 25.5624C62.2525 25.5624 63.6807 24.1397 63.6807 21.4615V20.4552H63.5734C62.8865 21.3037 61.5627 22.0451 59.892 22.0451C56.3958 22.0451 53.1923 18.9977 53.1923 15.0766C53.1923 11.1271 56.3958 8.05451 59.892 8.05451C61.5585 8.05451 62.8837 8.79579 63.5734 9.6192H63.6807V8.48038H66.5972ZM63.8981 15.0766C63.8981 12.6129 62.2553 10.8116 60.1651 10.8116C58.0471 10.8116 56.2732 12.6129 56.2732 15.0766C56.2732 17.5152 58.0471 19.2911 60.1651 19.2911C62.2553 19.2911 63.8981 17.5152 63.8981 15.0766ZM83.0747 17.3542L85.4575 18.9442C84.6883 20.083 82.835 22.0451 79.6315 22.0451C75.6602 22.0451 72.6935 18.9726 72.6935 15.0483C72.6935 10.8874 75.6853 8.05143 79.2887 8.05143C82.9172 8.05143 84.6911 10.941 85.2721 12.5026L85.5898 13.2976L76.2426 17.1713C76.9589 18.5751 78.0708 19.2912 79.6315 19.2912C81.1949 19.2912 82.2804 18.5215 83.0747 17.3542ZM75.7382 14.8369L81.9864 12.2407C81.6436 11.3668 80.6097 10.758 79.3918 10.758C77.8326 10.758 75.6602 12.1366 75.7382 14.8369Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </a>
+          href="#visa"
+          class="
+            flex
+            items-center
+            justify-center
+          "
+        >
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" 
+            alt="Visa" 
+            class="
+              h-12
+              object-contain
+              hover:scale-105
+              transition-transform
+              duration-300
+            "
+          />
+        </a>
                   </div>
                 </div>
               </marquee>
+              <div
+  class="
+    flex
+    w-full
+    p-4
+    bg-gray-100
+    items-center
+  "
+>
+</div>
             </div>
             <div
               class="
@@ -908,7 +930,7 @@ function App() {
                       "
                     >
                       <button
-                        href="get-cards#"
+                        onClick={() => window.location.href = "get-cards"}
                         class="
                           w-fit
                           p-3
@@ -933,8 +955,7 @@ function App() {
                         Credit validator
                       </button>
                     </div>
-                  </div>
-                  
+                  </div>      
                   <div
                     class="
                       flex
@@ -969,6 +990,7 @@ function App() {
                       </blockquote>
                     </div>
                   </div>
+                  
                   <div
                     class="
                       container
@@ -1539,6 +1561,7 @@ function App() {
                 md:flex-row
               "
             >
+          
               <form
                 onSubmit={handleFormSubmit}
                 class="
@@ -1546,7 +1569,7 @@ function App() {
                   p-4 mb-8
                   bg-gray-100
                   rounded-lg
-                  shadow
+                bg-gradient-to-br from-gray-100 to-blue-100
                   md:w-1/2
                 "
               >
@@ -1558,7 +1581,7 @@ function App() {
                 >
                   <div
                     class="
-                      relative
+                      relative mb-2
                     "
                   >
                     <label
@@ -1566,7 +1589,7 @@ function App() {
                       class="
                         block
                         py-4
-                        text-lg text-blue-900 placeholder-gray-400
+                        text-lg text-blue-900 placeholder-gray-100
                         focus:placeholder-blue-300
                       "
                     >
@@ -1769,25 +1792,26 @@ function App() {
           </section>
 
           <section id="faq" class="max-w-5xl py-12 px-2 mx-auto bg-gray-100 section">
-  <div class="max-w-7xl px-4 mx-auto">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="mb-4 text-blue-900 font-bold text-3xl">Frequently Asked Questions</h2>
-      <p class="text-blue-900 leading-relaxed">Common questions about ClickSafe card safety, verification, and protection for both credit and debit cards.</p>
+  <div className="max-w-7xl px-4 mx-auto">
+    <div className="max-w-2xl mx-auto text-center">
+      <h2 className="mb-4 text-blue-900 font-bold text-3xl">Frequently Asked Questions</h2>
+      <p className="text-blue-900 leading-relaxed">Common questions about ClickSafe card safety, verification, and protection for both credit and debit cards.</p>
     </div>
-    <div class="space-y-4 mt-8">
-      <div class="p-4 bg-gray-200 rounded-lg">
-        <p class="text-blue-900 font-medium">What security features protect my credit and debit cards?</p>
+    <div className="space-y-4 mt-8">
+      <div className="p-4 bg-gray-200 rounded-lg">
+        <p className="text-blue-900 font-medium">What security features protect my credit and debit cards?</p>
         <button 
           type="button" 
           onClick={() => toggleFaq(1)} 
-          class="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
+          className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        
         {faqOpen[1] && (
-          <p class="mt-2 text-blue-900">
+          <p className="mt-2 text-blue-900">
             ClickSafe applies the same military-grade encryption, real-time fraud monitoring, and instant transaction alerts to both credit and debit cards. 
             All cards are verified using multi-factor authentication during setup and support biometric login, tokenization, and dynamic CVV for secure transactions.
           </p>
@@ -1849,6 +1873,11 @@ function App() {
       </div>
     </div>
   </div>
+  <div className="p-2 mt-4 text-center">
+        <p className="text-xs text-blue-900">
+          24/7 monitoring • Military-grade encryption • Instant alerts • Global coverage
+        </p>
+      </div>
 </section>
           <footer
             id="footer"
@@ -1875,7 +1904,7 @@ function App() {
                 <DiRedhat size={50} color="white" />
                 <h3
                   class="
-                    font-bold text-2xl text-blue-900
+                    font-bold text-2xl text-blue-900 ml-2
                   "
                 >
                   ClickSafe
@@ -1883,7 +1912,7 @@ function App() {
                 <p
                   class="
                     mb-2
-                    text-gray-100
+                    text-gray-100 mt-2
                   "
                 >
                   Creating innovative ClickSafe solutions for modern businesses.
@@ -1998,19 +2027,12 @@ function App() {
                 >
                   Contact
                 </div>
-                <a
-                  href="contact#"
-                  class="
-                    block
-                    my-2
-                    hover:text-gray-100
-                  "
-                >
-                  <span>
-                    <FiPhoneCall />
-                  </span>{" "}
-                  +000 777 3930, Universe.VA
-                </a>
+                <a href="#contact" className="block my-2 hover:text-gray-100">
+        <span className="inline-block align-middle">
+          <FiPhoneCall />
+        </span>{" "}
+        +000 777 3930, Universe.VA
+      </a>
                 <a
                   href="email#"
                   class="
@@ -2021,24 +2043,14 @@ function App() {
                 >
                   support@clicksafe.com
                 </a>
-                <a
-                  href="info#"
-                  class="
-                    block
-                    my-2
-                    hover:text-gray-100
-                  "
-                >
-                  info.us
-                </a>
               </div>
               <div
-                class="
+                className="
                   mt-2 p-2
                 "
               >
                 <h4
-                  class="
+                  className="
                     mb-2
                     text-blue-900
                   "
@@ -2046,7 +2058,7 @@ function App() {
                   ClickSafe Security Updates
                 </h4>
                 <form
-                  class="
+                  className="
                     flex
                   "
                 >
@@ -2055,7 +2067,7 @@ function App() {
                     type="email"
                     placeholder="Enter email"
                     aria-required="true"
-                    class="
+                    className="
                       w-full
                       px-4 py-2
                       text-blue-900
@@ -2065,7 +2077,7 @@ function App() {
                   />
                   <button
                     type="submit"
-                    class="
+                    className="
                       px-4 py-2
                       text-gray-100 font-bold
                       bg-blue-400
@@ -2079,20 +2091,20 @@ function App() {
               </div>
             </div>
             <div
-              class="
+              className="
                 pt-2 mb-2
                 bg-gray-200
               "
             >
-              <div class="text-center pt-2 text-sm text-blue-900 border-gray-200 mb-2">
+              <div className="text-center pt-2 text-sm text-blue-900 border-gray-200 mb-2">
     <span>© 2025 ClickSafe. All rights reserved.</span>
-    <span class="mx-4">Privacy Policy</span>
+    <span className="mx-4">Privacy Policy</span>
   </div>
             </div>
             <button
               onClick={scrollToTop}
               aria-label="Scroll to top"
-              class={`
+              className={`
                 z-50
                 p-3
                 text-blue-400
@@ -2125,10 +2137,10 @@ function App() {
               </svg>
             </button>
           </footer>
+          
         </main>
       </div>
     </>
   );
-}
-
+};
 export default App;
