@@ -4,19 +4,17 @@ import "./App.css";
 import "animate.css";
 import { DiRedhat } from "react-icons/di";
 import { GiCardExchange } from "react-icons/gi";
-import { BsCreditCard } from "react-icons/bs";
-import { BiSolidCreditCardAlt } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
 import FraudTimeline from './components/FraudTimeline';
-import hero from "./assets/her1.jpg";
+import hero from "./assets/card.png";
 import stars from "./assets/stars-1.svg";
 import star from "./assets/stars-5-1.svg";
 import Feature from "./assets/Feature.jpg";
 import Feature1 from "./assets/security.jpg";
 import card2 from "./assets/card2.png";
-import paycard from "./assets/paycard.png";
+import pay from "./assets/pay.png";
 import credit from "./assets/credit.png";
-import securrr from "./assets/securrr.png";
+import secure from "./assets/secure.png";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,9 +31,10 @@ function App() {
     });
   };
   const [showScrollButton, setShowScrollButton] = useState(false);
-  function handleExploreClickSafe() {
-    window.location.href = "/contactless";
+  function handleExploreSecureCard() {
+    window.location.href = "/virtual";
   }
+
   function handleSecurityFeatures() {
     window.location.href = "/security";
   }
@@ -47,6 +46,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const toggleFaq = (id) => {
     setFaqOpen((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -57,7 +57,7 @@ function App() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Form submitted successfully!");
+    alert("Thank you! We'll get back to you shortly.");
     setFormData({ email: "", card: "", message: "" });
   };
 
@@ -66,7 +66,7 @@ function App() {
   return (
     <>
       <div
-        class="
+        className="
           flex flex-col
           min-h-screen
           scroll-smooth"
@@ -89,7 +89,7 @@ function App() {
             "
           >
             <motion.div
-              class="
+              className="
                 flex
                 font-bold
               "
@@ -107,11 +107,11 @@ function App() {
               />
               <a
                 href="/"
-                class="
+                className="
                   text-2xl text-blue-900
                 "
               >
-                ClickSafe
+                SecureCard+
               </a>
             </motion.div>
             <button
@@ -134,7 +134,7 @@ function App() {
                 `}
               ></span>
               <span
-                class={`
+                className={`
                   block
                   w-6 h-0.5
                   mb-1
@@ -143,7 +143,7 @@ function App() {
                 `}
               ></span>
               <span
-                class={`
+                className={`
                   block
                   w-6 h-0.5
                   bg-blue-900
@@ -155,7 +155,7 @@ function App() {
 
             <div
               style={{ transition: "all 2s ease-in-out", top: "100%" }}
-              class={`
+              className={`
                 flex flex-col z-40
                 w-full
                 space-x-4
@@ -168,7 +168,7 @@ function App() {
               <a
                 href="#home"
                 onClick={() => setMenuOpen(false)}
-                class="
+                className="
                   px-4 py-2
                   font-medium
                   rounded-lg
@@ -180,7 +180,7 @@ function App() {
               <a
                 href="#about"
                 onClick={() => setMenuOpen(false)}
-                class="
+                className="
                   px-4 py-2
                   font-medium
                   rounded-lg
@@ -192,7 +192,7 @@ function App() {
               <a
                 href="#feature"
                 onClick={() => setMenuOpen(false)}
-                class="
+                className="
                   px-4 py-2
                   font-medium
                   rounded-lg
@@ -204,7 +204,7 @@ function App() {
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
-                class="
+                className="
                   px-4 py-2
                   font-medium
                   rounded-lg
@@ -227,7 +227,7 @@ function App() {
   transition={{ duration: 1 }}
           >
             <motion.div
-              class="
+              className="
                 absolute inset-0
               "
               initial={{ scale: 1.1 }}
@@ -236,10 +236,10 @@ function App() {
             >
               <img
                 src={hero}
-                alt="hero image"
+                alt="SecureCard+ virtual card"
                 loading="lazy"
                 decoding="async"
-                class="
+                className="
                   object-cover object-center
                   w-full h-full
                   opacity-85
@@ -248,7 +248,7 @@ function App() {
               {/* <img src="http://www.zaccohn.com/images/gifs/lookatthat.gif" class="night-vision-effect h-full w-full"></img> */}
             </motion.div>
             <motion.div
-              class="
+              className="
                 z-10 flex flex-col
                 h-full
                 p-6
@@ -257,136 +257,131 @@ function App() {
               "
             >
               <motion.h1
-                class="
+                className="
                   max-w-5xl
                   mt-2 mb-2
-                  text-4xl text-gray-100 font-bold
+                  text-4xl text-blue-900 font-bold
                   md:text-5xl
                 "
                 initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.8 }}
               >
-                Secure Your Credit & Debit Cards with ClickSafe.
+                SecureCard+ Your Ultimate Virtual Credit Card.
               </motion.h1>
               <p
-                class="
+                className="
                   max-w-4xl
                   mb-6
                   text-blue-900 font-bold text-center text-lg leading-relaxed tracking-wide
                   bg-gray-100
-                  rounded-lg
+                  rounded-lg p-4
                 "
               >
-                Protect both your credit and debit cards with military-grade encryption, real-time fraud detection, 
-      and instant transaction alerts. Verified. Secured. Trusted.
+                Generate random, secure virtual card numbers in seconds. Never share your real card again.
               </p>
               
               <button
-      onClick={handleExploreClickSafe}
+      onClick={handleExploreSecureCard}
       className="px-6 py-3 text-lg text-gray-100 bg-blue-400 rounded-lg shadow-md hover:bg-blue-900 transition-all duration-300 transform hover:scale-105"
     >
-      Get Started
+      Get Your SecureCard+
     </button>
             </motion.div>
           </motion.div>
-          <section id="about" class="py-12 px-4 bg-gray-100">
-          <div class="py-12 px-4 bg-gray-100">
-  <div class="max-w-full mx-auto text-center">
-    <motion.h2 class="text-3xl font-bold text-blue-900 mb-8" initial={{ scale: 1.1 }}
+          
+          <section id="about" className="py-2 px-2 bg-gray-100">
+          <div className="py-2 px-2 bg-gray-100">
+  <div className="max-w-full mx-auto text-center">
+    <motion.h2 className="text-3xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Why Choose ClickSafe?</motion.h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <motion.div class="p-6 flex flex-col items-center text-center">
-        <img src={credit} alt="Zero fraud liability" class="rounded-2xl mb-3 h-20 object-contain" />
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+    transition={{ duration: 1.5, ease: "easeOut" }}>Why Choose SecureCard+ ?</motion.h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <motion.div className="p-6 flex flex-col items-center text-center">
+        <img src={credit} alt="Random card generation" className="rounded-2xl mb-2 h-20 object-contain" />
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Zero Fraud Liability</motion.h3>
-        <p class="text-blue-900 text-sm">
-          You're not responsible for unauthorized transactions on any linked credit or debit card. 
-          Verified protection from day one.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Random Card Generation</motion.h3>
+        <p className="text-blue-900 text-sm">
+        Create unique, disposable virtual card numbers instantly, each one isolated, secure and verified.
         </p>
       </motion.div>
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={securrr} alt="Instant alerts" class="rounded-2xl mb-3 h-20 object-contain" />
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+      <div className="p-6 flex flex-col items-center text-center">
+        <img src={secure} alt="Enhanced security" className="rounded-2xl mb-2 h-20 object-contain" />
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Instant Transaction Alerts</motion.h3>
-        <p class="text-blue-900 text-sm">
-          Receive real-time push or SMS alerts for every purchase — credit or debit — so you can act fast.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Enhanced Security</motion.h3>
+        <p className="text-blue-900 text-sm">
+        Your real card details stay hidden. No more data breaches or fraud exposure.
         </p>
       </div>
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={Feature1} alt="Freeze cards" class="rounded-2xl mb-3 h-20 object-contain" />
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+      <div className="p-6 flex flex-col items-center text-center">
+        <img src={Feature1} alt="Spending controls" className="rounded-2xl mb-2 h-20 object-contain" />
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Freeze Any Card Instantly</motion.h3>
-        <p class="text-blue-900 text-sm">
-          Lost your card? Freeze your credit or debit card in one tap. No more waiting for customer service.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Custom Spending Controls</motion.h3>
+        <p className="text-blue-900 text-sm">
+        Set limits, expiration dates, and merchant restrictions for full control over your spending.
         </p>
       </div>
-      <div class="p-6 flex flex-col items-center text-center">
-        <img src={paycard} alt="Global acceptance" class="mb-3 h-20 object-contain" />
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+      <div className="p-6 flex flex-col items-center text-center">
+        <img src={pay} alt="Privacy protection" className="mb-2 h-20 object-contain" />
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Works Worldwide</motion.h3>
-        <p class="text-blue-900 text-sm">
-          Accepted at millions of locations globally. Verified, secure, and ready for travel.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Privacy Protection</motion.h3>
+        <p className="text-blue-900 text-sm">
+        Avoid spam, tracking, and unwanted spending while your info stays private and secure.
         </p>
       </div>
     </div>
   </div>
 </div>
 </section>
-          <section id="feature" class="py-12 px-4 bg-gray-100">
-  <div class="max-w-6xl mx-auto text-center">
-    <motion.h1 class="text-3xl font-bold max-w-5xl text-blue-900 mb-2" initial={{ scale: 1.1 }}
+          <section id="feature" className="py-2 px-2 bg-gray-100">
+  <div className="max-w-6xl mx-auto text-center">
+    <motion.h1 className="text-3xl font-bold max-w-5xl text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Advanced Security for Your Card.</motion.h1>
-    <p class="max-w-2xl mx-auto text-blue-900 leading-relaxed mb-10">
-      Whether it’s a credit or debit card, ClickSafe ensures full protection with verified linking, 
-      end-to-end encryption, and AI-powered fraud monitoring.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Smart, Secure, Private.</motion.h1>
+    <p className="max-w-2xl mx-auto text-blue-900 leading-relaxed mb-10">
+      Generate random virtual card numbers for one-time purchases, subscriptions and online shopping without ever exposing your real card details.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-6">
-        <div class="w-fit mx-auto mb-4 text-blue-900">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="p-2">
+        <div className="w-fit mx-auto mb-2 text-blue-900">
         </div>
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Verified Card Linking</motion.h3>
-        <p class="text-blue-900">
-          Every credit and debit card is verified using SMS, email, or biometric authentication. 
-          Temporary authorization holds confirm ownership securely and comply with PCI-DSS standards.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Instant Random Cards</motion.h3>
+        <p className="text-blue-900">
+        Generate a new virtual card number in seconds randomly, encrypted, and ready to use for secure online transactions.
         </p>
       </div>
-      <div class="p-6">
-        <div class="w-fit mx-auto mb-4 text-blue-900">
+      <div className="p-2">
+        <div className="w-fit mx-auto mb-2 text-blue-900">
         </div>
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Military-Grade Encryption</motion.h3>
-        <p class="text-blue-900">
-          All card data — whether credit or debit — is encrypted in transit and at rest using AES-256. 
-          We never store full card numbers on our servers.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Full Transaction Control</motion.h3>
+        <p className="text-blue-900">
+        Freeze, delete and limit spending on any virtual card with just a click.
         </p>
       </div>
-      <div class="p-6">
-        <div class="w-fit mx-auto mb-4 text-blue-900">
+      <div className="p-2">
+        <div className="w-fit mx-auto mb-2 text-blue-900">
         </div>
-        <motion.h3 class="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
+        <motion.h3 className="text-xl font-bold text-blue-900 mb-2" initial={{ scale: 1.1 }}
     animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}>Real-Time Fraud Monitoring</motion.h3>
-        <p class="text-blue-900">
-          AI analyzes every transaction on your credit and debit cards in real time. 
-          Get instant alerts and freeze cards instantly if suspicious activity is detected.
+    transition={{ duration: 1.5, ease: "easeOut" }}>Real-Time Monitoring</motion.h3>
+        <p className="text-blue-900">
+          Monitor all your transactions from a single, secure dashboard with instant alerts and freeze cards instantly if suspicious activity is detected.
         </p>
       </div>
     </div>
   </div>
   <FraudTimeline />
 </section>
-          <div
+          {/* <div
             class="
               text-center
             "
@@ -473,7 +468,7 @@ function App() {
                   your funds.
                 </p>
                 <button
-                  onClick={handleExploreClickSafe}
+                  onClick={handleExploreSecureCard}
                   class="
                     px-2 py-4
                     text-gray-100 text-lg
@@ -559,9 +554,9 @@ function App() {
             "
           >
             
-            </div>      
+            </div>       */}
 <div
-              class="
+              className="
                 flex
                 w-full
                 p-4
@@ -574,7 +569,7 @@ function App() {
                 direction="left"
                 loop=""
                 scrollamount="10"
-                class="
+                className="
                   w-full
                   text-blue-900 font-bold text-2xl
                   bg-gray-100
@@ -583,13 +578,13 @@ function App() {
                 "
               >
                 <div
-                  class="
+                  className="
                     max-w-48xl
                     mx-auto px-4 pb-2
                   "
                 >
                   <div
-                    class="
+                    className="
                       grid grid-cols-4
                       text-blue-900
                       gap-8
@@ -597,7 +592,7 @@ function App() {
                   >
                     <a
           href="#stripe"
-          class="
+          className="
             flex
             items-center
             justify-center
@@ -606,7 +601,7 @@ function App() {
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" 
             alt="Stripe" 
-            class="
+            className="
               h-12
               object-contain
               hover:scale-105
@@ -617,7 +612,7 @@ function App() {
         </a>
                     <a
           href="#paypal"
-          class="
+          className="
             flex
             items-center
             justify-center
@@ -626,7 +621,7 @@ function App() {
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" 
             alt="PayPal" 
-            class="
+            className="
               h-12
               object-contain
               hover:scale-105
@@ -637,7 +632,7 @@ function App() {
         </a>
                     <a
           href="#mastercard"
-          class="
+          className="
             flex
             items-center
             justify-center
@@ -646,7 +641,7 @@ function App() {
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" 
             alt="Mastercard" 
-            class="
+            className="
               h-12
               object-contain
               hover:scale-105
@@ -658,7 +653,7 @@ function App() {
         
                     <a
           href="#visa"
-          class="
+          className="
             flex
             items-center
             justify-center
@@ -667,7 +662,7 @@ function App() {
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" 
             alt="Visa" 
-            class="
+            className="
               h-12
               object-contain
               hover:scale-105
@@ -680,7 +675,7 @@ function App() {
                 </div>
               </marquee>
               <div
-  class="
+  className="
     flex
     w-full
     p-4
@@ -691,25 +686,25 @@ function App() {
 </div>
             </div>
             <div
-              class="
+              className="
                 text-blue-900
                 bg-gray-100
               "
             >
               <div
-                class="
+                className="
                   container
                   mx-auto px-2 py-4
                 "
               >
                 <div
-                  class="
+                  className="
                     flex flex-wrap
                     text-center
                   "
                 >
                   <div
-                    class="
+                    className="
                       w-full
                       p-4
                       sm:w-1/2
@@ -717,12 +712,12 @@ function App() {
                     "
                   >
                     <div
-                      class="
+                      className="
                         px-2 py-4
                       "
                     >
                       <div
-                        class="
+                        className="
                           w-12 h-12
                           mb-1 mx-auto
                           items-center
@@ -731,23 +726,23 @@ function App() {
                         <img src={card2} alt="Virtual cards issued" />
                       </div>
                       <h2
-                        class="
+                        className="
                           text-3xl text-blue-900
                         "
                       >
                         7M+
                       </h2>
                       <p
-                        class="
-                          text-blue-900
+                        className="
+                          text-blue-900 text-3xl
                         "
                       >
-                        Virtual-Cards Issued
+                        Virtual Cards Issued
                       </p>
                     </div>
                   </div>
                   <div
-                    class="
+                    className="
                       w-full
                       p-4
                       sm:w-1/2
@@ -755,27 +750,27 @@ function App() {
                     "
                   >
                     <div
-                      class="
+                      className="
                         px-2 py-4
                       "
                     >
                       <GiCardExchange
-                        class="
+                        className="
                           inline-block
                           w-12 h-12
                           mb-1
                         "
                       />
                       <h2
-                        class="
+                        className="
                           text-3xl text-blue-900
                         "
                       >
                         380K
                       </h2>
                       <p
-                        class="
-                          text-blue-900
+                        className="
+                          text-blue-900 text-3xl
                         "
                       >
                         Daily Transactions
@@ -783,15 +778,15 @@ function App() {
                     </div>
                   </div>
                   <div
-                    class="
+                    className="
                       w-full
-                      p-4
+                      p-4<FraudTimeline />
                       sm:w-1/2
                       md:w-1/4
                     "
                   >
                     <div
-                      class="
+                      className="
                         px-2 py-4
                       "
                     >
@@ -802,7 +797,7 @@ function App() {
                         strokeLinejoin="round"
                         strokeWidth="2"
                         viewBox="0 0 24 24"
-                        class="
+                        className="
                           inline-block
                           w-12 h-12
                           mb-1
@@ -814,23 +809,23 @@ function App() {
                         <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                       </svg>
                       <h2
-                        class="
+                        className="
                           text-3xl text-blue-900
                         "
                       >
                         100%
                       </h2>
                       <p
-                        class="
-                          text-blue-900
+                        className="
+                          text-blue-900 text-3xl
                         "
                       >
-                        Fraud Protections
+                        Fraud Protection
                       </p>
                     </div>
                   </div>
                   <div
-                    class="
+                    className="
                       w-full
                       p-4
                       sm:w-1/2
@@ -838,32 +833,32 @@ function App() {
                     "
                   >
                     <div
-                      class="
+                      className="
                         px-2 py-4
                       "
                     >
                       <div
-                        class="
+                        className="
                           w-12 h-12
                           mb-1 mx-auto
                           items-center
                         "
                       >
-                        <img src={card2} alt="Virtual cards issued" />
+                        <img src={card2} alt="Transactions secured" />
                       </div>
                       <h2
-                        class="
+                        className="
                           text-3xl text-blue-900
                         "
                       >
                         $5B
                       </h2>
                       <p
-                        class="
-                          text-blue-900
+                        className="
+                          text-blue-900 text-3xl
                         "
                       >
-                        Annual Transactions
+                        Secured Transactions
                       </p>
                     </div>
                   </div>
@@ -871,7 +866,7 @@ function App() {
               </div>
             </div>
             <div
-              class="
+              className="
                 flex
                 text-blue-900
                 bg-gray-100
@@ -879,83 +874,11 @@ function App() {
               "
             >
               <div
-                class="
+                className="
                   w-full
                   px-2 py-4
                 "
-              >
-                <div
-                  class="
-                    grid grid-cols-1
-                    gap-8
-                  "
-                >
-                  <div
-                    class="
-                      flex flex-col
-                      items-center
-                    "
-                  >
-                    <h2
-                      class="
-                        text-4xl font-extrabold
-                      "
-                    >
-                      Smart Banking Cards
-                    </h2>
-                    <p
-                      class="
-                        block
-                        mt-2
-                        font-medium text-blue-900
-                        items-center
-                      "
-                    >
-                      Experience the future of payments with our advanced card
-                      technology that seamlessly integrates cutting-edge
-                      security features with an effortless payment experience.
-                      Our cards offer contactless payments for quick
-                      transactions, digital wallet integration for convenience,
-                      and real-time spending controls that empower you to manage
-                      your finances with ease. Say goodbye to traditional
-                      barriers and hello to a new era of financial freedom where
-                      innovation meets simplicity in every swipe.
-                    </p>
-                    <div
-                      class="
-                        flex flex-wrap
-                        w-fit
-                        mt-2
-                        gap-6
-                      "
-                    >
-                      <button
-                        onClick={() => window.location.href = "get-cards"}
-                        class="
-                          w-fit
-                          p-3
-                          text-blue-400 font-bold text-center
-                          rounded-lg border border-gray-300
-                          grow hover:bg-blue-900
-                        "
-                      >
-                        Order Cards
-                      </button>
-                      <button
-                        href="more-cards#"
-                        class="
-                          w-fit
-                          p-3
-                          text-gray-100 text-center
-                          bg-blue-400
-                          rounded-lg
-                          hover:bg-blue-900 grow
-                        "
-                      >
-                        Credit validator
-                      </button>
-                    </div>
-                  </div>      
+              >     
                   <div
                     class="
                       flex
@@ -1043,7 +966,7 @@ function App() {
                             15K+
                           </h2>
                           <p
-                            class="
+                            className="
                               text-blue-900
                             "
                           >
@@ -1059,7 +982,7 @@ function App() {
                         </div>
                       </div>
                       <div
-                        class="
+                        className="
                           w-full
                           p-4
                           sm:w-1/2
@@ -1227,11 +1150,10 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
           
           <section
             id="pricing"
-            class="
+            className="
               px-2 py-4
               text-center
               bg-gray-100
@@ -1287,21 +1209,14 @@ function App() {
                     mb-2
                   "
                 >
-                  <p
-                    class="
-                      text-blue-400 text-sm
-                      line-through
-                    "
-                  >
-                    Before: $49/month
-                  </p>
+                  
                   <p
                     class="
                       mt-1
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: FREE
+                     FREE
                   </p>
                 </div>
                 <ul
