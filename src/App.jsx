@@ -1161,35 +1161,36 @@ function App() {
             "
           >
             <h2
-              class="
+              className="
                 mb-2
                 text-blue-900 text-3xl font-bold
                 md:text-4xl
               "
             >
-              Choose Your ClickSafe Protection Plan
+              Choose Your SecureCard+ Plan
             </h2>
             <p
-              class="p-4 justify-center
+              className="p-4 justify-center
                 max-w-3xl mx-auto
                 leading-relaxed
                 mt-2 mb-6
                 text-blue-900 text-center font-semibold text-sm
               "
             >
-              Secure your credit and debit cards with flexible plans. Verified linking, real-time alerts and full fraud protection in every tier.
+              Generate random virtual cards with flexible plans. Security, privacy, and control in every tier.
             </p>
             <div
-              class="
+              className="
                 flex flex-wrap
                 justify-center gap-6
               "
             >
               <div
-                class="
+                className="
                   max-w-sm w-full
                   p-6
                   text-left
+                  text-sm
                   bg-gray-100
                   rounded-br-[50%]
                   shadow-sm
@@ -1197,41 +1198,41 @@ function App() {
                 "
               >
                 <h3
-                  class="
+                  className="
                     mb-1
                     text-lg text-blue-900 font-semibold
                   "
                 >
-                  Basic Plan
+                  Free
                 </h3>
                 <div
-                  class="
+                  className="
                     mb-2
                   "
                 >
                   
                   <p
-                    class="
+                    className="
                       mt-1
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                     FREE
+                     Forever Free
                   </p>
                 </div>
                 <ul
-                  class="
+                  className="
                     mb-4 space-y-1
                     text-blue-400 text-sm
                   "
                 >
-                  <li>Single Card  (Credit or Debit).</li>
-                  <li>Instant transaction Alerts.</li>
+                  <li>Active Virtual Card</li>
+                  <li>Random Card Generation</li>
                   <li>Freeze/Unfreeze anytime.</li>
-                  <li>Verified Card Setup</li>
+                  <li>Basic Spending Limits</li>
                 </ul>
                 <button
-                  class="
+                  className="
                     w-fit
                     py-2 px-4
                     text-gray-100 text-center font-medium
@@ -1240,103 +1241,28 @@ function App() {
                     hover:bg-blue-900
                   "
                 >
-                  Buy Now
+                  Get Started
                 </button>
               </div>
               <div
-                class="
+                className="
                   max-w-sm w-full
                   p-6
                   text-left
+                  text-sm
                   bg-gray-100
                   rounded-br-[50%]
                   shadow-sm
                   relative
                 "
               >
-                <h3
-                  class="
-                    mb-1
-                    text-lg text-blue-900 font-semibold
-                  "
-                >
-                  Plus
-                </h3>
-                <div
-                  class="
-                    mb-2
-                  "
-                >
-                  <p
-                    class="
-                      text-blue-400 text-sm
-                      line-through
-                    "
-                  >
-                    Before: $99/year
-                  </p>
-                  <p
-                    class="
-                      mt-1
-                      text-2xl text-blue-900 font-bold
-                    "
-                  >
-                    Now: $67/year
-                  </p>
-                </div>
-                <ul class="mb-4 space-y-2 text-blue-400 text-left text-sm">
-          <li>Up to 10 Cards (Credit/Debit)</li>
-          <li>Geo-Fencing & Location Alerts</li>
-          <li>Verified Biometric Setup</li>
-          <li>24/7 Fraud Monitoring</li>
-        </ul>
-                <button
-                  class="
-                    w-fit
-                    py-2 px-4
-                    text-gray-100 text-center font-medium
-                    bg-blue-400
-                    rounded-lg
-                    hover:bg-blue-900
-                  "
-                >
-                  Buy Now
-                </button>
-              </div>
-              <div
-                class="
-                  max-w-sm w-full
-                  p-4
-                  text-left
-                  bg-gray-100
-                  rounded-br-[50%]
-                  shadow-sm
-                  relative
-                "
-              >
-                <div
-                  class="
-                    z-10 overflow-hidden
-                    h-24 w-20
-                    mx-auto
-                    absolute right-[-3px] top-[-3px]
-                  "
-                >
-                  <div
-                    class="
-                      w-28
-                      px-0 py-1.5
-                      text-center text-gray-100
-                      bg-[#cfe1f0] bg-gradient-to-b from-[#0d47a1] via-[#000080] to-[#0d47a1]
-                      shadow-[0px_0px_3px_#0000004d]
-                      before:border-t-solid before:border-l-solid before:border-r-solid after:border-t-solid after:border-l-solid after:border-r-solid relative left-[-4px] top-3.5 rotate-45 transform drop-shadow-[#ffffff80_0px_1px_0px] before:absolute before:bottom-[-3px] before:left-0 before:border-l-[3px] before:border-r-[3px] before:border-t-[3px] before:border-l-transparent before:border-r-transparent before:border-t-[#50504f] before:content-[''] after:absolute after:bottom-[-3px] after:right-0 after:border-l-[3px] after:border-r-[3px] after:border-t-[3px] after:border-l-transparent after:border-r-transparent after:border-t-[#50504f] after:content-['']
-                    "
-                  >
-                    Hot Deals
+                <div className="z-10 overflow-hidden h-24 w-20 mx-auto absolute right-[-3px] top-[-3px]">
+                  <div className="w-28 px-0 py-1.5 text-center text-gray-100 bg-gradient-to-b from-blue-900 to-blue-600 rotate-45 transform before:content-[''] after:content-[''] relative left-[-4px] top-3.5 drop-shadow">
+                    Popular
                   </div>
                 </div>
                 <h3
-                  class="
+                  className="
                     mb-1
                     text-lg text-blue-900 font-semibold
                   "
@@ -1344,40 +1270,28 @@ function App() {
                   Pro
                 </h3>
                 <div
-                  class="
+                  className="
                     mb-2
                   "
                 >
+                  
                   <p
-                    class="
-                      text-blue-400 text-sm
-                      line-through
-                    "
-                  >
-                    Before: $159/year
-                  </p>
-                  <p
-                    class="
+                    className="
                       mt-1
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: $99/year
+                    $9/month
                   </p>
                 </div>
-                <ul
-                  class="
-                    mb-4 space-y-1
-                    text-blue-400 text-sm
-                  "
-                >
-                  <li>Upto 10 Cards (Credit & Debit).</li>
-                  <li>Geo-fencing  Location Alerts.</li>
-                  <li>1 Year Protection.</li>
-                  <li>Instant Global Transaction.</li>
-                </ul>
+                <ul className="mb-4 space-y-2 text-blue-400 text-left text-sm">
+          <li>Up to 10 Virtual Cards</li>
+          <li>Custom Expiration and Limits</li>
+          <li>Merchant Locking</li>
+          <li>Priority Support</li>
+        </ul>
                 <button
-                  class="
+                  className="
                     w-fit
                     py-2 px-4
                     text-gray-100 text-center font-medium
@@ -1386,22 +1300,32 @@ function App() {
                     hover:bg-blue-900
                   "
                 >
-                  Buy Now
+                  Go Pro
                 </button>
               </div>
               <div
-                class="
+                className="
                   max-w-sm w-full
-                  p-6
+                  p-4
                   text-left
+                  text-sm
                   bg-gray-100
                   rounded-br-[50%]
                   shadow-sm
                   relative
                 "
               >
+                <div
+                  className="
+                    z-10 overflow-hidden
+                    h-24 w-20
+                    mx-auto
+                    absolute right-[-3px] top-[-3px]
+                  "
+                >
+                </div>
                 <h3
-                  class="
+                  className="
                     mb-1
                     text-lg text-blue-900 font-semibold
                   "
@@ -1409,68 +1333,64 @@ function App() {
                   Enterprise
                 </h3>
                 <div
-                  class="
+                  className="
                     mb-2
                   "
                 >
                   <p
-                    class="
-                      text-blue-400 text-sm
-                      line-through
-                    "
-                  >
-                    Before: $299/year
-                  </p>
-                  <p
-                    class="
+                    className="
                       mt-1
                       text-2xl text-blue-900 font-bold
                     "
                   >
-                    Now: $199/year
+                    $99/year
                   </p>
                 </div>
-                <ul class="mb-4 space-y-2 text-blue-400 text-left text-sm">
-          <li>Unlimited Cards (Credit & Debit)</li>
-          <li>Custom Alerts & Rules</li>
-          <li>Advanced Verification Logs</li>
-          <li>Business-Grade Security</li>
-        </ul>
+                <ul
+                  className="
+                    mb-4 space-y-1
+                    text-blue-400 text-sm
+                  "
+                >
+                  <li>Unlimited Virtual Cards.</li>
+                  <li>Team Management</li>
+                  <li>API Access</li>
+                  <li>24/7 Support</li>
+                </ul>
                 <button
-                  class="
+                  className="
                     w-fit
                     py-2 px-4
                     text-gray-100 text-center font-medium
                     bg-blue-400
                     rounded-lg
-                    transform-element
                     hover:bg-blue-900
                   "
                 >
                   Buy Now
                 </button>
               </div>
-            </div>
+              </div>
           </section>
 
           <section
             id="contact"
-            class="
+            className="
               max-w-5xl
               p-4 mt-2 mx-auto
               section
             "
           >
             <h2
-              class="
+              className="
                 mb-4
                 text-blue-900 text-3xl font-semibold
               "
             >
-              Need Help Verifying Your Card?
+              Need Help Getting Your Card?
             </h2>
             <div
-              class="
+              className="
                 flex flex-col
                 gap-8
                 md:flex-row
@@ -1479,32 +1399,32 @@ function App() {
           
               <form
                 onSubmit={handleFormSubmit}
-                class="
+                className="
                   w-full
-                  p-4 mb-8
+                  p-4 mb-2
                   bg-gray-100
                   rounded-lg
-                bg-gradient-to-br from-gray-100 to-blue-100
+                  bg-gradient-to-br from-gray-100 to-blue-100
                   md:w-1/2
                 "
               >
                 <div
-                  class="
+                  className="
                     w-full
                     p-2
                   "
                 >
                   <div
-                    class="
+                    className="
                       relative mb-2
                     "
                   >
                     <label
                       htmlFor="email"
-                      class="
+                      className="
                         block
                         py-4
-                        text-lg text-blue-900 placeholder-gray-100
+                        text-xl text-blue-900 placeholder-gray-100
                         focus:placeholder-blue-300
                       "
                     >
@@ -1517,7 +1437,7 @@ function App() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      class="
+                      className="
                         w-full
                         py-1 px-1
                         text-base text-blue-900
@@ -1527,19 +1447,21 @@ function App() {
                     />
                   </div>
                   <div
-                    class="
+                    className="
                       mb-4
                     "
                   >
                     <label
                       htmlFor="card"
-                      class="
+                      className="
                         block
                         mb-2
-                        text-blue-900 font-medium
+                        text-blue-900 text-xl placeholder-gray-100
+                        focus:placeholder-blue-300
+                        font-medium
                       "
                     >
-                      Card Type
+                      Interest
                     </label>
                     <select
                       id="card"
@@ -1547,19 +1469,19 @@ function App() {
                       value={formData.card}
                       onChange={handleInputChange}
                       required
-                      class="
+                      className="
                         w-full
                         p-3
                         font-semibold text-blue-900
+                        text-sm
                         bg-blue-200
                         rounded-lg
                       "
                     >
-                      <option value="">Select a card</option>
-                      <option value="platinum">Platinum Credit Card</option>
-                      <option value="business">Business Expense Card</option>
-                      <option value="virtual">Virtual Debit Card</option>
-                      <option value="rewards">Rewards Mastercard</option>
+                      <option value="">Select Option</option>
+                      <option value="personal">Personal Use</option>
+                      <option value="business">Business Expenses</option>
+                      <option value="virtual">API Integration</option>
                     </select>
                   </div>
                   <div
@@ -1572,6 +1494,7 @@ function App() {
                       class="
                         block
                         mb-2
+                        text-lg
                         text-blue-900 font-medium
                       "
                     >
@@ -1595,15 +1518,17 @@ function App() {
                   </div>
                   <button
                     type="submit"
-                    class="
+                    className="
                       px-4 py-2
-                      text-gray-100 text-lg font-medium
+                      text-sm
+                      text-gray-100 font-medium
                       bg-blue-400
                       rounded-lg
                       hover:bg-blue-900
+                      transition-colors duration-300
                     "
                   >
-                    Send
+                    Send Message
                   </button>
                 </div>
               </form>
@@ -1615,10 +1540,15 @@ function App() {
               >
                 <section
                   class="
-                    pt-4 mb-4
+                    pt-4 mb-2
+                    px-4
+                    flex flex-col
+                    items-center
+                    justify-center
                     bg-white
                     rounded-lg
                     relative shadow
+                    bg-gradient-to-br from-gray-100 to-blue-100
                   "
                 >
                   <div
@@ -1634,9 +1564,10 @@ function App() {
                         w-fit
                         px-2
                         text-blue-900 font-semibold text-md
+                        
                       "
                     >
-                      ClickSafe Support
+                      SecureCard+ Support
                     </div>
                   </div>
                   <div
@@ -1650,17 +1581,15 @@ function App() {
                         text-blue-900
                       "
                     >
-                      24/7 Customer Support call us for any questions:
+                      Have questions? We're here to help:
                     </p>
                     <p
                       class="
-                        text-blue-400 font-bold text-xl
+                        text-blue-400 font-bold text-md
                       "
                     >
-                      <span>
                         <FiPhoneCall />
-                      </span>{" "}
-                      +000 777 3930
+                      +0 (000) 777 3930
                     </p>
                     <p
                       class="
@@ -1668,17 +1597,15 @@ function App() {
                         text-blue-900
                       "
                     >
-                      For lost or stolen cards call us immediately:
+                      For urgent card generation issues:
                     </p>
                     <p
                       class="
                         text-blue-400 font-bold text-xl
                       "
                     >
-                      <span>
                         <FiPhoneCall />
-                      </span>{" "}
-                      +000 777 3930
+                      +0 (000) 777 3930
                     </p>
                     <div
                       class="
@@ -1691,10 +1618,12 @@ function App() {
                       <button
                         class="
                           px-4 py-2
+                          text-md
                           text-gray-100 font-bold
                           bg-blue-400
                           rounded-md
                           hover:bg-blue-900
+                          transition-colors duration-300
                         "
                       >
                         Chat Now
@@ -1710,100 +1639,93 @@ function App() {
   <div className="max-w-7xl px-4 mx-auto">
     <div className="max-w-2xl mx-auto text-center">
       <h2 className="mb-4 text-blue-900 font-bold text-3xl">Frequently Asked Questions</h2>
-      <p className="text-blue-900 leading-relaxed">Common questions about ClickSafe card safety, verification, and protection for both credit and debit cards.</p>
+      <p className="text-blue-900 leading-relaxed">Learn more about SecureCard+ virtual card generation and protection.</p>
     </div>
     <div className="space-y-4 mt-8">
       <div className="p-4 bg-gray-200 rounded-lg">
-        <p className="text-blue-900 font-medium">What security features protect my credit and debit cards?</p>
+        <p className="text-blue-900 font-medium">How does random card generation work?</p>
+        <button onClick={() => toggleFaq(1)} className="flex w-full text-left justify-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+        
+        {faqOpen[1] && (
+          <p className="mt-2 text-blue-900">
+            SecureCard+ generates a completely random, unique virtual card number linked to your funding source. 
+            It's encrypted and never exposes your real card details during transactions.
+          </p>
+        )}
+      </div>
+      <div className="p-4 bg-gray-200 rounded-lg">
+        <p className="text-blue-900 font-medium">Can I use virtual cards anywhere?</p>
         <button 
           type="button" 
-          onClick={() => toggleFaq(1)} 
+          onClick={() => toggleFaq(2)} 
           className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        
-        {faqOpen[1] && (
-          <p className="mt-2 text-blue-900">
-            ClickSafe applies the same military-grade encryption, real-time fraud monitoring, and instant transaction alerts to both credit and debit cards. 
-            All cards are verified using multi-factor authentication during setup and support biometric login, tokenization, and dynamic CVV for secure transactions.
-          </p>
-        )}
-      </div>
-      <div class="p-4 bg-gray-200 rounded-lg">
-        <p class="text-blue-900 font-medium">How do I verify my credit or debit card with ClickSafe?</p>
-        <button 
-          type="button" 
-          onClick={() => toggleFaq(2)} 
-          class="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
         {faqOpen[2] && (
-          <p class="mt-2 text-blue-900">
-            To verify your card, simply add it in the ClickSafe app. We’ll authenticate ownership via SMS, email, or in-app biometrics. 
-            A small temporary authorization hold may be used for validation, which clears automatically. Both credit and debit cards are verified securely using PCI-DSS compliant processes.
+          <p className="mt-2 text-blue-900">
+            Yes! Our virtual cards work wherever major credit cards are accepted across all online stores, subscriptions, and international sites.
           </p>
         )}
       </div>
-      <div class="p-4 bg-gray-200 rounded-lg">
-        <p class="text-blue-900 font-medium">Are my transactions monitored in real time?</p>
+      <div className="p-4 bg-gray-200 rounded-lg">
+        <p className="text-blue-900 font-medium">Are my transactions monitored in real time?</p>
         <button 
           type="button" 
           onClick={() => toggleFaq(3)} 
-          class="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
+          className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         {faqOpen[3] && (
-          <p class="mt-2 text-blue-900">
-            Yes. Every transaction on your ClickSafe credit or debit card is analyzed in real time using AI-powered fraud detection. 
-            You’ll receive instant alerts for suspicious activity and can freeze your card instantly from the app.
+          <p className="mt-2 text-blue-900">
+            Yes. Every transaction on your SecureCard+ are analyzed in real time using fraud detection, receive instant alerts for suspicious activity and can freeze your card instantly.
           </p>
         )}
       </div>
-      <div class="p-4 bg-gray-200 rounded-lg">
-        <p class="text-blue-900 font-medium">Can I control where and how my card is used?</p>
+      <div className="p-4 bg-gray-200 rounded-lg">
+        <p className="text-blue-900 font-medium">Are my virtual cards secure?</p>
         <button 
           type="button" 
           onClick={() => toggleFaq(4)} 
-          class="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
+          className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         {faqOpen[4] && (
-          <p class="mt-2 text-blue-900">
-            Absolutely. With ClickSafe, you can set spending limits, disable international transactions, restrict usage by merchant type (e.g., no gambling sites), 
-            and enable geo-fencing to block transactions outside your location. These controls apply to both credit and debit cards.
+          <p className="mt-2 text-blue-900">
+             Absolutely. Every virtual card uses AES-256 encryption, tokenization, and real-time monitoring to prevent fraud.
           </p>
         )}
       </div>
     </div>
   </div>
   <div className="p-2 mt-4 text-center">
-        <p className="text-xs text-blue-900">
-          24/7 monitoring • Military-grade encryption • Instant alerts • Global coverage
+        <p className="text-xs text-blue-900 font-semibold">
+        Random card numbers • Full privacy • Instant control • Global use
         </p>
       </div>
 </section>
           <footer
             id="footer"
             aria-label="Footer"
-            class="
+            className="
               bg-blue-300
               footer
             "
           >
             <div
-              class="
+              className="
                 max-w-screen
                 px-2 py-2 mx-auto space-x-2
                 text-blue-900
@@ -1812,20 +1734,20 @@ function App() {
               "
             >
               <div
-                class="
+                className="
                   p-2
                 "
               >
                 <DiRedhat size={50} color="white" />
                 <h3
-                  class="
+                  className="
                     font-bold text-2xl text-blue-900 ml-2
                   "
                 >
                   ClickSafe
                 </h3>
                 <p
-                  class="
+                  className="
                     mb-2
                     text-gray-100 mt-2
                   "
@@ -1835,12 +1757,12 @@ function App() {
                 </p>
               </div>
               <div
-                class="
+                className="
                   p-2
                 "
               >
                 <div
-                  class="
+                  className="
                     text-2xl font-semibold text-blue-900
                   "
                 >
@@ -1848,7 +1770,7 @@ function App() {
                 </div>
                 <a
                   href="virtual#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1858,7 +1780,7 @@ function App() {
                 </a>
                 <a
                   href="prepaid#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1868,7 +1790,7 @@ function App() {
                 </a>
                 <a
                   href="business#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1878,7 +1800,7 @@ function App() {
                 </a>
                 <a
                   href="loyalty#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1888,12 +1810,12 @@ function App() {
                 </a>
               </div>
               <div
-                class="
+                className="
                   p-2
                 "
               >
                 <div
-                  class="
+                  className="
                     text-2xl font-semibold text-blue-900
                   "
                 >
@@ -1901,7 +1823,7 @@ function App() {
                 </div>
                 <a
                   href="about#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1911,7 +1833,7 @@ function App() {
                 </a>
                 <a
                   href="careers#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1921,7 +1843,7 @@ function App() {
                 </a>
                 <a
                   href="partners#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -1931,12 +1853,12 @@ function App() {
                 </a>
               </div>
               <div
-                class="
+                className="
                   p-2
                 "
               >
                 <div
-                  class="
+                  className="
                     text-2xl font-semibold text-blue-900
                   "
                 >
@@ -1946,11 +1868,11 @@ function App() {
         <span className="inline-block align-middle">
           <FiPhoneCall />
         </span>{" "}
-        +000 777 3930, Universe.VA
+        +0 (000) 777 3930, Universe.VA
       </a>
                 <a
                   href="email#"
-                  class="
+                  className="
                     block
                     my-2
                     hover:text-gray-100
@@ -2039,7 +1961,7 @@ function App() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                class="
+                className="
                   h-6 w-6
                 "
               >
