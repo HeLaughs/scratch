@@ -1239,6 +1239,8 @@ function App() {
                     bg-blue-400
                     rounded-lg
                     hover:bg-blue-900
+                    transition-transform
+                    duration-300 transform hover:scale-105
                   "
                 >
                   Get Started
@@ -1298,6 +1300,8 @@ function App() {
                     bg-blue-400
                     rounded-lg
                     hover:bg-blue-900
+                    transition-transform
+                    duration-300 transform hover:scale-105
                   "
                 >
                   Go Pro
@@ -1365,6 +1369,8 @@ function App() {
                     bg-blue-400
                     rounded-lg
                     hover:bg-blue-900
+                    transition-transform
+                    duration-300 transform hover:scale-105
                   "
                 >
                   Buy Now
@@ -1485,13 +1491,13 @@ function App() {
                     </select>
                   </div>
                   <div
-                    class="
+                    className="
                       mb-4
                     "
                   >
                     <label
                       htmlFor="message"
-                      class="
+                      className="
                         block
                         mb-2
                         text-lg
@@ -1507,7 +1513,7 @@ function App() {
                       onChange={handleInputChange}
                       rows="5"
                       required
-                      class="
+                      className="
                         w-full
                         p-3
                         text-blue-900
@@ -1533,13 +1539,13 @@ function App() {
                 </div>
               </form>
               <div
-                class="
+                className="
                   w-full
                   md:w-1/2
                 "
               >
                 <section
-                  class="
+                  className="
                     pt-4 mb-2
                     px-4
                     flex flex-col
@@ -1552,7 +1558,7 @@ function App() {
                   "
                 >
                   <div
-                    class="
+                    className="
                       px-2 p-4
                       bg-blue-300
                       rounded-tl-lg rounded-br-lg
@@ -1560,7 +1566,7 @@ function App() {
                     "
                   >
                     <div
-                      class="
+                      className="
                         w-fit
                         px-2
                         text-blue-900 font-semibold text-md
@@ -1571,12 +1577,12 @@ function App() {
                     </div>
                   </div>
                   <div
-                    class="
+                    className="
                       pt-12 px-4
                     "
                   >
                     <p
-                      class="
+                      className="
                         mb-4
                         text-blue-900
                       "
@@ -1584,7 +1590,7 @@ function App() {
                       Have questions? We're here to help:
                     </p>
                     <p
-                      class="
+                      className="
                         text-blue-400 font-bold text-md
                       "
                     >
@@ -1592,7 +1598,7 @@ function App() {
                       +0 (000) 777 3930
                     </p>
                     <p
-                      class="
+                      className="
                         mt-6
                         text-blue-900
                       "
@@ -1600,7 +1606,7 @@ function App() {
                       For urgent card generation issues:
                     </p>
                     <p
-                      class="
+                      className="
                         text-blue-400 font-bold text-xl
                       "
                     >
@@ -1608,7 +1614,7 @@ function App() {
                       +0 (000) 777 3930
                     </p>
                     <div
-                      class="
+                      className="
                         flex
                         w-full
                         my-3
@@ -1616,7 +1622,7 @@ function App() {
                       "
                     >
                       <button
-                        class="
+                        className="
                           px-4 py-2
                           text-md
                           text-gray-100 font-bold
@@ -1674,12 +1680,47 @@ function App() {
           </p>
         )}
       </div>
+      <div className="p-4 bg-gray-200 rounded-lg flex flex-col">
+  <p className="text-blue-900 font-medium">Can I use virtual cards anywhere?</p>
+  <div className="flex justify-end">
+    <button
+      type="button"
+      onClick={() => toggleFaq(2)}
+      className={`flex ${faqOpen[2] ? 'w-6' : 'w-6'} 
+        text-left text-xl font-bold text-blue-900 items-center 
+        transition-all duration-300`}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        className="w-6 h-6 text-blue-900"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </button>
+  </div>
+  {faqOpen[2] && (
+    <p className="mt-2 text-blue-900">
+      Yes! Our virtual cards work wherever major credit cards are accepted
+      across all online stores, subscriptions, and international sites.
+    </p>
+  )}
+</div>
+
       <div className="p-4 bg-gray-200 rounded-lg">
         <p className="text-blue-900 font-medium">Are my transactions monitored in real time?</p>
         <button 
           type="button" 
           onClick={() => toggleFaq(3)} 
           className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
+          
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -1744,7 +1785,7 @@ function App() {
                     font-bold text-2xl text-blue-900 ml-2
                   "
                 >
-                  ClickSafe
+                  SecureCard+
                 </h3>
                 <p
                   className="
@@ -1752,7 +1793,7 @@ function App() {
                     text-gray-100 mt-2
                   "
                 >
-                  Creating innovative ClickSafe solutions for modern businesses.
+                  Creating innovative SecureCard+ solutions for modern businesses.
                   Scalable, secure, and with user-friendly modern banking needs.
                 </p>
               </div>
@@ -1878,7 +1919,7 @@ function App() {
                     hover:text-gray-100
                   "
                 >
-                  support@clicksafe.com
+                  support@securecard.co
                 </a>
               </div>
               <div
@@ -1892,7 +1933,7 @@ function App() {
                     text-blue-900
                   "
                 >
-                  ClickSafe Security Updates
+                  SecureCard Security Updates
                 </h4>
                 <form
                   className="
@@ -1934,7 +1975,7 @@ function App() {
               "
             >
               <div className="text-center pt-2 text-sm text-blue-900 border-gray-200 mb-2">
-    <span>© 2025 ClickSafe. All rights reserved.</span>
+    <span>© 2025 SecureCard+. All rights reserved.</span>
     <span className="mx-4">Privacy Policy</span>
   </div>
             </div>
