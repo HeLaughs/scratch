@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import "./App.css";
 import "animate.css";
 import { DiRedhat } from "react-icons/di";
 import { GiCardExchange } from "react-icons/gi";
 import { FiPhoneCall } from "react-icons/fi";
 import FraudTimeline from './components/FraudTimeline';
-import hero from "./assets/card.png";
+import hero from "./assets/home.jpeg";
 import stars from "./assets/stars-1.svg";
 import star from "./assets/stars-5-1.svg";
 import Feature from "./assets/Feature.jpg";
@@ -260,7 +260,7 @@ function App() {
                 className="
                   max-w-5xl
                   mt-2 mb-2
-                  text-4xl text-blue-900 font-bold
+                  text-5xl text-gray-100 font-bold
                   md:text-5xl
                 "
                 initial={{ y: 50, opacity: 0 }}
@@ -273,9 +273,7 @@ function App() {
                 className="
                   max-w-4xl
                   mb-6
-                  text-blue-900 font-bold text-center text-lg leading-relaxed tracking-wide
-                  bg-gray-100
-                  rounded-lg p-4
+                  text-gray-100 font-bold text-center text-2xl leading-relaxed tracking-wide p-2
                 "
               >
                 Generate random, secure virtual card numbers in seconds. Never share your real card again.
@@ -958,13 +956,13 @@ function App() {
                             <circle cx="9" cy="7" r="4"></circle>
                             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                           </svg>
-                          <h2
+                          <motion.h2
                             class="
                               text-3xl text-blue-900
                             "
                           >
                             15K+
-                          </h2>
+                          </motion.h2>
                           <p
                             className="
                               text-blue-900

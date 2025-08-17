@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export default function FraudTimeline() {
@@ -99,7 +99,7 @@ export default function FraudTimeline() {
           </motion.div>
         )}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2 pt-4 border-t border-blue-400">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2 pt-4 border-b border-t border-blue-300">
         <div className="text-center p-4 ">
           <div className="text-2xl font-bold text-blue-900">{stats.protected}+</div>
           <div className="text-sm text-blue-900">Cards Protected</div>
