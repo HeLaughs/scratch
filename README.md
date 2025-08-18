@@ -1,13 +1,6 @@
-# React + Vite
+# SecureCard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# scratch
+It is a clean, modern React application that generates secure, disposable virtual credit cards.
+Built with React Hooks and Framer Motion, it features smooth animations, a responsive layout, and intuitive navigation.
+The site highlights key benefits such as fraud protection, spending controls, and privacy.
+Styled with Tailwind CSS, it delivers a sleek, user-friendly experience.
