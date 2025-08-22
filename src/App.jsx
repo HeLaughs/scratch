@@ -6,10 +6,9 @@ import { DiRedhat } from "react-icons/di";
 import { GiCardExchange } from "react-icons/gi";
 import { FiPhoneCall } from "react-icons/fi";
 import FraudTimeline from './components/FraudTimeline';
-import hero from "./assets/home.jpeg";
+import hero from "./assets/cards.jpg";
 import stars from "./assets/stars-1.svg";
 import star from "./assets/stars-5-1.svg";
-import Feature from "./assets/Feature.jpg";
 import Feature1 from "./assets/security.jpg";
 import card2 from "./assets/card2.png";
 import pay from "./assets/pay.png";
@@ -379,180 +378,6 @@ function App() {
   </div>
   <FraudTimeline />
 </section>
-          {/* <div
-            class="
-              text-center
-            "
-          >
-            <motion.h1
-              class="
-                mt-2 
-                font-bold text-3xl text-blue-900
-              "
-              initial={{ scale: 1.1 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 1.5, ease: "easeOut" }}
-            >
-              ClickSafe Security Features
-            </motion.h1>
-            <p
-              class="
-                max-w-2xl
-                mx-auto
-                text-blue-900 leading-relaxed
-              "
-            >
-              Advanced protection for your financial transactions.
-            </p>
-          </div>
-
-          <div
-            class="
-              flex flex-col
-              w-full h-full
-              py-10
-              items-center
-            "
-          >
-            <div
-              class="
-                flex flex-col
-                w-full
-                mx-auto mt-4
-                gap-2 justify-center
-                md:flex-row
-                lg:gap-4
-              "
-            >
-              <img
-                src={Feature}
-                alt="Contactless payment technology"
-                decoding="async"
-                class="
-                  w-full
-                  px-2 py-4
-                  rounded-md
-                  transition-transform
-                  hover:scale-105 duration-300 shadow
-                  md:w-1/2
-                "
-              />
-              <div
-                class="
-                  w-full
-                  p-4
-                  rounded-lg
-                  md:w-1/2
-                "
-              >
-                <h2
-                  class="
-                    text-3xl font-semibold text-blue-900
-                    md:text-4xl
-                  "
-                >
-                  Advanced contactless technology.
-                </h2>
-                <p
-                  class="
-                    max-w-md
-                    mt-4 mb-6 px-2 py-4
-                    text-blue-900
-                  "
-                >
-                  Our cards feature next-generation contactless payment
-                  technology for faster, more secure transactions. Tap to pay
-                  with enhanced encryption and transaction limits to protect
-                  your funds.
-                </p>
-                <button
-                  onClick={handleExploreSecureCard}
-                  class="
-                    px-2 py-4
-                    text-gray-100 text-lg
-                    bg-blue-400
-                    rounded-lg
-                    shadow-md transition-all
-                    hover:bg-blue-900 duration-300 transform hover:scale-105
-                  "
-                >
-                  Explore ClickSafe
-                </button>
-              </div>
-            </div>
-            <div
-              class="
-                flex flex-col-reverse
-                w-full
-                mx-auto mt-10
-                gap-2 justify-center
-                md:flex-row
-              "
-            >
-              <div
-                class="
-                  w-full
-                  p-4
-                  rounded-lg
-                  md:w-1/2
-                "
-              >
-                <h2
-                  class="
-                    text-3xl font-semibold text-blue-900
-                    md:text-4xl
-                  "
-                >
-                  Bank-level security.
-                </h2>
-                <p
-                  class="
-                    max-w-md
-                    mt-4 mb-6 px-2 py-4
-                    text-blue-900
-                  "
-                >
-                  All our cards come with military-grade encryption, real-time
-                  fraud monitoring, and instant transaction blocking. Your
-                  financial security is our top priority with 24/7 monitoring.
-                </p>
-                <button
-                  onClick={handleSecurityFeatures}
-                  class="
-                    px-2 py-4
-                    text-gray-100 text-lg
-                    bg-blue-400
-                    rounded-lg
-                    shadow-md transition-all
-                    hover:bg-blue-900 duration-300 transform hover:scale-105
-                  "
-                >
-                  Security Features
-                </button>
-              </div>
-              <img
-                src={Feature1}
-                alt="Security feature"
-                decoding="async"
-                class="
-                  w-full
-                  px-2 py-4
-                  rounded-md
-                  transition-transform
-                  hover:scale-105 duration-300 shadow
-                  md:w-1/2
-                "
-              />
-            </div>
-          </div>
-          <div
-            class="
-              max-w-7xl
-              px-4 mx-auto
-            "
-          >
-            
-            </div>       */}
 <div
               className="
                 flex
@@ -1646,35 +1471,19 @@ function App() {
       <p className="text-blue-900 leading-relaxed">Learn more about SecureCard+ virtual card generation and protection.</p>
     </div>
     <div className="space-y-4 mt-8">
-      <div className="p-4 bg-gray-200 rounded-lg">
+      <div className="p-4 bg-gray-200 rounded-lg flex flex-col">
         <p className="text-blue-900 font-medium">How does random card generation work?</p>
-        <button onClick={() => toggleFaq(1)} className="flex w-full text-left justify-end">
+        <div className="flex justify-end">
+        <button type="button" onClick={() => toggleFaq(1)} className={`flex ${faqOpen[1] ? 'w-6' : 'w-6'} text-left text-xl font-bold text-blue-900 items-center transition-all duration-300`}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-        
+        </div>
         {faqOpen[1] && (
           <p className="mt-2 text-blue-900">
             SecureCard+ generates a completely random, unique virtual card number linked to your funding source. 
             It's encrypted and never exposes your real card details during transactions.
-          </p>
-        )}
-      </div>
-      <div className="p-4 bg-gray-200 rounded-lg">
-        <p className="text-blue-900 font-medium">Can I use virtual cards anywhere?</p>
-        <button 
-          type="button" 
-          onClick={() => toggleFaq(2)} 
-          className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        {faqOpen[2] && (
-          <p className="mt-2 text-blue-900">
-            Yes! Our virtual cards work wherever major credit cards are accepted across all online stores, subscriptions, and international sites.
           </p>
         )}
       </div>
@@ -1712,35 +1521,37 @@ function App() {
   )}
 </div>
 
-      <div className="p-4 bg-gray-200 rounded-lg">
+      <div className="p-4 bg-gray-200 rounded-lg flex flex-col">
         <p className="text-blue-900 font-medium">Are my transactions monitored in real time?</p>
-        <button 
+        <div className="flex justify-end">
+          <button 
           type="button" 
           onClick={() => toggleFaq(3)} 
-          className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
-          
-        >
+          className={`flex ${faqOpen[3] ? 'w-6' : 'w-6'} text-left text-xl font-bold text-blue-900 items-center transition-all duration-300`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        </div>
         {faqOpen[3] && (
           <p className="mt-2 text-blue-900">
             Yes. Every transaction on your SecureCard+ are analyzed in real time using fraud detection, receive instant alerts for suspicious activity and can freeze your card instantly.
           </p>
         )}
       </div>
-      <div className="p-4 bg-gray-200 rounded-lg">
+      <div className="p-4 bg-gray-200 rounded-lg flex flex-col">
         <p className="text-blue-900 font-medium">Are my virtual cards secure?</p>
+        <div className="flex justify-end">
         <button 
           type="button" 
           onClick={() => toggleFaq(4)} 
-          className="flex w-full text-left text-xl font-bold text-blue-900 justify-end items-center"
+          className={`flex ${faqOpen[4] ? 'w-6' : 'w-6'} text-left text-xl font-bold text-blue-900 items-center transition-all duration-300`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-blue-900">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        </div>
         {faqOpen[4] && (
           <p className="mt-2 text-blue-900">
              Absolutely. Every virtual card uses AES-256 encryption, tokenization, and real-time monitoring to prevent fraud.
@@ -1903,7 +1714,7 @@ function App() {
                 >
                   Contact
                 </div>
-                <a href="#contact" className="block my-2 hover:text-gray-100">
+                <a href="#contact" className="block p-4 my-2 hover:text-gray-100">
         <span className="inline-block align-middle">
           <FiPhoneCall />
         </span>{" "}
