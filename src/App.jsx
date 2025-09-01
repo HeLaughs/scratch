@@ -244,7 +244,7 @@ function App() {
                   opacity-85
                 "
               />
-              {/* <img src="http://www.zaccohn.com/images/gifs/lookatthat.gif" class="night-vision-effect h-full w-full"></img> */}
+              
             </motion.div>
             <motion.div
               className="
@@ -376,8 +376,10 @@ function App() {
       </div>
     </div>
   </div>
-  <FraudTimeline />
 </section>
+<div className="bg-blue-300 w-full p-4 ">
+  <FraudTimeline />
+</div>
 <div
               className="
                 flex
